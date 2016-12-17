@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Poison</title>
+  <subtitle>这让人心慌</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://tianshuang.me/"/>
+  <updated>2016-12-15T03:12:11.000Z</updated>
+  <id>https://tianshuang.me/</id>
+  
+  <author>
+    <name>Poison</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MySQL Sorting Rows</title>
+    <link href="https://tianshuang.me/2016/12/15/MySQL-Sorting-Rows/"/>
+    <id>https://tianshuang.me/2016/12/15/MySQL-Sorting-Rows/</id>
+    <published>2016-12-15T02:50:01.000Z</published>
+    <updated>2016-12-15T03:12:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>之前一直以为MySQL的「ORDER BY」关键字在多列排序时未显式声明排序方式的列会沿用最后显式声明排序方式的列，今天才发现自己弄错了，罪过罪过。在多列排序时，不同的列拥有不同的排序方式，如果未显式声明，则采用默认的升序排序方式。</p>
+<p>You can sort on multiple columns, and you can sort different columns in different directions. For example, to sort by type of animal in ascending order, then by birth date within animal type in descending order (youngest animals first), use the following query:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">mysql&gt; SELECT name, species, birth FROM pet</div><div class="line">    -&gt; ORDER BY species, birth DESC;</div><div class="line">+----------+---------+------------+</div><div class="line">| name     | species | birth      |</div><div class="line">+----------+---------+------------+</div><div class="line">| Chirpy   | bird    | 1998-09-11 |</div><div class="line">| Whistler | bird    | 1997-12-09 |</div><div class="line">| Claws    | cat     | 1994-03-17 |</div><div class="line">| Fluffy   | cat     | 1993-02-04 |</div><div class="line">| Fang     | dog     | 1990-08-27 |</div><div class="line">| Bowser   | dog     | 1989-08-31 |</div><div class="line">| Buffy    | dog     | 1989-05-13 |</div><div class="line">| Puffball | hamster | 1999-03-30 |</div><div class="line">| Slim     | snake   | 1996-04-29 |</div><div class="line">+----------+---------+------------+</div></pre></td></tr></table></figure></p>
+<p>The DESC keyword applies only to the column name immediately preceding it (birth); it does not affect the species column sort order.</p>
+<p>参见<a href="http://dev.mysql.com/doc/refman/5.7/en/sorting-rows.html" target="_blank" rel="external">MySQL 5.7 Reference Manual 4.3.4.4 Sorting Rows</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;之前一直以为MySQL的「ORDER BY」关键字在多列排序时未显式声明排序方式的列会沿用最后显式声明排序方式的列，今天才发现自己弄错了，罪过罪过。在多列排序时，不同的列拥有不同的排序方式，如果未显式声明，则采用默认的升序排序方式。&lt;/p&gt;
+&lt;p&gt;You can sort 
+    
+    </summary>
+    
+    
+      <category term="MySQL" scheme="https://tianshuang.me/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在劫难逃</title>
+    <link href="https://tianshuang.me/2016/12/09/%E5%9C%A8%E5%8A%AB%E9%9A%BE%E9%80%83/"/>
+    <id>https://tianshuang.me/2016/12/09/在劫难逃/</id>
+    <published>2016-12-09T07:05:18.000Z</published>
+    <updated>2016-12-10T14:19:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><blockquote class="blockquote-center">你好 医生<br>你能不能把我杀了<br>我的 胸口<br>好像被什么堵住了</blockquote><br>在这条大道上，没有人能背道而驰。人群中有许多人其实很聪明，他们只是沉默，施害人与受害人往往走在同一条大道上。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;你好 医生&lt;br&gt;你能不能把我杀了&lt;br&gt;我的 胸口&lt;br&gt;好像被什么堵住了&lt;/blockquote&gt;&lt;br&gt;在这条大道上，没有人能背道而驰。人群中有许多人其实很聪明，他们只是沉默，施害人与受害人往
+    
+    </summary>
+    
+    
+      <category term="陈词滥调" scheme="https://tianshuang.me/tags/%E9%99%88%E8%AF%8D%E6%BB%A5%E8%B0%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSAPP:计算机系统漫游</title>
+    <link href="https://tianshuang.me/2016/12/08/CSAPP-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8/"/>
+    <id>https://tianshuang.me/2016/12/08/CSAPP-计算机系统漫游/</id>
+    <published>2016-12-08T07:16:03.000Z</published>
+    <updated>2016-12-08T07:21:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>超线程，有时称为同时多线程（simultaneous multi-threading），是一项允许一个CPU执行多个控制流的技术。它涉及CPU某些硬件有多个备份，比如程序计数器和寄存器文件；而其他的硬件部分只有一份，比如执行浮点算术运算的单元。常规的处理器需要大约20000个时钟周期做不同线程间的转换，而超线程的处理器可以在单个周期的基础上决定要执行哪一个线程。这使得CPU能够更好地利用它的处理资源。例如，假设一个线程必须等到某些数据被装载到高速缓存中，那CPU久可以继续去执行另一个线程。举例来说，Intel Core i7处理器可以让一个核执行两个线程，所以一个4核的系统实际上可以并行地执行8个线程。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;超线程，有时称为同时多线程（simultaneous multi-threading），是一项允许一个CPU执行多个控制流的技术。它涉及CPU某些硬件有多个备份，比如程序计数器和寄存器文件；而其他的硬件部分只有一份，比如执行浮点算术运算的单元。常规的处理器需要大约20000
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>CSAPP:信息的表示和处理</title>
+    <link href="https://tianshuang.me/2016/12/08/CSAPP-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86/"/>
+    <id>https://tianshuang.me/2016/12/08/CSAPP-信息的表示和处理/</id>
+    <published>2016-12-08T07:08:17.000Z</published>
+    <updated>2016-12-08T08:21:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="算数运算"><a href="#算数运算" class="headerlink" title="算数运算"></a>算数运算</h5><p>对计算机的算数运算有深刻的理解是写出可靠程序的关键。比如，程序员和编译器不能用表达式（x-y&lt;0）来替代（x&lt;y），因为前者可能会产生溢出。甚至于也不能用表达式（-y&lt;-x）来替代，因为在二进制补码表示中负数和正数的范围是不对称的。算术溢出是造成程序错误和安全漏洞的一个常见根源。</p>
+<h5 id="字"><a href="#字" class="headerlink" title="字"></a>字</h5><p>每台计算机都有一个字长（word size），指明整数和指针数据的标称大小（nominal size）。因为虚拟地址是以这样的一个字来编码的，所以字长决定的最重要的系统参数就是虚拟地址空间的最大大小。也就是说，对于一个字长尾w位的机器而言，虚拟地址的范围为0～2<sup>w</sup>-1，程序最多访问2<sup>w</sup>个字节。</p>
+<h5 id="寻址和字节顺序"><a href="#寻址和字节顺序" class="headerlink" title="寻址和字节顺序"></a>寻址和字节顺序</h5><p>某些机器选择在存储器中按照最低有效字节到最高有效字节的顺序存储对象，而另一些机器则按照从最高有效字节到最低有效字节的顺序存储。前一种规则————最低有效字节在最前面的方式，称为小端法（little endian）。大多数Intel兼容机都采用这种规则。后一种规则————最高有效字节在最前面的方式，称为大端法（big endian）。大多数IBM和Sun Microsystems的机器都采用这种规则。注意我们说的是“大多数”。这些规则并没有按照企业界限来划分。比如，IBM和Sun制造的个人计算机使用的是Intel兼容的处理器，因此用的就是小端法。许多比较新的微处理器使用双端法（bi-endian），也就是说可以把它们配置成座位大端或者小端的机器运行。</p>
+<h5 id="移位运算"><a href="#移位运算" class="headerlink" title="移位运算"></a>移位运算</h5><p>一般而言，机器支持两种形式的右移：逻辑右移和算术右移。逻辑右移在左端补k个0，算术右移是在左端补k个最高有效位的值。<br>C语言标准并没有明确定义应该是用哪种类型的右移。对于无符号数据（也就是以限定词unsigned声明的整型对象），右移必须是逻辑的。而对于有符号数据（默认的声明的整型对象），算术的或者逻辑的右移都可以。不幸的是，这就意味着假设一种或者另一种右移形式的代码都潜在着可移植性问题。然而，实际上，几乎所有的编译器／机器组合都对有符号数据使用算术右移，且许多程序员也都假设机器会使用这种右移。<br>另一方面，Java对于如何进行右移有明确的定义。表达式x&gt;&gt;k会将x算术右移k个位置，而x&gt;&gt;&gt;k会对x做逻辑右移。</p>
+<h6 id="移动k位，这里k很大"><a href="#移动k位，这里k很大" class="headerlink" title="移动k位，这里k很大"></a>移动k位，这里k很大</h6><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span>      lval = <span class="number">0xFEDCBA98</span>  &lt;&lt; <span class="number">32</span>;</div><div class="line"><span class="keyword">int</span>      aval = <span class="number">0xFEDCBA98</span>  &gt;&gt; <span class="number">36</span>;</div><div class="line"><span class="keyword">unsigned</span> uval = <span class="number">0xFEDCBA98</span>u &gt;&gt; <span class="number">40</span>;</div></pre></td></tr></table></figure>
+<p>C语言标准很小心地规避了说明在这种情况下该如何做。在许多机器上，当移动一个w位的值时，移位指令只考虑位移量的低log<sub>2</sub>w位，因此实际上位移量就是通过计算k mod w得到的。例如，在一台采用这个规则的32位机器上，上面三个移位运算分别是移动0、4和8位，得到结果：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">lval    <span class="number">0xFEDCBA98</span></div><div class="line">aval    <span class="number">0xFFEDCBA9</span></div><div class="line">uval    <span class="number">0x00FEDCBA</span></div></pre></td></tr></table></figure></p>
+<p>不过这种行为对于C程序来说是没有保证的，所以移位数量应该保持小于字长。<br>另一方面，Java特别要求位移数量应该按照我们前面所讲的求模的方法来计算。</p>
+<h6 id="与移位运算有关的操作符优先级问题"><a href="#与移位运算有关的操作符优先级问题" class="headerlink" title="与移位运算有关的操作符优先级问题"></a>与移位运算有关的操作符优先级问题</h6><p>常常有人会写这样的表达式1&lt;&lt;2+3&lt;&lt;4，其本意是(1&lt;&lt;2)+(3&lt;&lt;4)。但是在C语言中，前面的表达式等价于1&lt;&lt;(2+3)&lt;&lt;4，这是由于加法（和减法）的优先级比移位运算要高。然后，按照从左至右综合性规则，括号应该是这样打的(1&lt;&lt;(2+3))&lt;&lt;4，因此得到的结果是512，而不是期望的52。<br>在C表达式中搞错优先级是一种常见的程序错误，而且常常很难检查出来。所以当你拿不准的时候，请加上括号！</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;算数运算&quot;&gt;&lt;a href=&quot;#算数运算&quot; class=&quot;headerlink&quot; title=&quot;算数运算&quot;&gt;&lt;/a&gt;算数运算&lt;/h5&gt;&lt;p&gt;对计算机的算数运算有深刻的理解是写出可靠程序的关键。比如，程序员和编译器不能用表达式（x-y&amp;lt;0）来替代（x&amp;lt;y
+    
+    </summary>
+    
+    
+      <category term="CSAPP" scheme="https://tianshuang.me/tags/CSAPP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>异或操作的妙用</title>
+    <link href="https://tianshuang.me/2016/12/07/%E5%BC%82%E6%88%96%E6%93%8D%E4%BD%9C%E7%9A%84%E5%A6%99%E7%94%A8/"/>
+    <id>https://tianshuang.me/2016/12/07/异或操作的妙用/</id>
+    <published>2016-12-07T08:33:03.000Z</published>
+    <updated>2016-12-07T13:09:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<ol>
+<li>使特定位翻转，要使哪几位翻转就将与其进行^运算的该几位置为1即可。</li>
+<li>与0相^，保留原值。</li>
+<li>交换两个值，不用临时变量。这种交换方式并没有性能上的优势，它仅仅是一个智力游戏。</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;使特定位翻转，要使哪几位翻转就将与其进行^运算的该几位置为1即可。&lt;/li&gt;
+&lt;li&gt;与0相^，保留原值。&lt;/li&gt;
+&lt;li&gt;交换两个值，不用临时变量。这种交换方式并没有性能上的优势，它仅仅是一个智力游戏。&lt;/li&gt;
+&lt;/ol&gt;
+
+    
+    </summary>
+    
+    
+      <category term="CSAPP" scheme="https://tianshuang.me/tags/CSAPP/"/>
+    
+      <category term="CS" scheme="https://tianshuang.me/tags/CS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>User space 与 Kernel space</title>
+    <link href="https://tianshuang.me/2016/12/07/User-space-%E4%B8%8E-Kernel-space/"/>
+    <id>https://tianshuang.me/2016/12/07/User-space-与-Kernel-space/</id>
+    <published>2016-12-07T08:22:25.000Z</published>
+    <updated>2016-12-07T08:24:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>转自<a href="http://www.ruanyifeng.com/blog/2016/12/user_space_vs_kernel_space.html" target="_blank" rel="external">User space 与 Kernel space</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;转自&lt;a href=&quot;http://www.ruanyifeng.com/blog/2016/12/user_space_vs_kernel_space.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;User space 与 Kernel spa
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="https://tianshuang.me/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>理解字节序</title>
+    <link href="https://tianshuang.me/2016/12/07/%E7%90%86%E8%A7%A3%E5%AD%97%E8%8A%82%E5%BA%8F/"/>
+    <id>https://tianshuang.me/2016/12/07/理解字节序/</id>
+    <published>2016-12-07T08:22:10.000Z</published>
+    <updated>2016-12-07T08:24:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>转自<a href="http://www.ruanyifeng.com/blog/2016/11/byte-order.html" target="_blank" rel="external">理解字节序</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;转自&lt;a href=&quot;http://www.ruanyifeng.com/blog/2016/11/byte-order.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;理解字节序&lt;/a&gt;&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="CS" scheme="https://tianshuang.me/tags/CS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>The substring() Method in JDK 6 and JDK 7</title>
+    <link href="https://tianshuang.me/2016/11/18/The-substring-Method-in-JDK-6-and-JDK-7/"/>
+    <id>https://tianshuang.me/2016/11/18/The-substring-Method-in-JDK-6-and-JDK-7/</id>
+    <published>2016-11-18T02:35:43.000Z</published>
+    <updated>2016-11-18T02:36:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>转自<a href="http://www.programcreek.com/2013/09/the-substring-method-in-jdk-6-and-jdk-7/" target="_blank" rel="external">The substring() Method in JDK 6 and JDK 7</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;转自&lt;a href=&quot;http://www.programcreek.com/2013/09/the-substring-method-in-jdk-6-and-jdk-7/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;The substring() M
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://tianshuang.me/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java 8 HashMaps, Keys and the Comparable interface</title>
+    <link href="https://tianshuang.me/2016/11/18/Java-8-HashMaps-Keys-and-the-Comparable-interface/"/>
+    <id>https://tianshuang.me/2016/11/18/Java-8-HashMaps-Keys-and-the-Comparable-interface/</id>
+    <published>2016-11-18T02:34:15.000Z</published>
+    <updated>2016-11-18T02:35:10.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>转自<a href="https://tamasgyorfi.net/2016/05/01/java-8-hashmaps-keys-and-the-comparable-interface/" target="_blank" rel="external">Java 8 HashMaps, Keys and the Comparable interface</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;转自&lt;a href=&quot;https://tamasgyorfi.net/2016/05/01/java-8-hashmaps-keys-and-the-comparable-interface/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Java 8 H
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://tianshuang.me/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Integer Swap</title>
+    <link href="https://tianshuang.me/2016/11/18/Integer-Swap/"/>
+    <id>https://tianshuang.me/2016/11/18/Integer-Swap/</id>
+    <published>2016-11-18T02:32:26.000Z</published>
+    <updated>2016-11-18T02:33:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>转自<a href="http://mp.weixin.qq.com/s?__biz=MzA3MDExNzcyNA==&amp;mid=2650392147&amp;idx=1&amp;sn=91ba6172edb887217eca35532c8a4af3&amp;scene=0#wechat_redirect" target="_blank" rel="external">一个简单代码的不简单实现</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;转自&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzA3MDExNzcyNA==&amp;amp;mid=2650392147&amp;amp;idx=1&amp;amp;sn=91ba6172edb887217eca35532c8a4af3&amp;amp;scen
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://tianshuang.me/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小而巧的数字压缩算法：zigzag</title>
+    <link href="https://tianshuang.me/2016/11/18/%E5%B0%8F%E8%80%8C%E5%B7%A7%E7%9A%84%E6%95%B0%E5%AD%97%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95%EF%BC%9Azigzag/"/>
+    <id>https://tianshuang.me/2016/11/18/小而巧的数字压缩算法：zigzag/</id>
+    <published>2016-11-18T02:30:14.000Z</published>
+    <updated>2016-11-18T02:31:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>转自<a href="http://mp.weixin.qq.com/s?__biz=MzA3MDExNzcyNA==&amp;mid=2650392086&amp;idx=1&amp;sn=6a2ecfe2548f121a4726d03bf23f4478&amp;scene=0#wechat_redirect" target="_blank" rel="external">小而巧的数字压缩算法：zigzag</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;转自&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzA3MDExNzcyNA==&amp;amp;mid=2650392086&amp;amp;idx=1&amp;amp;sn=6a2ecfe2548f121a4726d03bf23f4478&amp;amp;scen
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="https://tianshuang.me/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Comet：基于 HTTP 长连接的服务器推技术</title>
+    <link href="https://tianshuang.me/2016/10/20/Comet%EF%BC%9A%E5%9F%BA%E4%BA%8E-HTTP-%E9%95%BF%E8%BF%9E%E6%8E%A5%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8E%A8%E6%8A%80%E6%9C%AF/"/>
+    <id>https://tianshuang.me/2016/10/20/Comet：基于-HTTP-长连接的服务器推技术/</id>
+    <published>2016-10-20T02:16:36.000Z</published>
+    <updated>2016-10-19T18:21:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在学校的时候帮老师做过的项目中涉及到推送的部分使用了Comet，今天无意又看到这篇文章，顺手贴下以作留念。</p>
+<p><a href="http://www.ibm.com/developerworks/cn/web/wa-lo-comet/" target="_blank" rel="external">Comet：基于 HTTP 长连接的服务器推技术</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在学校的时候帮老师做过的项目中涉及到推送的部分使用了Comet，今天无意又看到这篇文章，顺手贴下以作留念。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/cn/web/wa-lo-comet/&quot; target=&quot;_bla
+    
+    </summary>
+    
+    
+      <category term="HTTP" scheme="https://tianshuang.me/tags/HTTP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>False sharing</title>
+    <link href="https://tianshuang.me/2016/09/28/False-sharing/"/>
+    <id>https://tianshuang.me/2016/09/28/False-sharing/</id>
+    <published>2016-09-28T03:39:34.000Z</published>
+    <updated>2016-09-27T22:18:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>HikariCP的ConcurrentBag解释中提到了False sharing，查了下wiki，道理我都懂，不就是和Java内存模型中的主内存和每个线程的工作内存类似的原理吗（参见《深入理解Java虚拟机 JVM高级特性与最佳实践（第2版）》 第12章 Java内存模型与线程），既然看到了这里，诸位也可以自行回顾一下volatile的相关知识。</p>
+<p><a href="http://tutorials.jenkov.com/java-concurrency/volatile.html" target="_blank" rel="external">Java Volatile Keyword</a><br><a href="https://en.wikipedia.org/wiki/False_sharing" target="_blank" rel="external">False sharing</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;HikariCP的ConcurrentBag解释中提到了False sharing，查了下wiki，道理我都懂，不就是和Java内存模型中的主内存和每个线程的工作内存类似的原理吗（参见《深入理解Java虚拟机 JVM高级特性与最佳实践（第2版）》 第12章 Java内存模型
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://tianshuang.me/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQL JOINS</title>
+    <link href="https://tianshuang.me/2016/09/27/SQL-JOINS/"/>
+    <id>https://tianshuang.me/2016/09/27/SQL-JOINS/</id>
+    <published>2016-09-27T06:24:15.000Z</published>
+    <updated>2016-12-06T08:58:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://ohpew91u7.qnssl.com/2016/09/sql_joins.jpg" alt="SQL JOINS"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://ohpew91u7.qnssl.com/2016/09/sql_joins.jpg&quot; alt=&quot;SQL JOINS&quot;&gt;&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="SQL" scheme="https://tianshuang.me/tags/SQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How to run process as background and never die?</title>
+    <link href="https://tianshuang.me/2016/09/21/How-to-run-process-as-background-and-never-die/"/>
+    <id>https://tianshuang.me/2016/09/21/How-to-run-process-as-background-and-never-die/</id>
+    <published>2016-09-21T02:57:14.000Z</published>
+    <updated>2016-09-20T19:02:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>nohup ./caddy &gt; /dev/null 2&gt;&amp;1 &amp;</p>
+<p><a href="http://stackoverflow.com/a/11856575/5973816" target="_blank" rel="external">How to run process as background and never die?</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;nohup ./caddy &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 &amp;amp;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/a/11856575/5973816&quot; target=&quot;_blank&quot; rel=&quot;external
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="https://tianshuang.me/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>读写分离</title>
+    <link href="https://tianshuang.me/2016/08/17/%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB/"/>
+    <id>https://tianshuang.me/2016/08/17/读写分离/</id>
+    <published>2016-08-17T02:38:42.000Z</published>
+    <updated>2016-08-24T22:15:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>之前介绍了多数据源的接入，参见<a href="https://tianshuang.me/2016/08/15/Multiple%20Datasource/">Multiple Datasource</a>，后来一个数据分析的项目（大部分都是读操作）需要用到读写分离，在分析时读取从库的数据，避免增加对线上数据库的压力，少部分写操作依然写主库，然后再被同步至从库，根据同事的建议，希望采用注解方式实现，从而在开发时只需加上特定的注解即可表明此DAO操作主库还是从库，原理依然与之前类似，以下是调整的部分：</p>
+<blockquote>
+<p>为了保护隐私，以下代码部分命名被修改</p>
+</blockquote>
+<ol>
+<li><p>定义主从数据库的枚举，因为项目中大多数走从库，所以吧SLAVE写在了第一个</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by Poison on 8/15/2016.</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="keyword">enum</span> Database &#123;</div><div class="line">    SLAVE,</div><div class="line">    MASTER</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>定义切换数据源的注解，注解基础可参见<a href="https://docs.oracle.com/javase/tutorial/java/annotations/index.html" target="_blank" rel="external">Lesson: Annotations</a>，根据同事需要只定义了类级别的注解，保留到运行时，读者完全可以根据自身需要自由发挥</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by Poison on 8/16/2016.</div><div class="line"> * This is a marker annotation.</div><div class="line"> * Use this annotation on DAO interface level, represent that all methods in this interface will operate your specified database.</div><div class="line"> */</div><div class="line"><span class="meta">@Documented</span></div><div class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</div><div class="line"><span class="meta">@Target</span>(ElementType.TYPE)</div><div class="line"><span class="keyword">public</span> <span class="meta">@interface</span> DataSource &#123;</div><div class="line">    <span class="function">Database <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> Database.SLAVE</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改AOP相关代码，只有在DAO接口上应用了@DataSource注解，并且注解值为Database.MASTER时才走主库</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by Poison on 8/15/2016.</div><div class="line"> */</div><div class="line"></div><div class="line"><span class="meta">@Aspect</span></div><div class="line"><span class="meta">@Component</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AroundDataSource</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Around</span>(<span class="string">"execution(* me.tianshuang.dao..*.*(..))"</span>)</div><div class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">doBasicProfiling</span><span class="params">(ProceedingJoinPoint pjp)</span> <span class="keyword">throws</span> Throwable </span>&#123;</div><div class="line">        Object result;</div><div class="line">        <span class="keyword">if</span> (hasMasterAnnotation(pjp)) &#123;</div><div class="line">            DataSourceContextHolder.setDataSource(Database.MASTER);</div><div class="line">            result = pjp.proceed();</div><div class="line">            DataSourceContextHolder.restoreToSlaveDataSource();</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            result = pjp.proceed();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">hasMasterAnnotation</span><span class="params">(ProceedingJoinPoint pjp)</span> </span>&#123;</div><div class="line">        Class&lt;?&gt; declaringClass = ((MethodSignature) pjp.getSignature()).getMethod().getDeclaringClass();</div><div class="line">        <span class="keyword">if</span> (declaringClass.isAnnotationPresent(DataSource.class)) &#123;</div><div class="line">            DataSource dataSource = declaringClass.getAnnotation(DataSource.class);</div><div class="line">            <span class="keyword">if</span> (dataSource.value() == Database.MASTER) &#123;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;之前介绍了多数据源的接入，参见&lt;a href=&quot;https://tianshuang.me/2016/08/15/Multiple%20Datasource/&quot;&gt;Multiple Datasource&lt;/a&gt;，后来一个数据分析的项目（大部分都是读操作）需要用到读写分离，在分
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://tianshuang.me/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>From concurrent to parallel</title>
+    <link href="https://tianshuang.me/2016/08/17/From-concurrent-to-parallel/"/>
+    <id>https://tianshuang.me/2016/08/17/From-concurrent-to-parallel/</id>
+    <published>2016-08-17T02:15:51.000Z</published>
+    <updated>2016-08-16T18:25:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>More modern curricula describe concurrency as being about correctly and efficiently controlling access to shared resources, whereas parallelism is about using more resources to solve a problem faster. Constructing thread-safe data structures is the domain of concurrency, as enabled by primitives such as locks, events, semaphores, coroutines, or software transactional memory (STM). On the other hand, parallelism uses techniques like partitioning or sharding to enable multiple activities to make progress on the task without coordination.</p>
+<footer><strong>Brian Goetz</strong><cite><a href="http://www.ibm.com/developerworks/java/library/j-java-streams-4-brian-goetz/index.html" target="_blank" rel="external">From concurrent to parallel</a></cite></footer></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;&lt;p&gt;More modern curricula describe concurrency as being about correctly and efficiently controlling access to shared resources, w
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://tianshuang.me/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Multiple Datasource</title>
+    <link href="https://tianshuang.me/2016/08/15/Multiple%20Datasource/"/>
+    <id>https://tianshuang.me/2016/08/15/Multiple Datasource/</id>
+    <published>2016-08-15T07:53:52.000Z</published>
+    <updated>2016-08-24T22:16:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近项目中需要接入多个数据源，起初准备让Mybatis来进行数据源的动态选择，但查询Mybatis的相关文档后，未发现官方对多数据源的支持，并且笔者的项目中Mybatis的使用采用全注解的方式，如果实例化两个SqlSessionFactory，在全注解使用Mybatis的情况下，无法显式指定某个Mapper使用哪一个sqlSessionFactory。<br>继续查询相关资料，发现Spring自2.0.1开始就提供了对动态数据源的支持，参见<a href="http://spring.io/blog/2007/01/23/dynamic-datasource-routing/" target="_blank" rel="external">Dynamic DataSource Routing</a>，咳咳，由于文章历史悠久，追溯至2007年，所以在笔者的项目中笔者对其进行了改进，思路依然与原文基本一致，只不过把文中基于XML的相关配置改为了我们项目中的基于Java Code的配置。</p>
+<blockquote>
+<p>为了保护隐私，以下代码部分命名被修改</p>
+</blockquote>
+<ol>
+<li><p>定义多个数据源的枚举，本例中仅包含两个数据源</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by Poison on 8/15/2016.</div><div class="line"> */</div><div class="line"><span class="keyword">enum</span> DataSource &#123;</div><div class="line">    FIRST,</div><div class="line">    SECOND</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>定义DataSourceContextHolder</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by Poison on 8/15/2016.</div><div class="line"> */</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">DataSourceContextHolder</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> ThreadLocal&lt;DataSource&gt; contextHolder = <span class="keyword">new</span> ThreadLocal&lt;&gt;();</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">setDataSource</span><span class="params">(DataSource dataSource)</span> </span>&#123;</div><div class="line">        contextHolder.set(dataSource);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">static</span> DataSource <span class="title">getDataSource</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> contextHolder.get();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">restoreToFirstDataSource</span><span class="params">()</span> </span>&#123;</div><div class="line">        contextHolder.set(DataSource.FIRST);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>定义RoutingDataSource</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by Poison on 8/15/2016.</div><div class="line"> */</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">RoutingDataSource</span> <span class="keyword">extends</span> <span class="title">AbstractRoutingDataSource</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> Object <span class="title">determineCurrentLookupKey</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> DataSourceContextHolder.getDataSource();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Datasource相关配置</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Bean</span></div><div class="line"><span class="keyword">public</span> javax.sql.<span class="function">DataSource <span class="title">dataSourceForFirst</span><span class="params">()</span> </span>&#123;</div><div class="line">    HikariConfig hikariConfig = <span class="keyword">new</span> HikariConfig();</div><div class="line"></div><div class="line">    hikariConfig.setDataSourceClassName(getProperty(<span class="string">"jdbc.dataSourceClassName"</span>));</div><div class="line">    hikariConfig.setUsername(getProperty(<span class="string">"jdbc.username"</span>));</div><div class="line">    hikariConfig.setPassword(getProperty(<span class="string">"jdbc.password"</span>));</div><div class="line">    hikariConfig.setMinimumIdle(Integer.parseInt(getProperty(<span class="string">"jdbc.minimumIdle"</span>)));</div><div class="line">    hikariConfig.setMaximumPoolSize(Integer.parseInt(getProperty(<span class="string">"jdbc.maximumPoolSize"</span>)));</div><div class="line">    hikariConfig.addDataSourceProperty(<span class="string">"serverName"</span>, getProperty(<span class="string">"jdbc.serverName"</span>));</div><div class="line">    hikariConfig.addDataSourceProperty(<span class="string">"port"</span>, getProperty(<span class="string">"jdbc.port"</span>));</div><div class="line">    hikariConfig.addDataSourceProperty(<span class="string">"databaseName"</span>, getProperty(<span class="string">"jdbc.databaseName"</span>));</div><div class="line"></div><div class="line">    optimizeHikariConfigForMysql(hikariConfig);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> HikariDataSource(hikariConfig);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">optimizeHikariConfigForMysql</span><span class="params">(HikariConfig hikariConfig)</span> </span>&#123;</div><div class="line">    hikariConfig.addDataSourceProperty(<span class="string">"cachePrepStmts"</span>, <span class="keyword">true</span>);</div><div class="line">    hikariConfig.addDataSourceProperty(<span class="string">"prepStmtCacheSize"</span>, <span class="number">250</span>);</div><div class="line">    hikariConfig.addDataSourceProperty(<span class="string">"prepStmtCacheSqlLimit"</span>, <span class="number">2048</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">@Bean</span></div><div class="line"><span class="keyword">public</span> javax.sql.<span class="function">DataSource <span class="title">dataSourceForSecond</span><span class="params">()</span> </span>&#123;</div><div class="line">    HikariConfig hikariConfig = <span class="keyword">new</span> HikariConfig();</div><div class="line"></div><div class="line">    hikariConfig.setDataSourceClassName(env.getProperty(<span class="string">"jdbc.second.dataSourceClassName"</span>));</div><div class="line">    hikariConfig.setUsername(getProperty(<span class="string">"jdbc.second.username"</span>));</div><div class="line">    hikariConfig.setPassword(getProperty(<span class="string">"jdbc.second.password"</span>));</div><div class="line">    hikariConfig.setMinimumIdle(Integer.parseInt(env.getProperty(<span class="string">"jdbc.second.minimumIdle"</span>)));</div><div class="line">    hikariConfig.setMaximumPoolSize(Integer.parseInt(env.getProperty(<span class="string">"jdbc.second.maximumPoolSize"</span>)));</div><div class="line">    hikariConfig.addDataSourceProperty(<span class="string">"serverName"</span>, getProperty(<span class="string">"jdbc.second.serverName"</span>));</div><div class="line">    hikariConfig.addDataSourceProperty(<span class="string">"port"</span>, getProperty(<span class="string">"jdbc.second.port"</span>));</div><div class="line">    hikariConfig.addDataSourceProperty(<span class="string">"databaseName"</span>, getProperty(<span class="string">"jdbc.second.databaseName"</span>));</div><div class="line"></div><div class="line">    optimizeHikariConfigForMysql(hikariConfig);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> HikariDataSource(hikariConfig);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">@Bean</span></div><div class="line"><span class="keyword">public</span> javax.sql.<span class="function">DataSource <span class="title">dataSource</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">    RoutingDataSource routingDataSource = <span class="keyword">new</span> RoutingDataSource();</div><div class="line"></div><div class="line">    Map&lt;Object, Object&gt; targetDataSources = <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line">    targetDataSources.put(DataSource.FIRST, dataSourceForFirst());</div><div class="line">    targetDataSources.put(DataSource.SECOND, dataSourceForSecond());</div><div class="line"></div><div class="line">    routingDataSource.setTargetDataSources(targetDataSources);</div><div class="line">    routingDataSource.setDefaultTargetDataSource(dataSourceForFirst());</div><div class="line"></div><div class="line">    <span class="keyword">return</span> routingDataSource;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">@Bean</span></div><div class="line"><span class="function"><span class="keyword">public</span> SqlSessionFactory <span class="title">sqlSessionFactory</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">    SqlSessionFactoryBean sessionFactory = <span class="keyword">new</span> SqlSessionFactoryBean();</div><div class="line"></div><div class="line">    sessionFactory.setDataSource(dataSource());</div><div class="line">    sessionFactory.setTypeAliasesPackage(<span class="string">"me.tianshuang.domain"</span>);</div><div class="line">    sessionFactory.setTypeHandlers(<span class="keyword">new</span> TypeHandler[]&#123;<span class="keyword">new</span> LocalDateTimeTypeHandler()&#125;);</div><div class="line"></div><div class="line">    org.apache.ibatis.session.Configuration configuration = <span class="keyword">new</span> org.apache.ibatis.session.Configuration();</div><div class="line">    configuration.setMapUnderscoreToCamelCase(<span class="keyword">true</span>);</div><div class="line"></div><div class="line">    sessionFactory.setConfiguration(configuration);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> sessionFactory.getObject();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>AOP相关配置</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by Poison on 8/15/2016.</div><div class="line"> */</div><div class="line"></div><div class="line"><span class="meta">@Aspect</span></div><div class="line"><span class="meta">@Component</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AroundDataSource</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Around</span>(<span class="string">"execution(* me.tianshuang.dao.second..*.*(..))"</span>)</div><div class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">doBasicProfiling</span><span class="params">(ProceedingJoinPoint pjp)</span> <span class="keyword">throws</span> Throwable </span>&#123;</div><div class="line">        DataSourceContextHolder.setDataSource(DataSource.SECOND);</div><div class="line">        Object result = pjp.proceed();</div><div class="line">        DataSourceContextHolder.restoreToFirstDataSource();</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>在对数据源进行路由的控制这方面，采用了AOP的思想，在我们的项目中，因为第二个数据源用的频率很低，所以为需要操作第二个数据源的Mapper单独建立了一个包（me.tianshuang.dao.second），在此包下的所有Mapper的方法在执行前将切换数据源为SECOND，执行完方法后又切回数据源First。</p>
+<p>以上只是切换数据源的一种方案，本文的关键就在于RoutingDataSource，而在哪里切换数据源，读者完全可根据自身项目需要选择最适合的方案，该例只是适合笔者所在项目的一个例子。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近项目中需要接入多个数据源，起初准备让Mybatis来进行数据源的动态选择，但查询Mybatis的相关文档后，未发现官方对多数据源的支持，并且笔者的项目中Mybatis的使用采用全注解的方式，如果实例化两个SqlSessionFactory，在全注解使用Mybatis的情
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://tianshuang.me/tags/Java/"/>
+    
+      <category term="Spring" scheme="https://tianshuang.me/tags/Spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你看见的，不一定是真的</title>
+    <link href="https://tianshuang.me/2016/08/15/%E4%BD%A0%E7%9C%8B%E8%A7%81%E7%9A%84%EF%BC%8C%E4%B8%8D%E4%B8%80%E5%AE%9A%E6%98%AF%E7%9C%9F%E7%9A%84/"/>
+    <id>https://tianshuang.me/2016/08/15/你看见的，不一定是真的/</id>
+    <published>2016-08-15T07:51:39.000Z</published>
+    <updated>2016-08-15T01:33:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近在使用Java读取Shell脚本执行后打印到控制台上的文本时，需要获取包含指定关键字的一行，当然，又随手写下了以下代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (line.contains(<span class="string">"读写失败总数"</span>)) &#123;</div><div class="line">    <span class="comment">// do something</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>测试时可无论如何也if判断条件都不为真啊，明明控制台打印出了以上中文，到底是哪里出了问题？转念一想，是被控制台这小子耍了啊，在使用XShell类似的软件连接远程服务器时，你看到的输出不是控制台原生的输出，在本例中，看到输出了中文，实则是XShell帮我们进行了相关转码，随即，将以上中文转为Unicode后再次进行测试：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (line.contains(<span class="string">"\u8bfb\u5199\u5931\u8d25\u603b\u6570"</span>)) &#123;</div><div class="line">    <span class="comment">// do something</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>成功通过测试。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近在使用Java读取Shell脚本执行后打印到控制台上的文本时，需要获取包含指定关键字的一行，当然，又随手写下了以下代码：&lt;br&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div 
+    
+    </summary>
+    
+    
+      <category term="Shell" scheme="https://tianshuang.me/tags/Shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>记一起while引发的惨剧</title>
+    <link href="https://tianshuang.me/2016/08/15/%E8%AE%B0%E4%B8%80%E8%B5%B7while%E5%BC%95%E5%8F%91%E7%9A%84%E6%83%A8%E5%89%A7/"/>
+    <id>https://tianshuang.me/2016/08/15/记一起while引发的惨剧/</id>
+    <published>2016-08-15T07:51:09.000Z</published>
+    <updated>2016-08-15T00:17:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近在使用Java调用Shell脚本时，需要获取Shell脚本执行后输出到控制台的文本，然后随手就写出了以下代码（本着尽量使用第三方类库不自己造轮子的思想）…<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> (StringUtils.isNotBlank(line = stdInput.readLine())) &#123;</div><div class="line">    lines.add(line);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>跑测试时可怎么也读不到Shell脚本的输出啊，尼玛，检查万分，梦中惊醒，这可是while啊，我用StringUtils.isNotBlank搞毛线啊，读到一行第一行为空的就不继续读了，这里的终止条件应该为读到流结束（即readLine返回为null）啊，果断更改代码为：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> ((line = stdInput.readLine()) != <span class="keyword">null</span>) &#123;</div><div class="line">    lines.add(line);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>更改后一切正常…代码写多了后经常不假思索就敲了下去，这次就是一个教训，谨记。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Reads a line of text.  A line is considered to be terminated by any one</div><div class="line"> * of a line feed ('\n'), a carriage return ('\r'), or a carriage return</div><div class="line"> * followed immediately by a linefeed.</div><div class="line"> *</div><div class="line"> * <span class="doctag">@return</span>     A String containing the contents of the line, not including</div><div class="line"> *             any line-termination characters, or null if the end of the</div><div class="line"> *             stream has been reached</div><div class="line"> *</div><div class="line"> * <span class="doctag">@exception</span>  IOException  If an I/O error occurs</div><div class="line"> *</div><div class="line"> * <span class="doctag">@see</span> java.nio.file.Files#readAllLines</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">readLine</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">    <span class="keyword">return</span> readLine(<span class="keyword">false</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>or null if the end of the stream has been reached</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近在使用Java调用Shell脚本时，需要获取Shell脚本执行后输出到控制台的文本，然后随手就写出了以下代码（本着尽量使用第三方类库不自己造轮子的思想）…&lt;br&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;g
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://tianshuang.me/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java Streams</title>
+    <link href="https://tianshuang.me/2016/08/03/Java-Streams/"/>
+    <id>https://tianshuang.me/2016/08/03/Java-Streams/</id>
+    <published>2016-08-03T08:35:03.000Z</published>
+    <updated>2016-08-03T17:30:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>In addition to using streams for computation, you might want to consider using streams to return aggregates from API methods, where previously you might have returned an array or collection. Returning a stream is often more efficient, since you don’t have to copy all the data into a new array or collection. Returning a stream is also often more flexible; the form of collection the library chooses to return might not be what the caller needs, and it’s easy to convert a stream into any collection type. (The main situation in which returning a stream is inappropriate, and falling back to returning a materialized collection is better, is when the caller would need to see a consistent snapshot of the state at a point in time.)</p>
+<footer><strong>Brian Goetz</strong><cite><a href="http://www.ibm.com/developerworks/java/library/j-java-streams-1-brian-goetz/index.html" target="_blank" rel="external">An introduction to the java.util.stream library</a></cite></footer></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;&lt;p&gt;In addition to using streams for computation, you might want to consider using streams to return aggregates from API methods,
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://tianshuang.me/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git notes</title>
+    <link href="https://tianshuang.me/2016/07/07/Git-notes/"/>
+    <id>https://tianshuang.me/2016/07/07/Git-notes/</id>
+    <published>2016-07-07T02:03:20.000Z</published>
+    <updated>2016-08-03T00:31:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>git submodule init<br>git submodule update</p>
+<p>Permanently authenticating with Git repositories can use the .netrc file</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;git submodule init&lt;br&gt;git submodule update&lt;/p&gt;
+&lt;p&gt;Permanently authenticating with Git repositories can use the .netrc file&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="Git" scheme="https://tianshuang.me/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello, 2016!</title>
+    <link href="https://tianshuang.me/2016/02/08/Hello-2016/"/>
+    <id>https://tianshuang.me/2016/02/08/Hello-2016/</id>
+    <published>2016-02-07T17:30:02.000Z</published>
+    <updated>2016-06-16T23:59:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote class="blockquote-center">风险越高，收益越大</blockquote>
+
+<p>新年，已经没了小时候的些许期待，年复一年。</p>
+<p>回顾2015，专业技能方面稳步增长，但感觉驱动自己向前的力量没以前那么强了，可能已经渐渐厌倦大学生活，破茧待出，心里渴望急需闯进外面的世界。春节前考过了科目三，2016终于不会再在练车上消耗时间。白条和花呗真不是好东西（才把2015欠的债还清的我会乱说？），嗯，我恨不得它把我的额度都给收回去。</p>
+<p>新的一年，首要的事就是对自己的技术栈查缺补漏，夯实基础，毕竟也就这个学期了，接下来就要面临校招了。玩手机时少花时间在Twitter和Weibo上，刷多了你会发现这国家真是没救了，但又改变不了什么。把时间迁移到多看阅读（此处非广告）上，利用玩手机的时间多看看出版物书籍，这几年看过的纸质书都堆了好几摞了，不过大部分是技术书，但现在却在慢慢看一些人文方面的书籍，不能把自己完全困在技术圈子里，毕竟技术不是生活的全部。今年下半年应该会搬回自己的宿舍，大一住了一年宿舍，由于偶然的机会结识了核自院的老师，大二大三住在教学楼里，虽然和另外一位朋友一起，但依旧非常安静，特别是晚自习结束后，整座楼寂静无声，有空调有网并且从不断电，正是这个环境给了我自由学习探索的空间，没人打扰，可以自己决定工作到夜间什么时刻，在这里学习的效率也是非常高的，完成了自己知识体系从点到面的一些积累，在这个过程中就好像一扇扇门依次打开，哦，天呐，我敢打赌，这用户体验真是极好的，就像隔壁苏珊婶婶做的苹果派一样。</p>
+<p>另附在家乡这个小县城中饭桌上屡次出现的一些有趣的对话：入党没啊？怎么不入党啊？入了以后好当官啊。考研不啊？咋不考研呢？不考研怎么找工作啊？</p>
+<p>新年快乐，每个人都有自己的故事。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote class=&quot;blockquote-center&quot;&gt;风险越高，收益越大&lt;/blockquote&gt;
+
+&lt;p&gt;新年，已经没了小时候的些许期待，年复一年。&lt;/p&gt;
+&lt;p&gt;回顾2015，专业技能方面稳步增长，但感觉驱动自己向前的力量没以前那么强了，可能已经渐渐厌倦
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>关于此博客</title>
+    <link href="https://tianshuang.me/2016/01/21/%E5%85%B3%E4%BA%8E%E6%AD%A4%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://tianshuang.me/2016/01/21/关于此博客/</id>
+    <published>2016-01-20T20:43:28.000Z</published>
+    <updated>2016-08-15T17:21:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>折腾两三天，总算把这个博客搭建起来了。之前大二在CSDN写过一段时间的博客，大多数都是关于技术细节的，后来觉得没有多大意义（其实主要原因是感觉CSDN太low，哈哈），于是又陆续删除了一些，仅留下了几篇（仅仅留作怀念吧）。一直都有自己搭建博客的想法，想过自己动手码个博客，但无奈自己主要做Java的相关开发，前端不是很熟悉，无法做到心里想象中的前端效果，遂放弃自己动手码的想法。看到许多人用Hexo，于是Google了下相关资料，静态，再看看主题，也不错，遂决定就是Hexo了。随着阅历的增长，在此博客不会记录更多关于技术细节的东西了，技术上的东西更多只是点到为止。接下来说说此博客搭建的相关技术吧。</p>
+<ul>
+<li><a href="https://hexo.io/" target="_blank" rel="external">Hexo</a><ul>
+<li>A fast, simple &amp; powerful blog framework.</li>
+</ul>
+</li>
+<li><a href="https://m.do.co/c/5641c4b906cb" target="_blank" rel="external">DigitalOcean</a><ul>
+<li>一来是国内主机需要备案，灰常麻烦，又是照相又是寄核验单，而且还要20天左右，笔者有台阿里云的主机就经历过这样的摧残，原因大家都懂的。二来是… 当然是GitHub的学生认证送了50刀的DigitalOcean促销码啊，别人都送了，能不用吗？三来是… 国外主机可以用来科学…</li>
+</ul>
+</li>
+<li><a href="https://www.namecheap.com/" target="_blank" rel="external">Namecheap</a><ul>
+<li>也是GitHub的学生认证，赠送了一年的.me域名，果断就把tianshuang.me拿下，如果不出意外，这辈子就用这域名了。由于众所周知的原因，Namecheap的域名解析在国内经常抽风，无奈将DNS解析改为<a href="https://www.dnspod.cn/" target="_blank" rel="external">DNSPod</a>。</li>
+</ul>
+</li>
+<li><a href="https://www.nginx.com/" target="_blank" rel="external">Nginx</a><ul>
+<li>负载均衡，反向代理，并且之前项目中也用过，就顺手用上了，对于这个博客，反向代理仅用于admin插件进行后台编辑文章这部分。</li>
+</ul>
+</li>
+<li><a href="https://www.gogetssl.com/" target="_blank" rel="external">GOGETSSL</a><ul>
+<li>别人推荐，并且本博客后台需要登录，要是不上SSL能行？</li>
+</ul>
+</li>
+</ul>
+<p>嗯，暂时想到的就这些，以后想到再写吧。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;折腾两三天，总算把这个博客搭建起来了。之前大二在CSDN写过一段时间的博客，大多数都是关于技术细节的，后来觉得没有多大意义（其实主要原因是感觉CSDN太low，哈哈），于是又陆续删除了一些，仅留下了几篇（仅仅留作怀念吧）。一直都有自己搭建博客的想法，想过自己动手码个博客，但
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="https://tianshuang.me/tags/Hexo/"/>
+    
+      <category term="Nginx" scheme="https://tianshuang.me/tags/Nginx/"/>
+    
+      <category term="SSL" scheme="https://tianshuang.me/tags/SSL/"/>
+    
+  </entry>
+  
+</feed>
