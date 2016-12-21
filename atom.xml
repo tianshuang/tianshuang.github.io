@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tianshuang.me/"/>
-  <updated>2016-12-21T03:37:56.000Z</updated>
+  <updated>2016-12-21T14:33:53.000Z</updated>
   <id>https://tianshuang.me/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我们只畅享最疯狂的速度！</title>
+    <link href="https://tianshuang.me/2016/12/21/%E6%88%91%E4%BB%AC%E5%8F%AA%E7%95%85%E4%BA%AB%E6%9C%80%E7%96%AF%E7%8B%82%E7%9A%84%E9%80%9F%E5%BA%A6%EF%BC%81/"/>
+    <id>https://tianshuang.me/2016/12/21/我们只畅享最疯狂的速度！/</id>
+    <published>2016-12-21T14:26:54.000Z</published>
+    <updated>2016-12-21T14:33:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>速度症候群，就是······只要谁超他的车，他就会立即反超。尽管道路两旁不时闪过限速牌，但他顾不了那么多。在别的时候，他总是落在别人后面。现在是在高速公路上，他再也不愿落在人后。</p>
+<footer><strong>《速度之恋——高速公路文化家园》</strong></footer></blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;&lt;p&gt;速度症候群，就是······只要谁超他的车，他就会立即反超。尽管道路两旁不时闪过限速牌，但他顾不了那么多。在别的时候，他总是落在别人后面。现在是在高速公路上，他再也不愿落在人后。&lt;/p&gt;
+&lt;footer&gt;&lt;strong&gt;《速度之恋——高速公路文化家园
+    
+    </summary>
+    
+    
+      <category term="速度" scheme="https://tianshuang.me/tags/%E9%80%9F%E5%BA%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>当服务QPS增高时我们做什么</title>
