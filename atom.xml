@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tianshuang.me/"/>
-  <updated>2017-01-11T07:35:11.000Z</updated>
+  <updated>2017-01-13T06:59:41.000Z</updated>
   <id>https://tianshuang.me/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DNS: root servers</title>
+    <link href="https://tianshuang.me/2017/01/13/DNS-root-servers/"/>
+    <id>https://tianshuang.me/2017/01/13/DNS-root-servers/</id>
+    <published>2017-01-13T06:53:49.000Z</published>
+    <updated>2017-01-13T06:59:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>A root name server is a name server for the root zone of the Domain Name System (DNS) of the Internet. It directly answers requests for records in the root zone and answers other requests by returning a list of the authoritative name servers for the appropriate top-level domain (TLD).</p>
+<p><a href="http://www.root-servers.org/" target="_blank" rel="external">http://www.root-servers.org/</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;A root name server is a name server for the root zone of the Domain Name System (DNS) of the Internet. It directly answers requests for r
+    
+    </summary>
+    
+    
+      <category term="DNS" scheme="https://tianshuang.me/tags/DNS/"/>
+    
+  </entry>
   
   <entry>
     <title>TCP三次握手和Syn-Flood攻击</title>
