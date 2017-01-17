@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="HTTP," />
+  <meta name="keywords" content="OLTP,OLAP," />
 
 
 
@@ -86,19 +86,16 @@
 
 
 
-<meta name="description" content="在学校的时候帮老师做过的项目中涉及到推送的部分使用了Comet，今天无意又看到这篇文章，顺手贴下以作留念。
-Comet：基于 HTTP 长连接的服务器推技术">
+<meta name="description" content="OLTP (On-line Transaction Processing) is characterized by a large number of short on-line transactions (INSERT, UPDATE, DELETE). The main emphasis for OLTP systems is put on very fast query processin">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Comet：基于 HTTP 长连接的服务器推技术">
-<meta property="og:url" content="https://tianshuang.me/2016/10/20/Comet：基于-HTTP-长连接的服务器推技术/index.html">
+<meta property="og:title" content="OLTP vs. OLAP">
+<meta property="og:url" content="https://tianshuang.me/2017/01/17/OLTP-vs-OLAP/index.html">
 <meta property="og:site_name" content="Poison">
-<meta property="og:description" content="在学校的时候帮老师做过的项目中涉及到推送的部分使用了Comet，今天无意又看到这篇文章，顺手贴下以作留念。
-Comet：基于 HTTP 长连接的服务器推技术">
-<meta property="og:updated_time" content="2016-10-19T18:21:42.000Z">
+<meta property="og:description" content="OLTP (On-line Transaction Processing) is characterized by a large number of short on-line transactions (INSERT, UPDATE, DELETE). The main emphasis for OLTP systems is put on very fast query processin">
+<meta property="og:updated_time" content="2017-01-17T01:50:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Comet：基于 HTTP 长连接的服务器推技术">
-<meta name="twitter:description" content="在学校的时候帮老师做过的项目中涉及到推送的部分使用了Comet，今天无意又看到这篇文章，顺手贴下以作留念。
-Comet：基于 HTTP 长连接的服务器推技术">
+<meta name="twitter:title" content="OLTP vs. OLAP">
+<meta name="twitter:description" content="OLTP (On-line Transaction Processing) is characterized by a large number of short on-line transactions (INSERT, UPDATE, DELETE). The main emphasis for OLTP systems is put on very fast query processin">
 
 
 
@@ -126,13 +123,13 @@ Comet：基于 HTTP 长连接的服务器推技术">
 
 
 
-  <link rel="canonical" href="https://tianshuang.me/2016/10/20/Comet：基于-HTTP-长连接的服务器推技术/"/>
+  <link rel="canonical" href="https://tianshuang.me/2017/01/17/OLTP-vs-OLAP/"/>
 
 
 
 
 
-  <title> Comet：基于 HTTP 长连接的服务器推技术 | Poison </title>
+  <title> OLTP vs. OLAP | Poison </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -252,7 +249,7 @@ Comet：基于 HTTP 长连接的服务器推技术">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://tianshuang.me/2016/10/20/Comet：基于-HTTP-长连接的服务器推技术/">
+  <link itemprop="mainEntityOfPage" href="https://tianshuang.me/2017/01/17/OLTP-vs-OLAP/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Poison">
@@ -276,7 +273,7 @@ Comet：基于 HTTP 长连接的服务器推技术">
             
             
               
-                Comet：基于 HTTP 长连接的服务器推技术
+                OLTP vs. OLAP
               
             
           </h1>
@@ -289,8 +286,8 @@ Comet：基于 HTTP 长连接的服务器推技术">
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-20T10:16:36+08:00">
-                2016-10-20
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-17T09:46:55+08:00">
+                2017-01-17
               </time>
             
 
@@ -305,8 +302,8 @@ Comet：基于 HTTP 长连接的服务器推技术">
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2016/10/20/Comet：基于-HTTP-长连接的服务器推技术/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/20/Comet：基于-HTTP-长连接的服务器推技术/" itemprop="commentCount"></span>
+                <a href="/2017/01/17/OLTP-vs-OLAP/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/01/17/OLTP-vs-OLAP/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -316,7 +313,7 @@ Comet：基于 HTTP 长连接的服务器推技术">
 
           
           
-             <span id="/2016/10/20/Comet：基于-HTTP-长连接的服务器推技术/" class="leancloud_visitors" data-flag-title="Comet：基于 HTTP 长连接的服务器推技术">
+             <span id="/2017/01/17/OLTP-vs-OLAP/" class="leancloud_visitors" data-flag-title="OLTP vs. OLAP">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -341,8 +338,13 @@ Comet：基于 HTTP 长连接的服务器推技术">
       
 
       
-        <p>在学校的时候帮老师做过的项目中涉及到推送的部分使用了Comet，今天无意又看到这篇文章，顺手贴下以作留念。</p>
-<p><a href="http://www.ibm.com/developerworks/cn/web/wa-lo-comet/" target="_blank" rel="external">Comet：基于 HTTP 长连接的服务器推技术</a></p>
+        <ul>
+<li><p>OLTP (On-line Transaction Processing) is characterized by a large number of short on-line transactions (INSERT, UPDATE, DELETE). The main emphasis for OLTP systems is put on very fast query processing, maintaining data integrity in multi-access environments and an effectiveness measured by number of transactions per second. In OLTP database there is detailed and current data, and schema used to store transactional databases is the entity model (usually 3NF). </p>
+</li>
+<li><p>OLAP (On-line Analytical Processing) is characterized by relatively low volume of transactions. Queries are often very complex and involve aggregations. For OLAP systems a response time is an effectiveness measure. OLAP applications are widely used by Data Mining techniques. In OLAP database there is aggregated, historical data, stored in multi-dimensional schemas (usually star schema). </p>
+</li>
+</ul>
+<p><a href="http://datawarehouse4u.info/OLTP-vs-OLAP.html" target="_blank" rel="external">OLTP vs. OLAP</a></p>
 
       
     </div>
@@ -366,7 +368,9 @@ Comet：基于 HTTP 长连接的服务器推技术">
       
         <div class="post-tags">
           
-            <a href="/tags/HTTP/" rel="tag"># HTTP</a>
+            <a href="/tags/OLTP/" rel="tag"># OLTP</a>
+          
+            <a href="/tags/OLAP/" rel="tag"># OLAP</a>
           
         </div>
       
@@ -375,8 +379,8 @@ Comet：基于 HTTP 长连接的服务器推技术">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/28/False-sharing/" rel="next" title="False sharing">
-                <i class="fa fa-chevron-left"></i> False sharing
+              <a href="/2017/01/13/DNS-root-servers/" rel="next" title="DNS: root servers">
+                <i class="fa fa-chevron-left"></i> DNS: root servers
               </a>
             
           </div>
@@ -384,10 +388,6 @@ Comet：基于 HTTP 长连接的服务器推技术">
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/11/18/小而巧的数字压缩算法：zigzag/" rel="prev" title="小而巧的数字压缩算法：zigzag">
-                小而巧的数字压缩算法：zigzag <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -646,9 +646,9 @@ Comet：基于 HTTP 长连接的服务器推技术">
 
     <script type="text/javascript">
       var disqus_shortname = 'tianshuang';
-      var disqus_identifier = '2016/10/20/Comet：基于-HTTP-长连接的服务器推技术/';
+      var disqus_identifier = '2017/01/17/OLTP-vs-OLAP/';
 
-      var disqus_title = "Comet：基于 HTTP 长连接的服务器推技术";
+      var disqus_title = "OLTP vs. OLAP";
 
 
       function run_disqus_script(disqus_script) {
