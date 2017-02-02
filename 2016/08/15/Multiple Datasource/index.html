@@ -86,16 +86,16 @@
 
 
 
-<meta name="description" content="最近项目中需要接入多个数据源，起初准备让Mybatis来进行数据源的动态选择，但查询Mybatis的相关文档后，未发现官方对多数据源的支持，并且笔者的项目中Mybatis的使用采用全注解的方式，如果实例化两个SqlSessionFactory，在全注解使用Mybatis的情况下，无法显式指定某个Mapper使用哪一个sqlSessionFactory。继续查询相关资料，发现Spring自2.0.1">
+<meta name="description" content="最近项目中需要接入多个数据源，起初准备让Mybatis来进行数据源的动态选择，但查询Mybatis的相关文档后，未发现官方对多数据源的支持，并且笔者的项目中Mybatis的使用采用全注解的方式，如果实例化两个SqlSessionFactory，在全注解使用Mybatis的情况下，无法显式指定某个Mapper使用哪一个sqlSessionFactory。继续查询相关资料，发现Spring自2.0.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Multiple Datasource">
 <meta property="og:url" content="https://tianshuang.me/2016/08/15/Multiple Datasource/index.html">
 <meta property="og:site_name" content="Poison">
-<meta property="og:description" content="最近项目中需要接入多个数据源，起初准备让Mybatis来进行数据源的动态选择，但查询Mybatis的相关文档后，未发现官方对多数据源的支持，并且笔者的项目中Mybatis的使用采用全注解的方式，如果实例化两个SqlSessionFactory，在全注解使用Mybatis的情况下，无法显式指定某个Mapper使用哪一个sqlSessionFactory。继续查询相关资料，发现Spring自2.0.1">
+<meta property="og:description" content="最近项目中需要接入多个数据源，起初准备让Mybatis来进行数据源的动态选择，但查询Mybatis的相关文档后，未发现官方对多数据源的支持，并且笔者的项目中Mybatis的使用采用全注解的方式，如果实例化两个SqlSessionFactory，在全注解使用Mybatis的情况下，无法显式指定某个Mapper使用哪一个sqlSessionFactory。继续查询相关资料，发现Spring自2.0.">
 <meta property="og:updated_time" content="2016-08-24T22:16:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Multiple Datasource">
-<meta name="twitter:description" content="最近项目中需要接入多个数据源，起初准备让Mybatis来进行数据源的动态选择，但查询Mybatis的相关文档后，未发现官方对多数据源的支持，并且笔者的项目中Mybatis的使用采用全注解的方式，如果实例化两个SqlSessionFactory，在全注解使用Mybatis的情况下，无法显式指定某个Mapper使用哪一个sqlSessionFactory。继续查询相关资料，发现Spring自2.0.1">
+<meta name="twitter:description" content="最近项目中需要接入多个数据源，起初准备让Mybatis来进行数据源的动态选择，但查询Mybatis的相关文档后，未发现官方对多数据源的支持，并且笔者的项目中Mybatis的使用采用全注解的方式，如果实例化两个SqlSessionFactory，在全注解使用Mybatis的情况下，无法显式指定某个Mapper使用哪一个sqlSessionFactory。继续查询相关资料，发现Spring自2.0.">
 
 
 
@@ -338,7 +338,7 @@
       
 
       
-        <p>最近项目中需要接入多个数据源，起初准备让Mybatis来进行数据源的动态选择，但查询Mybatis的相关文档后，未发现官方对多数据源的支持，并且笔者的项目中Mybatis的使用采用全注解的方式，如果实例化两个SqlSessionFactory，在全注解使用Mybatis的情况下，无法显式指定某个Mapper使用哪一个sqlSessionFactory。<br>继续查询相关资料，发现Spring自2.0.1开始就提供了对动态数据源的支持，参见<a href="http://spring.io/blog/2007/01/23/dynamic-datasource-routing/" target="_blank" rel="external">Dynamic DataSource Routing</a>，咳咳，由于文章历史悠久，追溯至2007年，所以在笔者的项目中笔者对其进行了改进，思路依然与原文基本一致，只不过把文中基于XML的相关配置改为了我们项目中的基于Java Code的配置。</p>
+        <script src="/assets/js/APlayer.min.js"> </script><p>最近项目中需要接入多个数据源，起初准备让Mybatis来进行数据源的动态选择，但查询Mybatis的相关文档后，未发现官方对多数据源的支持，并且笔者的项目中Mybatis的使用采用全注解的方式，如果实例化两个SqlSessionFactory，在全注解使用Mybatis的情况下，无法显式指定某个Mapper使用哪一个sqlSessionFactory。<br>继续查询相关资料，发现Spring自2.0.1开始就提供了对动态数据源的支持，参见<a href="http://spring.io/blog/2007/01/23/dynamic-datasource-routing/" target="_blank" rel="external">Dynamic DataSource Routing</a>，咳咳，由于文章历史悠久，追溯至2007年，所以在笔者的项目中笔者对其进行了改进，思路依然与原文基本一致，只不过把文中基于XML的相关配置改为了我们项目中的基于Java Code的配置。</p>
 <blockquote>
 <p>为了保护隐私，以下代码部分命名被修改</p>
 </blockquote>
@@ -473,7 +473,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">33</span>
+              <span class="site-state-item-count">34</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -483,7 +483,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-count">28</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

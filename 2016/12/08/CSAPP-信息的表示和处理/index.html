@@ -87,18 +87,18 @@
 
 
 <meta name="description" content="算数运算对计算机的算数运算有深刻的理解是写出可靠程序的关键。比如，程序员和编译器不能用表达式（x-y&amp;lt;0）来替代（x&amp;lt;y），因为前者可能会产生溢出。甚至于也不能用表达式（-y&amp;lt;-x）来替代，因为在二进制补码表示中负数和正数的范围是不对称的。算术溢出是造成程序错误和安全漏洞的一个常见根源。
-字每台计算机都有一个字长（word size），指明整数和指针数据的标称大小（nominal">
+字每台计算机都有一个字长（word size），指明整数和指针数据的标称大小（nomina">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSAPP:信息的表示和处理">
 <meta property="og:url" content="https://tianshuang.me/2016/12/08/CSAPP-信息的表示和处理/index.html">
 <meta property="og:site_name" content="Poison">
 <meta property="og:description" content="算数运算对计算机的算数运算有深刻的理解是写出可靠程序的关键。比如，程序员和编译器不能用表达式（x-y&amp;lt;0）来替代（x&amp;lt;y），因为前者可能会产生溢出。甚至于也不能用表达式（-y&amp;lt;-x）来替代，因为在二进制补码表示中负数和正数的范围是不对称的。算术溢出是造成程序错误和安全漏洞的一个常见根源。
-字每台计算机都有一个字长（word size），指明整数和指针数据的标称大小（nominal">
+字每台计算机都有一个字长（word size），指明整数和指针数据的标称大小（nomina">
 <meta property="og:updated_time" content="2016-12-08T08:21:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSAPP:信息的表示和处理">
 <meta name="twitter:description" content="算数运算对计算机的算数运算有深刻的理解是写出可靠程序的关键。比如，程序员和编译器不能用表达式（x-y&amp;lt;0）来替代（x&amp;lt;y），因为前者可能会产生溢出。甚至于也不能用表达式（-y&amp;lt;-x）来替代，因为在二进制补码表示中负数和正数的范围是不对称的。算术溢出是造成程序错误和安全漏洞的一个常见根源。
-字每台计算机都有一个字长（word size），指明整数和指针数据的标称大小（nominal">
+字每台计算机都有一个字长（word size），指明整数和指针数据的标称大小（nomina">
 
 
 
@@ -341,7 +341,7 @@
       
 
       
-        <h5 id="算数运算"><a href="#算数运算" class="headerlink" title="算数运算"></a>算数运算</h5><p>对计算机的算数运算有深刻的理解是写出可靠程序的关键。比如，程序员和编译器不能用表达式（x-y&lt;0）来替代（x&lt;y），因为前者可能会产生溢出。甚至于也不能用表达式（-y&lt;-x）来替代，因为在二进制补码表示中负数和正数的范围是不对称的。算术溢出是造成程序错误和安全漏洞的一个常见根源。</p>
+        <script src="/assets/js/APlayer.min.js"> </script><h5 id="算数运算"><a href="#算数运算" class="headerlink" title="算数运算"></a>算数运算</h5><p>对计算机的算数运算有深刻的理解是写出可靠程序的关键。比如，程序员和编译器不能用表达式（x-y&lt;0）来替代（x&lt;y），因为前者可能会产生溢出。甚至于也不能用表达式（-y&lt;-x）来替代，因为在二进制补码表示中负数和正数的范围是不对称的。算术溢出是造成程序错误和安全漏洞的一个常见根源。</p>
 <h5 id="字"><a href="#字" class="headerlink" title="字"></a>字</h5><p>每台计算机都有一个字长（word size），指明整数和指针数据的标称大小（nominal size）。因为虚拟地址是以这样的一个字来编码的，所以字长决定的最重要的系统参数就是虚拟地址空间的最大大小。也就是说，对于一个字长尾w位的机器而言，虚拟地址的范围为0～2<sup>w</sup>-1，程序最多访问2<sup>w</sup>个字节。</p>
 <h5 id="寻址和字节顺序"><a href="#寻址和字节顺序" class="headerlink" title="寻址和字节顺序"></a>寻址和字节顺序</h5><p>某些机器选择在存储器中按照最低有效字节到最高有效字节的顺序存储对象，而另一些机器则按照从最高有效字节到最低有效字节的顺序存储。前一种规则————最低有效字节在最前面的方式，称为小端法（little endian）。大多数Intel兼容机都采用这种规则。后一种规则————最高有效字节在最前面的方式，称为大端法（big endian）。大多数IBM和Sun Microsystems的机器都采用这种规则。注意我们说的是“大多数”。这些规则并没有按照企业界限来划分。比如，IBM和Sun制造的个人计算机使用的是Intel兼容的处理器，因此用的就是小端法。许多比较新的微处理器使用双端法（bi-endian），也就是说可以把它们配置成座位大端或者小端的机器运行。</p>
 <h5 id="移位运算"><a href="#移位运算" class="headerlink" title="移位运算"></a>移位运算</h5><p>一般而言，机器支持两种形式的右移：逻辑右移和算术右移。逻辑右移在左端补k个0，算术右移是在左端补k个最高有效位的值。<br>C语言标准并没有明确定义应该是用哪种类型的右移。对于无符号数据（也就是以限定词unsigned声明的整型对象），右移必须是逻辑的。而对于有符号数据（默认的声明的整型对象），算术的或者逻辑的右移都可以。不幸的是，这就意味着假设一种或者另一种右移形式的代码都潜在着可移植性问题。然而，实际上，几乎所有的编译器／机器组合都对有符号数据使用算术右移，且许多程序员也都假设机器会使用这种右移。<br>另一方面，Java对于如何进行右移有明确的定义。表达式x&gt;&gt;k会将x算术右移k个位置，而x&gt;&gt;&gt;k会对x做逻辑右移。</p>
@@ -468,7 +468,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">33</span>
+              <span class="site-state-item-count">34</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -478,7 +478,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-count">28</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
