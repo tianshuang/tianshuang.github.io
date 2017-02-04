@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tianshuang.me/"/>
-  <updated>2017-02-02T15:36:26.000Z</updated>
+  <updated>2017-02-04T06:48:33.000Z</updated>
   <id>https://tianshuang.me/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>A ZeroMQ string</title>
+    <link href="https://tianshuang.me/2017/02/04/A-ZeroMQ-string/"/>
+    <id>https://tianshuang.me/2017/02/04/A-ZeroMQ-string/</id>
+    <published>2017-02-04T06:40:01.000Z</published>
+    <updated>2017-02-04T06:48:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p><img src="https://ohpew91u7.qnssl.com/2017/02/A%20ZeroMQ%20string.png" alt="A ZeroMQ string"></p>
+<p>ZeroMQ strings are length-specified and are sent on the wire without a trailing null. In the simplest case (and we’ll do this in our examples), a ZeroMQ string maps neatly to a ZeroMQ message frame, which looks like the above figure—a length and some bytes.</p>
+<p>看到这里诸位可以联想到Redis里的“simple dynamic string”也是采用类似的实现。详情请点击<a href="http://redisbook.com/preview/sds/implementation.html" target="_blank" rel="external">SDS 的定义</a>。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;&lt;img src=&quot;https://ohpew91u7.qnssl.com/2017/02/A%20ZeroMQ%20string.png&quot; alt=&quot;A ZeroMQ st
+    
+    </summary>
+    
+    
+      <category term="ZeroMQ" scheme="https://tianshuang.me/tags/ZeroMQ/"/>
+    
+  </entry>
   
   <entry>
     <title>回答</title>
