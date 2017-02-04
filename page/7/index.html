@@ -478,15 +478,14 @@
 
       
         
-          
-            <script src="/assets/js/APlayer.min.js"> </script><p>最近在使用Java调用Shell脚本时，需要获取Shell脚本执行后输出到控制台的文本，然后随手就写出了以下代码（本着尽量使用第三方类库不自己造轮子的思想）…<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> (StringUtils.isNotBlank(line = stdInput.readLine())) &#123;</div><div class="line">    lines.add(line);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>跑测试时可怎么也读不到Shell脚本的输出啊，尼玛，检查万分，梦中惊醒，这可是while啊，我用StringUtils.isNotBlank搞毛线啊，读到一行第一行为空的就不继续读了，这里的终止条件应该为读到流结束（即readLine返回为null）啊，果断更改代码为：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> ((line = stdInput.readLine()) != <span class="keyword">null</span>) &#123;</div><div class="line">    lines.add(line);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>更改后一切正常…代码写多了后经常不假思索就敲了下去，这次就是一个教训，谨记。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Reads a line of text.  A line is considered to be terminated by any one</div><div class="line"> * of a line feed ('\n'), a carriage return ('\r'), or a carriage return</div><div class="line"> * followed immediately by a linefeed.</div><div class="line"> *</div><div class="line"> * <span class="doctag">@return</span>     A String containing the contents of the line, not including</div><div class="line"> *             any line-termination characters, or null if the end of the</div><div class="line"> *             stream has been reached</div><div class="line"> *</div><div class="line"> * <span class="doctag">@exception</span>  IOException  If an I/O error occurs</div><div class="line"> *</div><div class="line"> * <span class="doctag">@see</span> java.nio.file.Files#readAllLines</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">readLine</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">    <span class="keyword">return</span> readLine(<span class="keyword">false</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>or null if the end of the stream has been reached</p>
-</blockquote>
-
-          
+          <p>最近在使用Java调用Shell脚本时，需要获取Shell脚本执行后输出到控制台的文本，然后随手就写出了以下代码（本着尽量使用第三方类库不自己造轮子的思想）…<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> (StringUtils.isNotBlank(line = stdInput.readLine())) &#123;</div><div class="line">    lines.add(line);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/15/记一起while引发的惨剧/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -883,16 +882,17 @@
 
       
         
-          
-            <script src="/assets/js/APlayer.min.js"> </script><blockquote class="blockquote-center">风险越高，收益越大</blockquote>
+          <blockquote class="blockquote-center">风险越高，收益越大</blockquote>
 
 <p>新年，已经没了小时候的些许期待，年复一年。</p>
 <p>回顾2015，专业技能方面稳步增长，但感觉驱动自己向前的力量没以前那么强了，可能已经渐渐厌倦大学生活，破茧待出，心里渴望急需闯进外面的世界。春节前考过了科目三，2016终于不会再在练车上消耗时间。白条和花呗真不是好东西（才把2015欠的债还清的我会乱说？），嗯，我恨不得它把我的额度都给收回去。</p>
-<p>新的一年，首要的事就是对自己的技术栈查缺补漏，夯实基础，毕竟也就这个学期了，接下来就要面临校招了。玩手机时少花时间在Twitter和Weibo上，刷多了你会发现这国家真是没救了，但又改变不了什么。把时间迁移到多看阅读（此处非广告）上，利用玩手机的时间多看看出版物书籍，这几年看过的纸质书都堆了好几摞了，不过大部分是技术书，但现在却在慢慢看一些人文方面的书籍，不能把自己完全困在技术圈子里，毕竟技术不是生活的全部。今年下半年应该会搬回自己的宿舍，大一住了一年宿舍，由于偶然的机会结识了核自院的老师，大二大三住在教学楼里，虽然和另外一位朋友一起，但依旧非常安静，特别是晚自习结束后，整座楼寂静无声，有空调有网并且从不断电，正是这个环境给了我自由学习探索的空间，没人打扰，可以自己决定工作到夜间什么时刻，在这里学习的效率也是非常高的，完成了自己知识体系从点到面的一些积累，在这个过程中就好像一扇扇门依次打开，哦，天呐，我敢打赌，这用户体验真是极好的，就像隔壁苏珊婶婶做的苹果派一样。</p>
-<p>另附在家乡这个小县城中饭桌上屡次出现的一些有趣的对话：入党没啊？怎么不入党啊？入了以后好当官啊。考研不啊？咋不考研呢？不考研怎么找工作啊？</p>
-<p>新年快乐，每个人都有自己的故事。</p>
-
-          
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/02/08/Hello-2016/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

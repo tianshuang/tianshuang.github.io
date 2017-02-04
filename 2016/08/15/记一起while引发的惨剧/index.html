@@ -86,19 +86,16 @@
 
 
 
-<meta name="description" content="最近在使用Java调用Shell脚本时，需要获取Shell脚本执行后输出到控制台的文本，然后随手就写出了以下代码（本着尽量使用第三方类库不自己造轮子的思想）…123while (StringUtils.isNotBlank(line = stdInput.readLine())) &amp;#123;    lines.add(line);&amp;#125;
-跑测试时可怎么也读不到Shell脚本的输出啊，尼玛">
+<meta name="description" content="最近在使用Java调用Shell脚本时，需要获取Shell脚本执行后输出到控制台的文本，然后随手就写出了以下代码（本着尽量使用第三方类库不自己造轮子的思想）…123while (StringUtils.isNotBlank(line = stdInput.readLine())) &amp;#123;    lines.add(line);&amp;#125;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="记一起while引发的惨剧">
 <meta property="og:url" content="https://tianshuang.me/2016/08/15/记一起while引发的惨剧/index.html">
 <meta property="og:site_name" content="Poison">
-<meta property="og:description" content="最近在使用Java调用Shell脚本时，需要获取Shell脚本执行后输出到控制台的文本，然后随手就写出了以下代码（本着尽量使用第三方类库不自己造轮子的思想）…123while (StringUtils.isNotBlank(line = stdInput.readLine())) &amp;#123;    lines.add(line);&amp;#125;
-跑测试时可怎么也读不到Shell脚本的输出啊，尼玛">
-<meta property="og:updated_time" content="2016-08-15T00:17:22.000Z">
+<meta property="og:description" content="最近在使用Java调用Shell脚本时，需要获取Shell脚本执行后输出到控制台的文本，然后随手就写出了以下代码（本着尽量使用第三方类库不自己造轮子的思想）…123while (StringUtils.isNotBlank(line = stdInput.readLine())) &amp;#123;    lines.add(line);&amp;#125;">
+<meta property="og:updated_time" content="2017-02-04T03:50:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记一起while引发的惨剧">
-<meta name="twitter:description" content="最近在使用Java调用Shell脚本时，需要获取Shell脚本执行后输出到控制台的文本，然后随手就写出了以下代码（本着尽量使用第三方类库不自己造轮子的思想）…123while (StringUtils.isNotBlank(line = stdInput.readLine())) &amp;#123;    lines.add(line);&amp;#125;
-跑测试时可怎么也读不到Shell脚本的输出啊，尼玛">
+<meta name="twitter:description" content="最近在使用Java调用Shell脚本时，需要获取Shell脚本执行后输出到控制台的文本，然后随手就写出了以下代码（本着尽量使用第三方类库不自己造轮子的思想）…123while (StringUtils.isNotBlank(line = stdInput.readLine())) &amp;#123;    lines.add(line);&amp;#125;">
 
 
 
@@ -342,6 +339,7 @@
 
       
         <script src="/assets/js/APlayer.min.js"> </script><p>最近在使用Java调用Shell脚本时，需要获取Shell脚本执行后输出到控制台的文本，然后随手就写出了以下代码（本着尽量使用第三方类库不自己造轮子的思想）…<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> (StringUtils.isNotBlank(line = stdInput.readLine())) &#123;</div><div class="line">    lines.add(line);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <p>跑测试时可怎么也读不到Shell脚本的输出啊，尼玛，检查万分，梦中惊醒，这可是while啊，我用StringUtils.isNotBlank搞毛线啊，读到一行第一行为空的就不继续读了，这里的终止条件应该为读到流结束（即readLine返回为null）啊，果断更改代码为：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> ((line = stdInput.readLine()) != <span class="keyword">null</span>) &#123;</div><div class="line">    lines.add(line);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>更改后一切正常…代码写多了后经常不假思索就敲了下去，这次就是一个教训，谨记。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Reads a line of text.  A line is considered to be terminated by any one</div><div class="line"> * of a line feed ('\n'), a carriage return ('\r'), or a carriage return</div><div class="line"> * followed immediately by a linefeed.</div><div class="line"> *</div><div class="line"> * <span class="doctag">@return</span>     A String containing the contents of the line, not including</div><div class="line"> *             any line-termination characters, or null if the end of the</div><div class="line"> *             stream has been reached</div><div class="line"> *</div><div class="line"> * <span class="doctag">@exception</span>  IOException  If an I/O error occurs</div><div class="line"> *</div><div class="line"> * <span class="doctag">@see</span> java.nio.file.Files#readAllLines</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">readLine</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">    <span class="keyword">return</span> readLine(<span class="keyword">false</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <blockquote>
