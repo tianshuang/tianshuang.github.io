@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tianshuang.me/"/>
-  <updated>2017-02-08T15:09:58.000Z</updated>
+  <updated>2017-02-08T17:24:35.000Z</updated>
   <id>https://tianshuang.me/</id>
   
   <author>
@@ -14,6 +14,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>迟来的2016年度总结</title>
+    <link href="https://tianshuang.me/2017/02/08/%E8%BF%9F%E6%9D%A5%E7%9A%842016%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/"/>
+    <id>https://tianshuang.me/2017/02/08/迟来的2016年度总结/</id>
+    <published>2017-02-08T15:35:33.000Z</published>
+    <updated>2017-02-08T17:24:35.000Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><blockquote class="blockquote-center">青春啊<br>总是在这样分裂的失落的煎熬的夜晚让人伤心<br>我多么想你<br>只能轻轻唱歌</blockquote>
+
+<p>在这正月十二的夜晚，笔者挑灯夜战之后，写下这份迟来的2016年度总结。16年已经成为过去，这一年，经历了太多事，四月初出学校实习，长辈的离世，各项事务繁杂不清。2016，注定是悲伤的一年。</p>
+<a id="more"></a>
+<p>开学早早来到学校，三月面了阿里的实习内推，当然，历史总是惊人的相似，挂了，不过，作为一个渣学历的本科生，被刷是很正常的，当然，这不是失败的借口。笔者的第二次面试就是笔者现在的公司，然后就实习呗，当然，这次的面试官之前也是阿里的，这面试和笔者阿里实习内推面问的知识点是差不多的，因为岗位都是Java服务器端工程师，还告诉笔者阿里现在校招集团要求学校评级是A以上，没过也很正常。然后笔者就开始了实习生涯，因为这边给的Offer虽然比不上知乎上的随手几十w的年薪，但相对来说，也不会算低，并且在成都，笔者17年要面临毕业，学校还有一些事务需要处理，所以暂时不方便离开成都，这也是笔者后面没有再去参加其他面试的原因之一。以上是笔者的实习求职过程，生活的艰辛在这种时候体现得淋漓尽致。</p>
+<p>长辈的离世，让我恍如从梦中惊醒，一切都成了昨天，化为了回忆，不知不觉一晃二十余年，一直以为时间还有很多，想起送我的心形夜光石，不知散落到了何处，有的事只能长眠于记忆。</p>
+<p>同事准备在成都买房，苦于迟迟没有下手，十月出了新政，错过等一年，希望他能在下一波上涨前买下。</p>
+<p>吃饭，唱K，室友Moses追女生技术欠佳，屡次失手，室友RH就不一样了，成功率蛮高，当然，室友HB更是高人，只是不愿出招，还有三四个月就毕业了，四年转瞬即逝，即将各奔东西，不知还能相聚几次。</p>
+<p>二十多岁的年纪，经历最多的就是「迷茫」，能怎么办？像李逼说的，熬呗，就是熬，没有其他办法。</p>
+<p>晚安吧。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote class=&quot;blockquote-center&quot;&gt;青春啊&lt;br&gt;总是在这样分裂的失落的煎熬的夜晚让人伤心&lt;br&gt;我多么想你&lt;br&gt;只能轻轻唱歌&lt;/blockquote&gt;
+
+&lt;p&gt;在这正月十二的夜晚，笔者挑灯夜战之后，写下这份迟来的2016年度总结。16年已经成为过去，这一年，经历了太多事，四月初出学校实习，长辈的离世，各项事务繁杂不清。2016，注定是悲伤的一年。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="2016" scheme="https://tianshuang.me/tags/2016/"/>
+    
+      <category term="年度总结" scheme="https://tianshuang.me/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>What Is /dev/shm And Its Practical Usage</title>
