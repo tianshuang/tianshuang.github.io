@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tianshuang.me/"/>
-  <updated>2017-02-04T06:48:33.000Z</updated>
+  <updated>2017-02-08T15:09:58.000Z</updated>
   <id>https://tianshuang.me/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>What Is /dev/shm And Its Practical Usage</title>
+    <link href="https://tianshuang.me/2017/02/07/What-Is-dev-shm-And-Its-Practical-Usage/"/>
+    <id>https://tianshuang.me/2017/02/07/What-Is-dev-shm-And-Its-Practical-Usage/</id>
+    <published>2017-02-07T06:25:33.000Z</published>
+    <updated>2017-02-08T15:09:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>之前看caoz的文章里写到/dev/shm的用处，顺手Google之，感兴趣者可参见下方链接。</p>
+<p><a href="https://www.cyberciti.biz/tips/what-is-devshm-and-its-practical-usage.html" target="_blank" rel="external">What Is /dev/shm And Its Practical Usage</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;之前看caoz的文章里写到/dev/shm的用处，顺手Google之，感兴趣者可参见下方链接。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.cyberciti.b
+    
+    </summary>
+    
+    
+      <category term="/dev/shm" scheme="https://tianshuang.me/tags/dev-shm/"/>
+    
+  </entry>
   
   <entry>
     <title>A ZeroMQ string</title>
