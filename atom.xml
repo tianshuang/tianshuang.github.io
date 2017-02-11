@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tianshuang.me/"/>
-  <updated>2017-02-08T17:28:53.000Z</updated>
+  <updated>2017-02-11T04:47:30.000Z</updated>
   <id>https://tianshuang.me/</id>
   
   <author>
@@ -14,6 +14,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为什么文件名要小写？</title>
+    <link href="https://tianshuang.me/2017/02/11/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%96%87%E4%BB%B6%E5%90%8D%E8%A6%81%E5%B0%8F%E5%86%99%EF%BC%9F/"/>
+    <id>https://tianshuang.me/2017/02/11/为什么文件名要小写？/</id>
+    <published>2017-02-11T04:46:08.000Z</published>
+    <updated>2017-02-11T04:47:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>转自<a href="http://www.ruanyifeng.com/blog/2017/02/filename-should-be-lowercase.html" target="_blank" rel="external">为什么文件名要小写？</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;转自&lt;a href=&quot;http://www.ruanyifeng.com/blog/2017/02/filename-should-be-lowercase.html&quot; ta
+    
+    </summary>
+    
+    
+      <category term="文件名" scheme="https://tianshuang.me/tags/%E6%96%87%E4%BB%B6%E5%90%8D/"/>
+    
+  </entry>
   
   <entry>
     <title>迟来的2016年度总结</title>
