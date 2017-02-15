@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tianshuang.me/"/>
-  <updated>2017-02-11T04:47:30.000Z</updated>
+  <updated>2017-02-15T16:00:50.000Z</updated>
   <id>https://tianshuang.me/</id>
   
   <author>
@@ -14,6 +14,97 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一则经典技术面试题目的解读</title>
+    <link href="https://tianshuang.me/2017/02/15/%E4%B8%80%E5%88%99%E7%BB%8F%E5%85%B8%E6%8A%80%E6%9C%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9B%AE%E7%9A%84%E8%A7%A3%E8%AF%BB/"/>
+    <id>https://tianshuang.me/2017/02/15/一则经典技术面试题目的解读/</id>
+    <published>2017-02-15T15:55:00.000Z</published>
+    <updated>2017-02-15T16:00:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>笔者从Pocket里翻出了这篇caoz的<a href="http://mp.weixin.qq.com/s?__biz=MzI0MjA1Mjg2Ng==&amp;mid=209679438&amp;idx=1&amp;sn=d68c1512ad23f6e164f69bd351a18c62&amp;scene=21#wechat_redirect" target="_blank" rel="external">「一则经典技术面试题目的解读」</a>，其实这篇文章说的这道面试题在许令波的<a href="https://book.douban.com/subject/10546925/" target="_blank" rel="external">《深入分析Java Web技术内幕（修订版）》</a>也提到过，笔者也是当年大二读过此书后对用户的一次访问有了全局性的认识，后面再慢慢将相关的知识点补齐，现在的大多数文章就像快餐，要想系统性的学习还是要看完相关书籍，这也应了那句话，“没有捷径可走”。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;笔者从Pocket里翻出了这篇caoz的&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzI0MjA1Mjg2Ng==&amp;amp;mid=2
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="https://tianshuang.me/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>道哥的黑板报</title>
+    <link href="https://tianshuang.me/2017/02/15/%E9%81%93%E5%93%A5%E7%9A%84%E9%BB%91%E6%9D%BF%E6%8A%A5/"/>
+    <id>https://tianshuang.me/2017/02/15/道哥的黑板报/</id>
+    <published>2017-02-15T15:35:53.000Z</published>
+    <updated>2017-02-15T15:50:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>知道道哥是因为大二读闲书时读了<a href="https://book.douban.com/subject/10546925/" target="_blank" rel="external">《白帽子讲Web安全》</a>，由于最近几天笔者在我司忙于迁移对象存储及测试daily环境下重新调整后的稳定性，笔者的Pocket里堆满了未读文章。昨日工作基本做完了，今日得以有空来筛选Pocket里的知识，这篇<a href="http://mp.weixin.qq.com/s/_snozlQIcfROxuexpVTe9Q" target="_blank" rel="external">「我回阿里的29个月」</a>是道哥2月8日就发布的，今日才得以阅读，印象最深的一点就是“没有捷径可走”，这也是caoz多次提到的，就算是富二代，那也是别人父亲一手打拼起来的啊。所以，许多时候还是该沉下心来做事，你我和这些大神比起来都太过渺小，做好当下的工作，不要浪费每一天。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;知道道哥是因为大二读闲书时读了&lt;a href=&quot;https://book.douban.com/subject/10546925/&quot; target=&quot;_blank&quot; rel=
+    
+    </summary>
+    
+    
+      <category term="安全" scheme="https://tianshuang.me/tags/%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RegExr 可视化正则工具</title>
+    <link href="https://tianshuang.me/2017/02/15/RegExr-%E5%8F%AF%E8%A7%86%E5%8C%96%E6%AD%A3%E5%88%99%E5%B7%A5%E5%85%B7/"/>
+    <id>https://tianshuang.me/2017/02/15/RegExr-可视化正则工具/</id>
+    <published>2017-02-15T15:24:54.000Z</published>
+    <updated>2017-02-15T15:33:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>微博上看见网路冷眼推荐的，之前需要测试自己写的正则是否正确都是手写程序验证的，不及可视化来得实在，不用再解释了，上链接。</p>
+<p><a href="http://regexr.com/" target="_blank" rel="external">RegExr is an online tool to learn, build, &amp; test Regular Expressions (RegEx / RegExp).</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;微博上看见网路冷眼推荐的，之前需要测试自己写的正则是否正确都是手写程序验证的，不及可视化来得实在，不用再解释了，上链接。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://reg
+    
+    </summary>
+    
+    
+      <category term="regex" scheme="https://tianshuang.me/tags/regex/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>域名服务器缓存污染</title>
+    <link href="https://tianshuang.me/2017/02/15/%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%93%E5%AD%98%E6%B1%A1%E6%9F%93/"/>
+    <id>https://tianshuang.me/2017/02/15/域名服务器缓存污染/</id>
+    <published>2017-02-15T07:20:38.000Z</published>
+    <updated>2017-02-15T15:32:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>无意间点进了这个wiki词条，当时实习面试时还讨论过这个问题，当在中国大陆解析google.com时是怎么处理的，因为笔者之前看过相关的资料，就把之前的说了一遍，比如说解析到阿塞拜疆啊等等，说到DNS，你可以将话题延伸至UDP，可以谈到UDP的不可靠性，就域名劫持这个方面又可以延伸至HTTPDNS，说到HTTPDNS又可以说到智能DNS，根据客户端IP定向解析，从此说到CDN是怎么判断用户当前最近的节点的等等，还能提到迅雷15年做的CDN，模式就像滴滴、Uber以及现在遍布街头的共享单车。当然，以上任何一点都不是简单几句话能讲清楚的，其实如果能谈到这里的话，与面试官在讨论中已经是一种平等的交流关系了，在此体现了知识的广度，注意，也仅仅是广度而已，当然，这些都是建立在某一块知识的深度之上的，属于附加分。所以笔者的建议还是由深至广。</p>
+<a id="more"></a>
+<p>扯了这么多，该上硬菜了，大家还是看词条吧。</p>
+<p><a href="https://zh.wikipedia.org/zh-cn/%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%93%E5%AD%98%E6%B1%A1%E6%9F%93" target="_blank" rel="external">域名服务器缓存污染</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;无意间点进了这个wiki词条，当时实习面试时还讨论过这个问题，当在中国大陆解析google.com时是怎么处理的，因为笔者之前看过相关的资料，就把之前的说了一遍，比如说解析到阿塞拜疆啊等等，说到DNS，你可以将话题延伸至UDP，可以谈到UDP的不可靠性，就域名劫持这个方面又可以延伸至HTTPDNS，说到HTTPDNS又可以说到智能DNS，根据客户端IP定向解析，从此说到CDN是怎么判断用户当前最近的节点的等等，还能提到迅雷15年做的CDN，模式就像滴滴、Uber以及现在遍布街头的共享单车。当然，以上任何一点都不是简单几句话能讲清楚的，其实如果能谈到这里的话，与面试官在讨论中已经是一种平等的交流关系了，在此体现了知识的广度，注意，也仅仅是广度而已，当然，这些都是建立在某一块知识的深度之上的，属于附加分。所以笔者的建议还是由深至广。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="DNS" scheme="https://tianshuang.me/tags/DNS/"/>
+    
+      <category term="GFW" scheme="https://tianshuang.me/tags/GFW/"/>
+    
+  </entry>
   
   <entry>
     <title>为什么文件名要小写？</title>
