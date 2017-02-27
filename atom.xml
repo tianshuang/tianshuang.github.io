@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Poison</title>
-  <subtitle>这让人心慌</subtitle>
+  <subtitle>田爽</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tianshuang.me/"/>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>High Performance Browser Networking</title>
-    <link href="https://tianshuang.me/2017/02/24/High-Performance-Browser-Networking/index.html"/>
-    <id>https://tianshuang.me/2017/02/24/High-Performance-Browser-Networking/index.html</id>
+    <link href="https://tianshuang.me/High-Performance-Browser-Networking/index.html"/>
+    <id>https://tianshuang.me/High-Performance-Browser-Networking/index.html</id>
     <published>2017-02-24T14:57:17.000Z</published>
     <updated>2017-02-24T15:01:31.000Z</updated>
     
@@ -39,8 +39,8 @@
   
   <entry>
     <title>多动态图详细讲解二叉搜索树</title>
-    <link href="https://tianshuang.me/2017/02/24/%E5%A4%9A%E5%8A%A8%E6%80%81%E5%9B%BE%E8%AF%A6%E7%BB%86%E8%AE%B2%E8%A7%A3%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/index.html"/>
-    <id>https://tianshuang.me/2017/02/24/多动态图详细讲解二叉搜索树/index.html</id>
+    <link href="https://tianshuang.me/%E5%A4%9A%E5%8A%A8%E6%80%81%E5%9B%BE%E8%AF%A6%E7%BB%86%E8%AE%B2%E8%A7%A3%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/index.html"/>
+    <id>https://tianshuang.me/多动态图详细讲解二叉搜索树/index.html</id>
     <published>2017-02-24T14:55:45.000Z</published>
     <updated>2017-02-24T14:56:23.000Z</updated>
     
@@ -58,8 +58,8 @@
   
   <entry>
     <title>阿里巴巴Java开发手册 笔记</title>
-    <link href="https://tianshuang.me/2017/02/17/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4Java%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C-%E7%AC%94%E8%AE%B0/index.html"/>
-    <id>https://tianshuang.me/2017/02/17/阿里巴巴Java开发手册-笔记/index.html</id>
+    <link href="https://tianshuang.me/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4Java%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C-%E7%AC%94%E8%AE%B0/index.html"/>
+    <id>https://tianshuang.me/阿里巴巴Java开发手册-笔记/index.html</id>
     <published>2017-02-17T10:12:35.000Z</published>
     <updated>2017-02-26T04:05:54.000Z</updated>
     
@@ -144,8 +144,8 @@
   
   <entry>
     <title>一则经典技术面试题目的解读</title>
-    <link href="https://tianshuang.me/2017/02/15/%E4%B8%80%E5%88%99%E7%BB%8F%E5%85%B8%E6%8A%80%E6%9C%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9B%AE%E7%9A%84%E8%A7%A3%E8%AF%BB/index.html"/>
-    <id>https://tianshuang.me/2017/02/15/一则经典技术面试题目的解读/index.html</id>
+    <link href="https://tianshuang.me/%E4%B8%80%E5%88%99%E7%BB%8F%E5%85%B8%E6%8A%80%E6%9C%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9B%AE%E7%9A%84%E8%A7%A3%E8%AF%BB/index.html"/>
+    <id>https://tianshuang.me/一则经典技术面试题目的解读/index.html</id>
     <published>2017-02-15T15:55:00.000Z</published>
     <updated>2017-02-15T16:00:50.000Z</updated>
     
@@ -165,8 +165,8 @@
   
   <entry>
     <title>道哥的黑板报</title>
-    <link href="https://tianshuang.me/2017/02/15/%E9%81%93%E5%93%A5%E7%9A%84%E9%BB%91%E6%9D%BF%E6%8A%A5/index.html"/>
-    <id>https://tianshuang.me/2017/02/15/道哥的黑板报/index.html</id>
+    <link href="https://tianshuang.me/%E9%81%93%E5%93%A5%E7%9A%84%E9%BB%91%E6%9D%BF%E6%8A%A5/index.html"/>
+    <id>https://tianshuang.me/道哥的黑板报/index.html</id>
     <published>2017-02-15T15:35:53.000Z</published>
     <updated>2017-02-15T15:50:13.000Z</updated>
     
@@ -186,8 +186,8 @@
   
   <entry>
     <title>RegExr 可视化正则工具</title>
-    <link href="https://tianshuang.me/2017/02/15/RegExr-%E5%8F%AF%E8%A7%86%E5%8C%96%E6%AD%A3%E5%88%99%E5%B7%A5%E5%85%B7/index.html"/>
-    <id>https://tianshuang.me/2017/02/15/RegExr-可视化正则工具/index.html</id>
+    <link href="https://tianshuang.me/RegExr-%E5%8F%AF%E8%A7%86%E5%8C%96%E6%AD%A3%E5%88%99%E5%B7%A5%E5%85%B7/index.html"/>
+    <id>https://tianshuang.me/RegExr-可视化正则工具/index.html</id>
     <published>2017-02-15T15:24:54.000Z</published>
     <updated>2017-02-15T15:33:23.000Z</updated>
     
@@ -209,8 +209,8 @@
   
   <entry>
     <title>域名服务器缓存污染</title>
-    <link href="https://tianshuang.me/2017/02/15/%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%93%E5%AD%98%E6%B1%A1%E6%9F%93/index.html"/>
-    <id>https://tianshuang.me/2017/02/15/域名服务器缓存污染/index.html</id>
+    <link href="https://tianshuang.me/%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%93%E5%AD%98%E6%B1%A1%E6%9F%93/index.html"/>
+    <id>https://tianshuang.me/域名服务器缓存污染/index.html</id>
     <published>2017-02-15T07:20:38.000Z</published>
     <updated>2017-02-15T15:32:57.000Z</updated>
     
@@ -235,8 +235,8 @@
   
   <entry>
     <title>为什么文件名要小写？</title>
-    <link href="https://tianshuang.me/2017/02/11/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%96%87%E4%BB%B6%E5%90%8D%E8%A6%81%E5%B0%8F%E5%86%99%EF%BC%9F/index.html"/>
-    <id>https://tianshuang.me/2017/02/11/为什么文件名要小写？/index.html</id>
+    <link href="https://tianshuang.me/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%96%87%E4%BB%B6%E5%90%8D%E8%A6%81%E5%B0%8F%E5%86%99%EF%BC%9F/index.html"/>
+    <id>https://tianshuang.me/为什么文件名要小写？/index.html</id>
     <published>2017-02-11T04:46:08.000Z</published>
     <updated>2017-02-11T04:47:30.000Z</updated>
     
@@ -256,8 +256,8 @@
   
   <entry>
     <title>迟来的2016年度总结</title>
-    <link href="https://tianshuang.me/2017/02/08/%E8%BF%9F%E6%9D%A5%E7%9A%842016%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/index.html"/>
-    <id>https://tianshuang.me/2017/02/08/迟来的2016年度总结/index.html</id>
+    <link href="https://tianshuang.me/%E8%BF%9F%E6%9D%A5%E7%9A%842016%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/index.html"/>
+    <id>https://tianshuang.me/迟来的2016年度总结/index.html</id>
     <published>2017-02-08T15:35:33.000Z</published>
     <updated>2017-02-08T17:28:53.000Z</updated>
     
@@ -290,8 +290,8 @@
   
   <entry>
     <title>What Is /dev/shm And Its Practical Usage</title>
-    <link href="https://tianshuang.me/2017/02/07/What-Is-dev-shm-And-Its-Practical-Usage/index.html"/>
-    <id>https://tianshuang.me/2017/02/07/What-Is-dev-shm-And-Its-Practical-Usage/index.html</id>
+    <link href="https://tianshuang.me/What-Is-dev-shm-And-Its-Practical-Usage/index.html"/>
+    <id>https://tianshuang.me/What-Is-dev-shm-And-Its-Practical-Usage/index.html</id>
     <published>2017-02-07T06:25:33.000Z</published>
     <updated>2017-02-16T01:42:01.000Z</updated>
     
@@ -313,8 +313,8 @@
   
   <entry>
     <title>A ZeroMQ string</title>
-    <link href="https://tianshuang.me/2017/02/04/A-ZeroMQ-string/index.html"/>
-    <id>https://tianshuang.me/2017/02/04/A-ZeroMQ-string/index.html</id>
+    <link href="https://tianshuang.me/A-ZeroMQ-string/index.html"/>
+    <id>https://tianshuang.me/A-ZeroMQ-string/index.html</id>
     <published>2017-02-04T06:40:01.000Z</published>
     <updated>2017-02-04T06:48:33.000Z</updated>
     
@@ -336,8 +336,8 @@
   
   <entry>
     <title>回答</title>
-    <link href="https://tianshuang.me/2017/02/02/%E5%9B%9E%E7%AD%94/index.html"/>
-    <id>https://tianshuang.me/2017/02/02/回答/index.html</id>
+    <link href="https://tianshuang.me/%E5%9B%9E%E7%AD%94/index.html"/>
+    <id>https://tianshuang.me/回答/index.html</id>
     <published>2017-02-02T15:33:46.000Z</published>
     <updated>2017-02-02T15:36:26.000Z</updated>
     
@@ -357,8 +357,8 @@
   
   <entry>
     <title>丽江之行（暗黑版）</title>
-    <link href="https://tianshuang.me/2017/02/02/%E4%B8%BD%E6%B1%9F%E4%B9%8B%E8%A1%8C%EF%BC%88%E6%9A%97%E9%BB%91%E7%89%88%EF%BC%89/index.html"/>
-    <id>https://tianshuang.me/2017/02/02/丽江之行（暗黑版）/index.html</id>
+    <link href="https://tianshuang.me/%E4%B8%BD%E6%B1%9F%E4%B9%8B%E8%A1%8C%EF%BC%88%E6%9A%97%E9%BB%91%E7%89%88%EF%BC%89/index.html"/>
+    <id>https://tianshuang.me/丽江之行（暗黑版）/index.html</id>
     <published>2017-02-02T12:39:23.000Z</published>
     <updated>2017-02-04T03:48:53.000Z</updated>
     
@@ -390,8 +390,8 @@
   
   <entry>
     <title>回不去的家乡</title>
-    <link href="https://tianshuang.me/2017/02/01/%E5%9B%9E%E4%B8%8D%E5%8E%BB%E7%9A%84%E5%AE%B6%E4%B9%A1/index.html"/>
-    <id>https://tianshuang.me/2017/02/01/回不去的家乡/index.html</id>
+    <link href="https://tianshuang.me/%E5%9B%9E%E4%B8%8D%E5%8E%BB%E7%9A%84%E5%AE%B6%E4%B9%A1/index.html"/>
+    <id>https://tianshuang.me/回不去的家乡/index.html</id>
     <published>2017-02-01T13:40:37.000Z</published>
     <updated>2017-02-04T03:45:47.000Z</updated>
     
@@ -426,8 +426,8 @@
   
   <entry>
     <title>成都 国色天乡千莲音乐节 逼哥</title>
-    <link href="https://tianshuang.me/2017/02/01/%E6%88%90%E9%83%BD-%E5%9B%BD%E8%89%B2%E5%A4%A9%E4%B9%A1%E5%8D%83%E8%8E%B2%E9%9F%B3%E4%B9%90%E8%8A%82-%E9%80%BC%E5%93%A5/index.html"/>
-    <id>https://tianshuang.me/2017/02/01/成都-国色天乡千莲音乐节-逼哥/index.html</id>
+    <link href="https://tianshuang.me/%E6%88%90%E9%83%BD-%E5%9B%BD%E8%89%B2%E5%A4%A9%E4%B9%A1%E5%8D%83%E8%8E%B2%E9%9F%B3%E4%B9%90%E8%8A%82-%E9%80%BC%E5%93%A5/index.html"/>
+    <id>https://tianshuang.me/成都-国色天乡千莲音乐节-逼哥/index.html</id>
     <published>2017-02-01T11:05:08.000Z</published>
     <updated>2017-02-04T03:45:32.000Z</updated>
     
@@ -495,8 +495,8 @@
   
   <entry>
     <title>丽江之行</title>
-    <link href="https://tianshuang.me/2017/01/31/%E4%B8%BD%E6%B1%9F%E4%B9%8B%E8%A1%8C/index.html"/>
-    <id>https://tianshuang.me/2017/01/31/丽江之行/index.html</id>
+    <link href="https://tianshuang.me/%E4%B8%BD%E6%B1%9F%E4%B9%8B%E8%A1%8C/index.html"/>
+    <id>https://tianshuang.me/丽江之行/index.html</id>
     <published>2017-01-31T13:09:56.000Z</published>
     <updated>2017-02-04T03:48:47.000Z</updated>
     
@@ -536,8 +536,8 @@
   
   <entry>
     <title>OLTP vs. OLAP</title>
-    <link href="https://tianshuang.me/2017/01/17/OLTP-vs-OLAP/index.html"/>
-    <id>https://tianshuang.me/2017/01/17/OLTP-vs-OLAP/index.html</id>
+    <link href="https://tianshuang.me/OLTP-vs-OLAP/index.html"/>
+    <id>https://tianshuang.me/OLTP-vs-OLAP/index.html</id>
     <published>2017-01-17T01:46:55.000Z</published>
     <updated>2017-01-17T01:50:32.000Z</updated>
     
@@ -566,8 +566,8 @@
   
   <entry>
     <title>DNS: root servers</title>
-    <link href="https://tianshuang.me/2017/01/13/DNS-root-servers/index.html"/>
-    <id>https://tianshuang.me/2017/01/13/DNS-root-servers/index.html</id>
+    <link href="https://tianshuang.me/DNS-root-servers/index.html"/>
+    <id>https://tianshuang.me/DNS-root-servers/index.html</id>
     <published>2017-01-13T06:53:49.000Z</published>
     <updated>2017-01-13T06:59:41.000Z</updated>
     
@@ -588,8 +588,8 @@
   
   <entry>
     <title>TCP三次握手和Syn-Flood攻击</title>
-    <link href="https://tianshuang.me/2017/01/10/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8CSyn-Flood%E6%94%BB%E5%87%BB/index.html"/>
-    <id>https://tianshuang.me/2017/01/10/TCP三次握手和Syn-Flood攻击/index.html</id>
+    <link href="https://tianshuang.me/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8CSyn-Flood%E6%94%BB%E5%87%BB/index.html"/>
+    <id>https://tianshuang.me/TCP三次握手和Syn-Flood攻击/index.html</id>
     <published>2017-01-10T09:18:28.000Z</published>
     <updated>2017-01-11T07:35:11.000Z</updated>
     
@@ -609,8 +609,8 @@
   
   <entry>
     <title>RESTful架构风格下的4大常见安全问题</title>
-    <link href="https://tianshuang.me/2017/01/06/RESTful%E6%9E%B6%E6%9E%84%E9%A3%8E%E6%A0%BC%E4%B8%8B%E7%9A%844%E5%A4%A7%E5%B8%B8%E8%A7%81%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98/index.html"/>
-    <id>https://tianshuang.me/2017/01/06/RESTful架构风格下的4大常见安全问题/index.html</id>
+    <link href="https://tianshuang.me/RESTful%E6%9E%B6%E6%9E%84%E9%A3%8E%E6%A0%BC%E4%B8%8B%E7%9A%844%E5%A4%A7%E5%B8%B8%E8%A7%81%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98/index.html"/>
+    <id>https://tianshuang.me/RESTful架构风格下的4大常见安全问题/index.html</id>
     <published>2017-01-06T01:39:48.000Z</published>
     <updated>2017-01-06T01:40:47.000Z</updated>
     
@@ -632,8 +632,8 @@
   
   <entry>
     <title>分布式锁</title>
-    <link href="https://tianshuang.me/2016/12/29/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/index.html"/>
-    <id>https://tianshuang.me/2016/12/29/分布式锁/index.html</id>
+    <link href="https://tianshuang.me/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/index.html"/>
+    <id>https://tianshuang.me/分布式锁/index.html</id>
     <published>2016-12-29T08:58:20.000Z</published>
     <updated>2016-12-29T08:59:17.000Z</updated>
     
@@ -653,8 +653,8 @@
   
   <entry>
     <title>我们只畅享最疯狂的速度！</title>
-    <link href="https://tianshuang.me/2016/12/21/%E6%88%91%E4%BB%AC%E5%8F%AA%E7%95%85%E4%BA%AB%E6%9C%80%E7%96%AF%E7%8B%82%E7%9A%84%E9%80%9F%E5%BA%A6%EF%BC%81/index.html"/>
-    <id>https://tianshuang.me/2016/12/21/我们只畅享最疯狂的速度！/index.html</id>
+    <link href="https://tianshuang.me/%E6%88%91%E4%BB%AC%E5%8F%AA%E7%95%85%E4%BA%AB%E6%9C%80%E7%96%AF%E7%8B%82%E7%9A%84%E9%80%9F%E5%BA%A6%EF%BC%81/index.html"/>
+    <id>https://tianshuang.me/我们只畅享最疯狂的速度！/index.html</id>
     <published>2016-12-21T14:26:54.000Z</published>
     <updated>2016-12-21T14:33:53.000Z</updated>
     
@@ -675,8 +675,8 @@
   
   <entry>
     <title>当服务QPS增高时我们做什么</title>
-    <link href="https://tianshuang.me/2016/12/21/%E5%BD%93%E6%9C%8D%E5%8A%A1QPS%E5%A2%9E%E9%AB%98%E6%97%B6%E6%88%91%E4%BB%AC%E5%81%9A%E4%BB%80%E4%B9%88/index.html"/>
-    <id>https://tianshuang.me/2016/12/21/当服务QPS增高时我们做什么/index.html</id>
+    <link href="https://tianshuang.me/%E5%BD%93%E6%9C%8D%E5%8A%A1QPS%E5%A2%9E%E9%AB%98%E6%97%B6%E6%88%91%E4%BB%AC%E5%81%9A%E4%BB%80%E4%B9%88/index.html"/>
+    <id>https://tianshuang.me/当服务QPS增高时我们做什么/index.html</id>
     <published>2016-12-21T03:33:53.000Z</published>
     <updated>2016-12-21T03:37:56.000Z</updated>
     
@@ -696,8 +696,8 @@
   
   <entry>
     <title>MySQL Sorting Rows</title>
-    <link href="https://tianshuang.me/2016/12/15/MySQL-Sorting-Rows/index.html"/>
-    <id>https://tianshuang.me/2016/12/15/MySQL-Sorting-Rows/index.html</id>
+    <link href="https://tianshuang.me/MySQL-Sorting-Rows/index.html"/>
+    <id>https://tianshuang.me/MySQL-Sorting-Rows/index.html</id>
     <published>2016-12-15T02:50:01.000Z</published>
     <updated>2016-12-15T03:12:11.000Z</updated>
     
@@ -720,8 +720,8 @@
   
   <entry>
     <title>在劫难逃</title>
-    <link href="https://tianshuang.me/2016/12/09/%E5%9C%A8%E5%8A%AB%E9%9A%BE%E9%80%83/index.html"/>
-    <id>https://tianshuang.me/2016/12/09/在劫难逃/index.html</id>
+    <link href="https://tianshuang.me/%E5%9C%A8%E5%8A%AB%E9%9A%BE%E9%80%83/index.html"/>
+    <id>https://tianshuang.me/在劫难逃/index.html</id>
     <published>2016-12-09T07:05:18.000Z</published>
     <updated>2016-12-10T14:19:24.000Z</updated>
     
@@ -741,8 +741,8 @@
   
   <entry>
     <title>CSAPP:计算机系统漫游</title>
-    <link href="https://tianshuang.me/2016/12/08/CSAPP-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8/index.html"/>
-    <id>https://tianshuang.me/2016/12/08/CSAPP-计算机系统漫游/index.html</id>
+    <link href="https://tianshuang.me/CSAPP-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8/index.html"/>
+    <id>https://tianshuang.me/CSAPP-计算机系统漫游/index.html</id>
     <published>2016-12-08T07:16:03.000Z</published>
     <updated>2016-12-21T03:35:32.000Z</updated>
     
@@ -762,8 +762,8 @@
   
   <entry>
     <title>CSAPP:信息的表示和处理</title>
-    <link href="https://tianshuang.me/2016/12/08/CSAPP-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86/index.html"/>
-    <id>https://tianshuang.me/2016/12/08/CSAPP-信息的表示和处理/index.html</id>
+    <link href="https://tianshuang.me/CSAPP-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86/index.html"/>
+    <id>https://tianshuang.me/CSAPP-信息的表示和处理/index.html</id>
     <published>2016-12-08T07:08:17.000Z</published>
     <updated>2017-02-04T03:47:50.000Z</updated>
     
@@ -791,8 +791,8 @@
   
   <entry>
     <title>异或操作的妙用</title>
-    <link href="https://tianshuang.me/2016/12/07/%E5%BC%82%E6%88%96%E6%93%8D%E4%BD%9C%E7%9A%84%E5%A6%99%E7%94%A8/index.html"/>
-    <id>https://tianshuang.me/2016/12/07/异或操作的妙用/index.html</id>
+    <link href="https://tianshuang.me/%E5%BC%82%E6%88%96%E6%93%8D%E4%BD%9C%E7%9A%84%E5%A6%99%E7%94%A8/index.html"/>
+    <id>https://tianshuang.me/异或操作的妙用/index.html</id>
     <published>2016-12-07T08:33:03.000Z</published>
     <updated>2016-12-07T13:09:04.000Z</updated>
     
@@ -821,8 +821,8 @@
   
   <entry>
     <title>User space 与 Kernel space</title>
-    <link href="https://tianshuang.me/2016/12/07/User-space-%E4%B8%8E-Kernel-space/index.html"/>
-    <id>https://tianshuang.me/2016/12/07/User-space-与-Kernel-space/index.html</id>
+    <link href="https://tianshuang.me/User-space-%E4%B8%8E-Kernel-space/index.html"/>
+    <id>https://tianshuang.me/User-space-与-Kernel-space/index.html</id>
     <published>2016-12-07T08:22:25.000Z</published>
     <updated>2016-12-07T08:24:04.000Z</updated>
     
@@ -842,8 +842,8 @@
   
   <entry>
     <title>理解字节序</title>
-    <link href="https://tianshuang.me/2016/12/07/%E7%90%86%E8%A7%A3%E5%AD%97%E8%8A%82%E5%BA%8F/index.html"/>
-    <id>https://tianshuang.me/2016/12/07/理解字节序/index.html</id>
+    <link href="https://tianshuang.me/%E7%90%86%E8%A7%A3%E5%AD%97%E8%8A%82%E5%BA%8F/index.html"/>
+    <id>https://tianshuang.me/理解字节序/index.html</id>
     <published>2016-12-07T08:22:10.000Z</published>
     <updated>2016-12-07T08:24:58.000Z</updated>
     
@@ -863,8 +863,8 @@
   
   <entry>
     <title>The substring() Method in JDK 6 and JDK 7</title>
-    <link href="https://tianshuang.me/2016/11/18/The-substring-Method-in-JDK-6-and-JDK-7/index.html"/>
-    <id>https://tianshuang.me/2016/11/18/The-substring-Method-in-JDK-6-and-JDK-7/index.html</id>
+    <link href="https://tianshuang.me/The-substring-Method-in-JDK-6-and-JDK-7/index.html"/>
+    <id>https://tianshuang.me/The-substring-Method-in-JDK-6-and-JDK-7/index.html</id>
     <published>2016-11-18T02:35:43.000Z</published>
     <updated>2016-11-18T02:36:27.000Z</updated>
     
@@ -884,8 +884,8 @@
   
   <entry>
     <title>Java 8 HashMaps, Keys and the Comparable interface</title>
-    <link href="https://tianshuang.me/2016/11/18/Java-8-HashMaps-Keys-and-the-Comparable-interface/index.html"/>
-    <id>https://tianshuang.me/2016/11/18/Java-8-HashMaps-Keys-and-the-Comparable-interface/index.html</id>
+    <link href="https://tianshuang.me/Java-8-HashMaps-Keys-and-the-Comparable-interface/index.html"/>
+    <id>https://tianshuang.me/Java-8-HashMaps-Keys-and-the-Comparable-interface/index.html</id>
     <published>2016-11-18T02:34:15.000Z</published>
     <updated>2016-11-18T02:35:10.000Z</updated>
     
@@ -905,8 +905,8 @@
   
   <entry>
     <title>Integer Swap</title>
-    <link href="https://tianshuang.me/2016/11/18/Integer-Swap/index.html"/>
-    <id>https://tianshuang.me/2016/11/18/Integer-Swap/index.html</id>
+    <link href="https://tianshuang.me/Integer-Swap/index.html"/>
+    <id>https://tianshuang.me/Integer-Swap/index.html</id>
     <published>2016-11-18T02:32:26.000Z</published>
     <updated>2016-11-18T02:33:28.000Z</updated>
     
@@ -926,8 +926,8 @@
   
   <entry>
     <title>小而巧的数字压缩算法：zigzag</title>
-    <link href="https://tianshuang.me/2016/11/18/%E5%B0%8F%E8%80%8C%E5%B7%A7%E7%9A%84%E6%95%B0%E5%AD%97%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95%EF%BC%9Azigzag/index.html"/>
-    <id>https://tianshuang.me/2016/11/18/小而巧的数字压缩算法：zigzag/index.html</id>
+    <link href="https://tianshuang.me/%E5%B0%8F%E8%80%8C%E5%B7%A7%E7%9A%84%E6%95%B0%E5%AD%97%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95%EF%BC%9Azigzag/index.html"/>
+    <id>https://tianshuang.me/小而巧的数字压缩算法：zigzag/index.html</id>
     <published>2016-11-18T02:30:14.000Z</published>
     <updated>2016-11-18T02:31:50.000Z</updated>
     
@@ -947,8 +947,8 @@
   
   <entry>
     <title>Comet：基于 HTTP 长连接的服务器推技术</title>
-    <link href="https://tianshuang.me/2016/10/20/Comet%EF%BC%9A%E5%9F%BA%E4%BA%8E-HTTP-%E9%95%BF%E8%BF%9E%E6%8E%A5%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8E%A8%E6%8A%80%E6%9C%AF/index.html"/>
-    <id>https://tianshuang.me/2016/10/20/Comet：基于-HTTP-长连接的服务器推技术/index.html</id>
+    <link href="https://tianshuang.me/Comet%EF%BC%9A%E5%9F%BA%E4%BA%8E-HTTP-%E9%95%BF%E8%BF%9E%E6%8E%A5%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8E%A8%E6%8A%80%E6%9C%AF/index.html"/>
+    <id>https://tianshuang.me/Comet：基于-HTTP-长连接的服务器推技术/index.html</id>
     <published>2016-10-20T02:16:36.000Z</published>
     <updated>2016-10-19T18:21:42.000Z</updated>
     
@@ -970,8 +970,8 @@
   
   <entry>
     <title>False sharing</title>
-    <link href="https://tianshuang.me/2016/09/28/False-sharing/index.html"/>
-    <id>https://tianshuang.me/2016/09/28/False-sharing/index.html</id>
+    <link href="https://tianshuang.me/False-sharing/index.html"/>
+    <id>https://tianshuang.me/False-sharing/index.html</id>
     <published>2016-09-28T03:39:34.000Z</published>
     <updated>2016-09-27T22:18:42.000Z</updated>
     
@@ -992,8 +992,8 @@
   
   <entry>
     <title>SQL JOINS</title>
-    <link href="https://tianshuang.me/2016/09/27/SQL-JOINS/index.html"/>
-    <id>https://tianshuang.me/2016/09/27/SQL-JOINS/index.html</id>
+    <link href="https://tianshuang.me/SQL-JOINS/index.html"/>
+    <id>https://tianshuang.me/SQL-JOINS/index.html</id>
     <published>2016-09-27T06:24:15.000Z</published>
     <updated>2016-12-06T08:58:04.000Z</updated>
     
@@ -1014,8 +1014,8 @@
   
   <entry>
     <title>How to run process as background and never die?</title>
-    <link href="https://tianshuang.me/2016/09/21/How-to-run-process-as-background-and-never-die/index.html"/>
-    <id>https://tianshuang.me/2016/09/21/How-to-run-process-as-background-and-never-die/index.html</id>
+    <link href="https://tianshuang.me/How-to-run-process-as-background-and-never-die/index.html"/>
+    <id>https://tianshuang.me/How-to-run-process-as-background-and-never-die/index.html</id>
     <published>2016-09-21T02:57:14.000Z</published>
     <updated>2016-09-20T19:02:58.000Z</updated>
     
@@ -1037,8 +1037,8 @@
   
   <entry>
     <title>读写分离</title>
-    <link href="https://tianshuang.me/2016/08/17/%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB/index.html"/>
-    <id>https://tianshuang.me/2016/08/17/读写分离/index.html</id>
+    <link href="https://tianshuang.me/%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB/index.html"/>
+    <id>https://tianshuang.me/读写分离/index.html</id>
     <published>2016-08-17T02:38:42.000Z</published>
     <updated>2017-02-04T03:49:38.000Z</updated>
     
@@ -1072,8 +1072,8 @@
   
   <entry>
     <title>From concurrent to parallel</title>
-    <link href="https://tianshuang.me/2016/08/17/From-concurrent-to-parallel/index.html"/>
-    <id>https://tianshuang.me/2016/08/17/From-concurrent-to-parallel/index.html</id>
+    <link href="https://tianshuang.me/From-concurrent-to-parallel/index.html"/>
+    <id>https://tianshuang.me/From-concurrent-to-parallel/index.html</id>
     <published>2016-08-17T02:15:51.000Z</published>
     <updated>2016-08-16T18:25:28.000Z</updated>
     
@@ -1093,8 +1093,8 @@
   
   <entry>
     <title>Multiple Datasource</title>
-    <link href="https://tianshuang.me/2016/08/15/Multiple%20Datasource/index.html"/>
-    <id>https://tianshuang.me/2016/08/15/Multiple Datasource/index.html</id>
+    <link href="https://tianshuang.me/Multiple%20Datasource/index.html"/>
+    <id>https://tianshuang.me/Multiple Datasource/index.html</id>
     <published>2016-08-15T07:53:52.000Z</published>
     <updated>2017-02-04T03:48:24.000Z</updated>
     
@@ -1139,8 +1139,8 @@
   
   <entry>
     <title>你看见的，不一定是真的</title>
-    <link href="https://tianshuang.me/2016/08/15/%E4%BD%A0%E7%9C%8B%E8%A7%81%E7%9A%84%EF%BC%8C%E4%B8%8D%E4%B8%80%E5%AE%9A%E6%98%AF%E7%9C%9F%E7%9A%84/index.html"/>
-    <id>https://tianshuang.me/2016/08/15/你看见的，不一定是真的/index.html</id>
+    <link href="https://tianshuang.me/%E4%BD%A0%E7%9C%8B%E8%A7%81%E7%9A%84%EF%BC%8C%E4%B8%8D%E4%B8%80%E5%AE%9A%E6%98%AF%E7%9C%9F%E7%9A%84/index.html"/>
+    <id>https://tianshuang.me/你看见的，不一定是真的/index.html</id>
     <published>2016-08-15T07:51:39.000Z</published>
     <updated>2016-08-15T01:33:36.000Z</updated>
     
@@ -1162,8 +1162,8 @@
   
   <entry>
     <title>记一起while引发的惨剧</title>
-    <link href="https://tianshuang.me/2016/08/15/%E8%AE%B0%E4%B8%80%E8%B5%B7while%E5%BC%95%E5%8F%91%E7%9A%84%E6%83%A8%E5%89%A7/index.html"/>
-    <id>https://tianshuang.me/2016/08/15/记一起while引发的惨剧/index.html</id>
+    <link href="https://tianshuang.me/%E8%AE%B0%E4%B8%80%E8%B5%B7while%E5%BC%95%E5%8F%91%E7%9A%84%E6%83%A8%E5%89%A7/index.html"/>
+    <id>https://tianshuang.me/记一起while引发的惨剧/index.html</id>
     <published>2016-08-15T07:51:09.000Z</published>
     <updated>2017-02-04T03:50:14.000Z</updated>
     
@@ -1189,8 +1189,8 @@
   
   <entry>
     <title>Java Streams</title>
-    <link href="https://tianshuang.me/2016/08/03/Java-Streams/index.html"/>
-    <id>https://tianshuang.me/2016/08/03/Java-Streams/index.html</id>
+    <link href="https://tianshuang.me/Java-Streams/index.html"/>
+    <id>https://tianshuang.me/Java-Streams/index.html</id>
     <published>2016-08-03T08:35:03.000Z</published>
     <updated>2016-08-03T17:30:30.000Z</updated>
     
@@ -1210,8 +1210,8 @@
   
   <entry>
     <title>Git notes</title>
-    <link href="https://tianshuang.me/2016/07/07/Git-notes/index.html"/>
-    <id>https://tianshuang.me/2016/07/07/Git-notes/index.html</id>
+    <link href="https://tianshuang.me/Git-notes/index.html"/>
+    <id>https://tianshuang.me/Git-notes/index.html</id>
     <published>2016-07-07T02:03:20.000Z</published>
     <updated>2016-08-03T00:31:28.000Z</updated>
     
@@ -1233,8 +1233,8 @@
   
   <entry>
     <title>Hello, 2016!</title>
-    <link href="https://tianshuang.me/2016/02/08/Hello-2016/index.html"/>
-    <id>https://tianshuang.me/2016/02/08/Hello-2016/index.html</id>
+    <link href="https://tianshuang.me/Hello-2016/index.html"/>
+    <id>https://tianshuang.me/Hello-2016/index.html</id>
     <published>2016-02-07T17:30:02.000Z</published>
     <updated>2017-02-04T03:48:11.000Z</updated>
     
@@ -1262,10 +1262,10 @@
   
   <entry>
     <title>关于此博客</title>
-    <link href="https://tianshuang.me/2016/01/21/%E5%85%B3%E4%BA%8E%E6%AD%A4%E5%8D%9A%E5%AE%A2/index.html"/>
-    <id>https://tianshuang.me/2016/01/21/关于此博客/index.html</id>
+    <link href="https://tianshuang.me/%E5%85%B3%E4%BA%8E%E6%AD%A4%E5%8D%9A%E5%AE%A2/index.html"/>
+    <id>https://tianshuang.me/关于此博客/index.html</id>
     <published>2016-01-20T20:43:28.000Z</published>
-    <updated>2017-02-26T05:01:21.000Z</updated>
+    <updated>2017-02-27T03:17:15.000Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>折腾两三天，总算把这个博客搭建起来了。之前大二在CSDN写过一段时间的博客，大多数都是关于技术细节的，后来觉得没有多大意义（好吧，其实是出于个人审美的原因），于是又陆续删除了一些，仅留下了几篇（仅仅留作怀念吧）。一直都有自己搭建博客的想法，想过自己动手码个博客，但无奈自己主要做Java的相关开发，前端不是很熟悉，无法做到心里想象中的前端效果，遂放弃自己动手码的想法。看到许多人用Hexo，于是Google了下相关资料，静态，再看看主题，也不错，遂决定就是Hexo了。随着阅历的增长，在此博客不会记录更多关于技术细节的东西了，技术上的东西更多只是点到为止。接下来说说此博客搭建的相关技术吧。</p>
 <a id="more"></a>
@@ -1294,7 +1294,7 @@
 <p>嗯，暂时想到的就这些，以后想到再写吧。</p>
 <h3 id="2017-02-20-更新日志"><a href="#2017-02-20-更新日志" class="headerlink" title="2017-02-20 更新日志"></a>2017-02-20 更新日志</h3><p>时隔一年，根据后台的访客数据，我发现访客中的大多数都会来看一看这一篇。今日状态不佳，望着外面氤氲的天空，上午写了一点点代码，想起这篇博客，于是来更新一下。</p>
 <p>上面的部分是16年博客建立之初的环境，由于主机在境外，由于众所周知的原因，慢是一种常态，更严重的是有时根本无法连通，开始我只是把部分图片资源转移到了七牛上，再后面直接把这个域名直接加速，后来学生主机到期，就把静态博客移到了Github Pages 上，但是怎么弄主机都在境外，只要一旦没击中缓存，就要从境外主机回源，速度不可直视。趁这几天有空，将blog挪一下窝，一切为了速度，首先将DNS解析更换为<a href="https://www.cloudxns.net/" target="_blank" rel="external">CloudXNS</a>，然后将blog文件放至阿里云OSS，写了个增量更新的脚本，还是一样的一键发布，再搭配阿里云的CDN，之所以选阿里云是因为之前用七牛的CDN时，七牛那边暂不支持HTTP到HTTPS的301/302重定向，七牛的技术给的答复也只是支持的时候会通知，腾讯云的CDN也暂时不支持，而阿里云这边是支持的，之所以一定要HTTPS，是因为实在受不了右下角经常被插入小广告。暂时就做以上的调整，先试试效果。</p>
-<h3 id="2017-02-25-更新日志"><a href="#2017-02-25-更新日志" class="headerlink" title="2017-02-25 更新日志"></a>2017-02-25 更新日志</h3><p>将博客增量上传到OSS的Python脚本上传到了Github上，需要的朋友自取，<a href="https://github.com/tianshuang/aliyun-oss-sync" target="_blank" rel="external">aliyun-oss-sync</a>，因为使用阿里云CDN加速OSS之后，OSS中的文件变化后CDN会自动刷新相关文件，所以每次只要UPDATE到OSS即完成发布。当然，笔者的这个博客小站就没必要上负载均衡再灰度发布了，暂时就先这样吧。</p>
+<h3 id="2017-02-25-更新日志"><a href="#2017-02-25-更新日志" class="headerlink" title="2017-02-25 更新日志"></a>2017-02-25 更新日志</h3><p>将博客增量上传到OSS的Python脚本上传到了Github上，需要的朋友自取，<a href="https://github.com/tianshuang/aliyun-oss-sync" target="_blank" rel="external">aliyun-oss-sync</a>，因为使用阿里云CDN加速OSS之后，OSS中的文件变化后CDN会自动刷新相关文件，所以每次只要UPDATE到OSS即完成发布。当然，笔者的这个博客小站全是静态请求并且量也很小，就没必要上负载均衡再灰度发布了，暂时就先这样吧。</p>
 ]]></content>
     
     <summary type="html">

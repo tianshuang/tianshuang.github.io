@@ -1,0 +1,868 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//ohpew91u7.qnssl.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="规范," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Poison" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="编程规约
+POJO 类中布尔类型的变量，都不要加 is，否则部分框架解析会引起序列化错误。假设定义一个 boolean 的 isSuccess 属性，它的方法 Getter 被IDE生成为 isSuccess()，RPC等三方框架在反向解析的时候，“以为”对应的属性名称是 success，导致属性获取不到，进而抛出异常。这点也是笔者之前遇到过的，查了很久哪里的错最后发现是这个问题，不过经历一次后基">
+<meta property="og:type" content="article">
+<meta property="og:title" content="阿里巴巴Java开发手册 笔记">
+<meta property="og:url" content="https://tianshuang.me/阿里巴巴Java开发手册-笔记/index.html">
+<meta property="og:site_name" content="Poison">
+<meta property="og:description" content="编程规约
+POJO 类中布尔类型的变量，都不要加 is，否则部分框架解析会引起序列化错误。假设定义一个 boolean 的 isSuccess 属性，它的方法 Getter 被IDE生成为 isSuccess()，RPC等三方框架在反向解析的时候，“以为”对应的属性名称是 success，导致属性获取不到，进而抛出异常。这点也是笔者之前遇到过的，查了很久哪里的错最后发现是这个问题，不过经历一次后基">
+<meta property="og:updated_time" content="2017-02-26T04:05:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="阿里巴巴Java开发手册 笔记">
+<meta name="twitter:description" content="编程规约
+POJO 类中布尔类型的变量，都不要加 is，否则部分框架解析会引起序列化错误。假设定义一个 boolean 的 isSuccess 属性，它的方法 Getter 被IDE生成为 isSuccess()，RPC等三方框架在反向解析的时候，“以为”对应的属性名称是 success，导致属性获取不到，进而抛出异常。这点也是笔者之前遇到过的，查了很久哪里的错最后发现是这个问题，不过经历一次后基">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tianshuang.me/阿里巴巴Java开发手册-笔记/"/>
+
+
+
+
+
+  <title> 阿里巴巴Java开发手册 笔记 | Poison </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Poison</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">田爽</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/index.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/index.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-gift">
+          <a href="/gift/index.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-gift"></i> <br />
+            
+            赠书
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://tianshuang.me/阿里巴巴Java开发手册-笔记/index.html">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Poison">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://ohpew91u7.qnssl.com/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Poison">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Poison" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                阿里巴巴Java开发手册 笔记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-17T18:12:35+08:00">
+                2017-02-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+             <span id="/阿里巴巴Java开发手册-笔记/index.html" class="leancloud_visitors" data-flag-title="阿里巴巴Java开发手册 笔记">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <script src="/assets/js/APlayer.min.js"> </script><h3 id="编程规约"><a href="#编程规约" class="headerlink" title="编程规约"></a>编程规约</h3><ul>
+<li>POJO 类中布尔类型的变量，都不要加 is，否则部分框架解析会引起序列化错误。假设定义一个 boolean 的 isSuccess 属性，它的方法 Getter 被IDE生成为 isSuccess()，RPC等三方框架在反向解析的时候，“以为”对应的属性名称是 success，导致属性获取不到，进而抛出异常。这点也是笔者之前遇到过的，查了很久哪里的错最后发现是这个问题，不过经历一次后基本后面就能避免。</li>
+<li>接口类中的方法和属性不要加任何修饰符号。包括在一些开源的代码里，笔者也经常看见在接口方法上声明 public 关键字的，这是冗余的，在Java规范中提到过。关于代码的规范及简洁性诸位可以参考<a href="https://book.douban.com/subject/4262627/" target="_blank" rel="external">《重构 改善既有代码的设计》</a> 及 <a href="https://book.douban.com/subject/4199741/" target="_blank" rel="external">《代码整洁之道》</a>。</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li>方法体内的执行语句组、变量的定义语句组、不同的业务逻辑之间或者不同的语义之间插入一个空行。相同业务逻辑和语义之间不需要插入空行。不过没有必要插入多行空格进行隔开。这样可读性会明显提高，笔者经常看到部分开发人员的代码在很长的代码块里完全没有一个空行，没有按逻辑进行换行，这种习惯是不太好的。</li>
+<li>所有的覆写方法，必须加 @Override 注解。这样IDE会检查合法性，有错误的话会及时提示。</li>
+<li>所有的相同类型的包装类对象之间值的比较，全部使用 equals 方法比较。比如 Integer 的-128至127之间被缓存的对象可以直接使用==判断，因为被缓存了，是同一对象，地址相等，而这个区间外的却不能使用==判断，这也是面试时的一个常考点。</li>
+<li>关于基本数据类型与包装数据类型：所有的POJO类属性必须使用包装数据类型，以便映射数据库中的NULL，局部变量推荐使用基本数据类型。</li>
+<li>关于 hashCode 和 equals 的处理，遵循如下规则：只要重写 equals，就必须重写 hashCode，具体原因可参考<a href="https://book.douban.com/subject/3360807/" target="_blank" rel="external">《Effective java 中文版（第2版）》</a>。</li>
+<li>关于 ArrayList 里 subList 结果的注意事项，subList 只是 ArrayList 的一个视图，这部分大家可以参考JDK里的源码。</li>
+<li>不要在 foreach 循环里进行元素的 remove/add 操作。remove 元素请使用 Iterator 方式，如果并发操作，需要对 Iterator 对象加锁。</li>
+<li>在 JDK7 版本以上，Comparator 要满足自反性，传递性，对称性，不然 Arrays.sort， Collections.sort 会报 IllegalArgumentException 异常。这个在《Effective java 中文版（第2版）》中也有说明，虽然笔者之前看过，但在刚实习时的一个用于省份排序的代码里使用 Comparator 时还是忘了处理值相等的情况，所以，还是要实战后才能加深记忆。</li>
+<li>集合初始化时，尽量指定集合初始值大小。这在笔者实习面试时也被问到，这块的话主要考察 ArrayList 的原理，内部机制，诸位看看JDK里 ArrayList 的原理就明白了。</li>
+<li>创建线程或线程池时请指定有意义的线程名称，方便出错时回溯。</li>
+<li>高并发时，同步调用应该去考量锁的性能损耗。能用无锁数据结构，就不要用锁；能锁区块，就不要锁整个方法体；能用对象锁，就不要用类锁。概括为一句话就是：尽量降低锁的粒度。</li>
+<li>对多个资源、数据库表、对象同时加锁时，需要保持一致的加锁顺序，否则可能会造成死锁。关于并发这块可以参考<a href="https://book.douban.com/subject/10484692/" target="_blank" rel="external">《Java并发编程实战》</a>，个人认为这本在笔者看过Java并发的书籍里能算上乘之作，另外也可参考<a href="https://book.douban.com/subject/26591326/" target="_blank" rel="external">《Java并发编程的艺术》</a>。</li>
+<li>通过双重检查锁(double-checked locking)(在并发场景)实现延迟初始化的优化问题隐患(可参考 The “Double-Checked Locking is Broken” Declaration)，推荐问题解决方案中较为简单一种(适用于 JDK5 及以上版本)，将目标属性声明为 volatile 型。这部分涉及到两个重点，一是双重检查锁，二是 volatile 的原理及Java的主内存及每个线程的内存之间的关系。volatile只能解决多线程时的内存可见性问题，无法解决线程安全问题。可参考<a href="https://en.wikipedia.org/wiki/Double-checked_locking#Usage_in_Java" target="_blank" rel="external">Double checked locking</a> 及 <a href="https://en.wikipedia.org/wiki/Initialization-on-demand_holder_idiom" target="_blank" rel="external">Initialization on demand holder idiom</a>。</li>
+<li>注释掉的代码尽量要配合说明，而不是简单的注释掉。如果永久不用，建议直接删除，因为Git等版本控制系统保存了历史代码。</li>
+<li>好的命名、代码结构是自解释的，注释力求精简准确、表达到位。避免无用的注释。</li>
+<li>善用 TODO 及 FIXME，IDE可以方便的进行扫描。</li>
+<li>获取当前毫秒数使用 System.currentTimeMillis()，System.nanoTime()产生的值仅用于比较，同一时刻不同虚拟机System.nanoTime()返回的值可能不一样并且相差很大，笔者的同事已经踩过一次坑，关于 nanoTime 诸位可以看一看JavaDoc。</li>
+</ul>
+<h3 id="异常日志"><a href="#异常日志" class="headerlink" title="异常日志"></a>异常日志</h3><ul>
+<li>不要捕获Java类库中定义的继承自 RuntimeException 的运行时异常类，如：IndexOutOfBoundsException / NullPointerException，这类异常由程序员预检查来规避，保证程序健壮性。说到这里，异常继承结构图也可以看下。</li>
+<li>捕获异常是为了处理它，不要捕获了却什么都不处理而抛弃之，如果不想处理它，请将该异常抛给它的调用者。最外层的业务使用者，必须处理异常，将其转化为用户可以理解的内容。</li>
+<li>避免出现重复的代码(Don’t Repeat Yourself)，即DRY原则。关于这部分可参考<a href="https://book.douban.com/subject/5387402/" target="_blank" rel="external">《程序员修炼之道》</a>。</li>
+<li>谨慎地记录日志。生产环境禁止输出 debug 日志；有选择地输出 info 日志；如果使用 warn 来记录刚上线时的业务行为信息，一定要注意日志输出量的问题，避免把服务器磁盘撑爆，并记得及时删除这些观察日志。关于日志把server磁盘撑爆的问题，我司也出现过，后面加了相关监控来避免。</li>
+</ul>
+<h3 id="MySQL规约"><a href="#MySQL规约" class="headerlink" title="MySQL规约"></a>MySQL规约</h3><ul>
+<li>表达是与否概念的字段，必须使用 is_xxx 的方式命名，数据类型是 unsigned tinyint (1表示是，0表示否)，此规则同样适用于odps建表。任何字段如果为非负数，必须是 unsigned。因为这样的话可用容量提升了一倍。</li>
+<li>表名不使用复数名词。表名应该仅仅表示表里面的实体内容，不应该表示实体数量，对应于 DO 类名也是单数形式，符合表达习惯。</li>
+<li>禁用保留字，如 desc、range、match、delayed 等，禁止在代码里对 SQL 关键字进行单独处理。</li>
+<li>唯一索引名为 uk_字段名，普通索引名则为 idx_字段名。这样能让开发人员一眼就知道相关索引。</li>
+<li>如果存储的字符串长度几乎相等，使用 char 定长字符串类型。</li>
+<li>表必备三字段:id, gmt_create, gmt_modified。其中id必为主键，类型为unsigned bigint、单表时自增、步长为1。gmt_create, gmt_modified 的类型均为 date_time 类型。创建时间与修改时间需要记录笔者理解，不理解的为什么要用 gmt 开头，北京时间应该是GMT + 8:00 啊。</li>
+<li>字段允许适当冗余，以提高性能，但是必须考虑数据同步的情况。冗余字段应遵循：不是频繁修改的字段；不是 varchar 超长字段，更不能是 text 字段。比如我司的很多表都冗余了 user_name 这个字段。</li>
+<li>单表行数超过 500 万行或者单表容量超过 2GB，才推荐进行分库分表。</li>
+<li>业务上具有唯一特性的字段，即使是组合字段，也必须建成唯一索引。即使在应用层做了非常完善的校验和控制，只要没有唯一索引，根据墨菲定律，必然有脏数据产生。</li>
+<li>页面搜索严禁左模糊或者全模糊，如果需要请走搜索引擎来解决。索引文件具有 B-Tree 的最左前缀匹配特性，如果左边的值未确定，那么无法使用此索引。关于 MySQL 的知识，诸位可参考<a href="https://book.douban.com/subject/23008813/" target="_blank" rel="external">《高性能MySQL》</a>。</li>
+<li>利用延迟关联或者子查询优化超多分页场景。MySQL 并不是跳过 offset 行，而是取 offset+N 行，然后返回放弃前 offset 行，返回 N 行，那当 offset 特别大的时候，效率就非常的低下，要么控制返回的总页数，要么对超过特定阈值的页数进行 SQL 改写。</li>
+<li>建组合索引的时候，区分度最高的在最左边。</li>
+<li>不要使用 count(列名)或 count(常量)来替代 count(*)，count(*)就是 SQL92 定义 的标准统计行数的语法，跟数据库无关，跟 NULL 和非 NULL 无关。</li>
+<li>不得使用外键与级联，一切外键概念必须在应用层解决。外键与级联更新适用于单机低并发，不适合分布式、高并发集群；级联更新是强阻塞，存在数据库更新风暴的风险；外键影响数据库的插入速度。</li>
+<li>禁止使用存储过程，存储过程难以调试和扩展，更没有移植性。</li>
+<li>数据订正时，删除和修改记录时，要先 select，避免出现误删除，确认无误才能执行更新语句。</li>
+</ul>
+<h3 id="工程规约"><a href="#工程规约" class="headerlink" title="工程规约"></a>工程规约</h3><ul>
+<li>高并发服务器建议调小 TCP 协议的 time_wait 超时时间。</li>
+<li>调大服务器所支持的最大文件句柄数(File Descriptor，简写为fd)。</li>
+<li>给 JVM 设置-XX:+HeapDumpOnOutOfMemoryError 参数，让 JVM 碰到 OOM 场景时输出 dump 信息。</li>
+</ul>
+<h3 id="安全规约"><a href="#安全规约" class="headerlink" title="安全规约"></a>安全规约</h3><ul>
+<li>隶属于用户个人的页面或者功能必须进行权限控制校验。</li>
+<li>用户敏感数据禁止直接展示，必须对展示数据脱敏。</li>
+<li>用户输入的 SQL 参数严格使用参数绑定或者 METADATA 字段值限定，防止 SQL 注入， 禁止字符串拼接 SQL 访问数据库。</li>
+<li>用户请求传入的任何参数必须做有效性验证。</li>
+<li>表单、AJAX 提交必须执行 CSRF 安全过滤。</li>
+<li>在使用平台资源，譬如短信、邮件、电话、下单、支付，必须实现正确的防重放限制， 如数量限制、疲劳度控制、验证码校验，避免被滥刷、资损。</li>
+<li>关于安全这块可以阅读<a href="https://book.douban.com/subject/10546925/" target="_blank" rel="external">《白帽子讲Web安全》</a>。</li>
+</ul>
+<p><a href="https://ohpew91u7.qnssl.com/2017/02/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4Java%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C.pdf" target="_blank" rel="external">阿里巴巴Java开发手册</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="https://ohpew91u7.qnssl.com/wechat_tspoison.jpg" alt="Poison wechat" style="width: 200px; max-width: 100%;"/>
+    <div>扫一扫，微信加好友</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/规范/" rel="tag"># 规范</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/一则经典技术面试题目的解读/index.html" rel="next" title="一则经典技术面试题目的解读">
+                <i class="fa fa-chevron-left"></i> 一则经典技术面试题目的解读
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/多动态图详细讲解二叉搜索树/index.html" rel="prev" title="多动态图详细讲解二叉搜索树">
+                多动态图详细讲解二叉搜索树 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://ohpew91u7.qnssl.com/avatar.jpg"
+               alt="Poison" />
+          <p class="site-author-name" itemprop="name">Poison</p>
+          <p class="site-description motion-element" itemprop="description">昨夜如梦 似流星划过</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives/index.html">
+              <span class="site-state-item-count">47</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">39</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/tianshuang" target="_blank" rel="external nofollow" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://yunfan.me/" title="Yunfan" target="_blank">Yunfan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://blog.lxmoses.com/" title="Moses" target="_blank">Moses</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.bestrenhao.com/" title="Tyson" target="_blank">Tyson</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#编程规约"><span class="nav-number">1.</span> <span class="nav-text">编程规约</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常日志"><span class="nav-number">2.</span> <span class="nav-text">异常日志</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL规约"><span class="nav-number">3.</span> <span class="nav-text">MySQL规约</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工程规约"><span class="nav-number">4.</span> <span class="nav-text">工程规约</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安全规约"><span class="nav-number">5.</span> <span class="nav-text">安全规约</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Poison</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io" rel="external nofollow">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("35cFq1Hd1TounnuuDyLShkEc-gzGzoHsz", "Fol2El70DGPkDFc0pgp9NMbI");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>
