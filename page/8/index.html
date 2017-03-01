@@ -717,7 +717,7 @@
 
       
         
-          <p>之前介绍了多数据源的接入，参见<a href="https://tianshuang.me/2016/08/15/Multiple%20Datasource/">Multiple Datasource</a>，后来一个数据分析的项目（大部分都是读操作）需要用到读写分离，在分析时读取从库的数据，避免增加对线上数据库的压力，少部分写操作依然写主库，然后再被同步至从库，根据同事的建议，希望采用注解方式实现，从而在开发时只需加上特定的注解即可表明此DAO操作主库还是从库，原理依然与之前类似，以下是调整的部分：</p>
+          <p>之前介绍了多数据源的接入，参见<a href="https://tianshuang.me/Multiple%20Datasource/index.html">Multiple Datasource</a>，后来一个数据分析的项目（大部分都是读操作）需要用到读写分离，在分析时读取从库的数据，避免增加对线上数据库的压力，少部分写操作依然写主库，然后再被同步至从库，根据同事的建议，希望采用注解方式实现，从而在开发时只需加上特定的注解即可表明此DAO操作主库还是从库，原理依然与之前类似，以下是调整的部分：</p>
           <!--noindex-->
           <div class="post-more-link text-center">
             <a class="btn" href="/读写分离/index.html#more" rel="contents">
