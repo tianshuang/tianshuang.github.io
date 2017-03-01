@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tianshuang.me/"/>
-  <updated>2017-02-24T15:01:31.000Z</updated>
+  <updated>2017-03-01T14:34:00.000Z</updated>
   <id>https://tianshuang.me/</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2014年昆明火车站暴力恐怖袭击事件</title>
+    <link href="https://tianshuang.me/2014%E5%B9%B4%E6%98%86%E6%98%8E%E7%81%AB%E8%BD%A6%E7%AB%99%E6%9A%B4%E5%8A%9B%E6%81%90%E6%80%96%E8%A2%AD%E5%87%BB%E4%BA%8B%E4%BB%B6/index.html"/>
+    <id>https://tianshuang.me/2014年昆明火车站暴力恐怖袭击事件/index.html</id>
+    <published>2017-03-01T14:32:20.000Z</published>
+    <updated>2017-03-01T14:34:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>安息吧。</p>
+<p><a href="https://zh.wikipedia.org/zh-cn/2014%E5%B9%B4%E6%98%86%E6%98%8E%E7%81%AB%E8%BD%A6%E7%AB%99%E6%9A%B4%E5%8A%9B%E6%81%90%E6%80%96%E8%A2%AD%E5%87%BB%E4%BA%8B%E4%BB%B6" target="_blank" rel="external">2014年昆明火车站暴力恐怖袭击事件</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;安息吧。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://zh.wikipedia.org/zh-cn/2014%E5%B9%B4%E6%98%86%E6%98%8E%E7%
+    
+    </summary>
+    
+    
+      <category term="昆明" scheme="https://tianshuang.me/tags/%E6%98%86%E6%98%8E/"/>
+    
+      <category term="暴力" scheme="https://tianshuang.me/tags/%E6%9A%B4%E5%8A%9B/"/>
+    
+      <category term="恐怖" scheme="https://tianshuang.me/tags/%E6%81%90%E6%80%96/"/>
+    
+      <category term="袭击" scheme="https://tianshuang.me/tags/%E8%A2%AD%E5%87%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>High Performance Browser Networking</title>
