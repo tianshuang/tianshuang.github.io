@@ -92,7 +92,7 @@
 <meta property="og:url" content="https://tianshuang.me/关于此博客/index.html">
 <meta property="og:site_name" content="Poison">
 <meta property="og:description" content="折腾两三天，总算把这个博客搭建起来了。之前大二在CSDN写过一段时间的博客，大多数都是关于技术细节的，后来觉得没有多大意义（好吧，其实是出于个人审美的原因），于是又陆续删除了一些，仅留下了几篇（仅仅留作怀念吧）。一直都有自己搭建博客的想法，想过自己动手码个博客，但无奈自己主要做Java的相关开发，前端不是很熟悉，无法做到心里想象中的前端效果，遂放弃自己动手码的想法。看到许多人用Hexo，于是Goo">
-<meta property="og:updated_time" content="2017-02-27T03:17:15.000Z">
+<meta property="og:updated_time" content="2017-03-03T14:40:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于此博客">
 <meta name="twitter:description" content="折腾两三天，总算把这个博客搭建起来了。之前大二在CSDN写过一段时间的博客，大多数都是关于技术细节的，后来觉得没有多大意义（好吧，其实是出于个人审美的原因），于是又陆续删除了一些，仅留下了几篇（仅仅留作怀念吧）。一直都有自己搭建博客的想法，想过自己动手码个博客，但无奈自己主要做Java的相关开发，前端不是很熟悉，无法做到心里想象中的前端效果，遂放弃自己动手码的想法。看到许多人用Hexo，于是Goo">
@@ -360,6 +360,7 @@
 <h3 id="2017-02-20-更新日志"><a href="#2017-02-20-更新日志" class="headerlink" title="2017-02-20 更新日志"></a>2017-02-20 更新日志</h3><p>时隔一年，根据后台的访客数据，我发现访客中的大多数都会来看一看这一篇。今日状态不佳，望着外面氤氲的天空，上午写了一点点代码，想起这篇博客，于是来更新一下。</p>
 <p>上面的部分是16年博客建立之初的环境，由于主机在境外，由于众所周知的原因，慢是一种常态，更严重的是有时根本无法连通，开始我只是把部分图片资源转移到了七牛上，再后面直接把这个域名直接加速，后来学生主机到期，就把静态博客移到了Github Pages 上，但是怎么弄主机都在境外，只要一旦没击中缓存，就要从境外主机回源，速度不可直视。趁这几天有空，将blog挪一下窝，一切为了速度，首先将DNS解析更换为<a href="https://www.cloudxns.net/" target="_blank" rel="external">CloudXNS</a>，然后将blog文件放至阿里云OSS，写了个增量更新的脚本，还是一样的一键发布，再搭配阿里云的CDN，之所以选阿里云是因为之前用七牛的CDN时，七牛那边暂不支持HTTP到HTTPS的301/302重定向，七牛的技术给的答复也只是支持的时候会通知，腾讯云的CDN也暂时不支持，而阿里云这边是支持的，之所以一定要HTTPS，是因为实在受不了右下角经常被插入小广告。暂时就做以上的调整，先试试效果。</p>
 <h3 id="2017-02-25-更新日志"><a href="#2017-02-25-更新日志" class="headerlink" title="2017-02-25 更新日志"></a>2017-02-25 更新日志</h3><p>将博客增量上传到OSS的Python脚本上传到了Github上，需要的朋友自取，<a href="https://github.com/tianshuang/aliyun-oss-sync" target="_blank" rel="external">aliyun-oss-sync</a>，因为使用阿里云CDN加速OSS之后，OSS中的文件变化后CDN会自动刷新相关文件，所以每次只要UPDATE到OSS即完成发布。当然，笔者的这个博客小站全是静态请求并且量也很小，就没必要上负载均衡再灰度发布了，暂时就先这样吧。</p>
+<h3 id="2017-03-03-更新日志"><a href="#2017-03-03-更新日志" class="headerlink" title="2017-03-03 更新日志"></a>2017-03-03 更新日志</h3><p>因为用户直接在浏览器输入 tianshuang.me 的话，浏览器默认使用HTTP协议访问，server 端返回 301/302 让客户端重定向到 <a href="https://tianshuang.me/">https://tianshuang.me/</a> ，而在这一次请求及响应依然是明文传输的，所以仍然存在被中间人攻击的可能。为了尽可能降低这种可能性，我们希望配置 Strict-Transport-Security 这个header ，这里有一篇文章讲得比较清楚，参见 <a href="http://insights.thoughtworkers.org/detailed-hsts/" target="_blank" rel="external">HSTS详解</a>，而本站使用了阿里云的CDN，CDN的控制面板里可以手动配置HTTP header，但阿里云仅开放了部分 header 供用户手动配置，故已经提交了工单，希望开放此 Strict-Transport-Security header 供用户手动配置。</p>
 
       
     </div>
@@ -562,7 +563,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2017-02-20-更新日志"><span class="nav-number">1.</span> <span class="nav-text">2017-02-20 更新日志</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2017-02-25-更新日志"><span class="nav-number">2.</span> <span class="nav-text">2017-02-25 更新日志</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2017-02-20-更新日志"><span class="nav-number">1.</span> <span class="nav-text">2017-02-20 更新日志</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2017-02-25-更新日志"><span class="nav-number">2.</span> <span class="nav-text">2017-02-25 更新日志</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2017-03-03-更新日志"><span class="nav-number">3.</span> <span class="nav-text">2017-03-03 更新日志</span></a></li></ol></div>
             
 
           </div>
