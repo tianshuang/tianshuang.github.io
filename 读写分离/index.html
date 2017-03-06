@@ -86,16 +86,16 @@
 
 
 
-<meta name="description" content="之前介绍了多数据源的接入，参见Multiple Datasource，后来一个数据分析的项目（大部分都是读操作）需要用到读写分离，在分析时读取从库的数据，避免增加对线上数据库的压力，少部分写操作依然写主库，然后再被同步至从库，根据同事的建议，希望采用注解方式实现，从而在开发时只需加上特定的注解即可表明此DAO操作主库还是从库，原理依然与之前类似，以下是调整的部分：">
+<meta name="description" content="之前介绍了多数据源的接入，参见 Multiple Datasource ，后来一个数据分析的项目（大部分都是读操作）需要用到读写分离，在分析时读取从库的数据，避免增加对线上数据库的压力，少部分写操作依然写主库，然后再被同步至从库，根据同事的建议，希望采用注解方式实现，从而在开发时只需加上特定的注解即可表明此 DAO 操作主库还是从库，原理依然与之前类似，以下是调整的部分：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="读写分离">
 <meta property="og:url" content="https://tianshuang.me/读写分离/index.html">
 <meta property="og:site_name" content="Poison">
-<meta property="og:description" content="之前介绍了多数据源的接入，参见Multiple Datasource，后来一个数据分析的项目（大部分都是读操作）需要用到读写分离，在分析时读取从库的数据，避免增加对线上数据库的压力，少部分写操作依然写主库，然后再被同步至从库，根据同事的建议，希望采用注解方式实现，从而在开发时只需加上特定的注解即可表明此DAO操作主库还是从库，原理依然与之前类似，以下是调整的部分：">
-<meta property="og:updated_time" content="2017-03-01T08:45:50.000Z">
+<meta property="og:description" content="之前介绍了多数据源的接入，参见 Multiple Datasource ，后来一个数据分析的项目（大部分都是读操作）需要用到读写分离，在分析时读取从库的数据，避免增加对线上数据库的压力，少部分写操作依然写主库，然后再被同步至从库，根据同事的建议，希望采用注解方式实现，从而在开发时只需加上特定的注解即可表明此 DAO 操作主库还是从库，原理依然与之前类似，以下是调整的部分：">
+<meta property="og:updated_time" content="2017-03-06T15:33:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="读写分离">
-<meta name="twitter:description" content="之前介绍了多数据源的接入，参见Multiple Datasource，后来一个数据分析的项目（大部分都是读操作）需要用到读写分离，在分析时读取从库的数据，避免增加对线上数据库的压力，少部分写操作依然写主库，然后再被同步至从库，根据同事的建议，希望采用注解方式实现，从而在开发时只需加上特定的注解即可表明此DAO操作主库还是从库，原理依然与之前类似，以下是调整的部分：">
+<meta name="twitter:description" content="之前介绍了多数据源的接入，参见 Multiple Datasource ，后来一个数据分析的项目（大部分都是读操作）需要用到读写分离，在分析时读取从库的数据，避免增加对线上数据库的压力，少部分写操作依然写主库，然后再被同步至从库，根据同事的建议，希望采用注解方式实现，从而在开发时只需加上特定的注解即可表明此 DAO 操作主库还是从库，原理依然与之前类似，以下是调整的部分：">
 
 
 
@@ -332,19 +332,19 @@
       
 
       
-        <script src="/assets/js/APlayer.min.js"> </script><p>之前介绍了多数据源的接入，参见<a href="https://tianshuang.me/Multiple%20Datasource/index.html">Multiple Datasource</a>，后来一个数据分析的项目（大部分都是读操作）需要用到读写分离，在分析时读取从库的数据，避免增加对线上数据库的压力，少部分写操作依然写主库，然后再被同步至从库，根据同事的建议，希望采用注解方式实现，从而在开发时只需加上特定的注解即可表明此DAO操作主库还是从库，原理依然与之前类似，以下是调整的部分：</p>
+        <script src="/assets/js/APlayer.min.js"> </script><p>之前介绍了多数据源的接入，参见 <a href="https://tianshuang.me/Multiple%20Datasource/index.html">Multiple Datasource</a> ，后来一个数据分析的项目（大部分都是读操作）需要用到读写分离，在分析时读取从库的数据，避免增加对线上数据库的压力，少部分写操作依然写主库，然后再被同步至从库，根据同事的建议，希望采用注解方式实现，从而在开发时只需加上特定的注解即可表明此 DAO 操作主库还是从库，原理依然与之前类似，以下是调整的部分：</p>
 <a id="more"></a>
 <blockquote>
 <p>为了保护隐私，以下代码部分命名被修改</p>
 </blockquote>
 <ol>
-<li><p>定义主从数据库的枚举，因为项目中大多数走从库，所以吧SLAVE写在了第一个</p>
+<li><p>定义主从数据库的枚举，因为项目中大多数走从库，所以吧 SLAVE 写在了第一个</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by Poison on 8/15/2016.</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="keyword">enum</span> Database &#123;</div><div class="line">    SLAVE,</div><div class="line">    MASTER</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-<li><p>定义切换数据源的注解，注解基础可参见<a href="https://docs.oracle.com/javase/tutorial/java/annotations/index.html" target="_blank" rel="external">Lesson: Annotations</a>，根据同事需要只定义了类级别的注解，保留到运行时，读者完全可以根据自身需要自由发挥</p>
+<li><p>定义切换数据源的注解，注解基础可参见 <a href="https://docs.oracle.com/javase/tutorial/java/annotations/index.html" target="_blank" rel="external">Lesson: Annotations</a> ，根据同事需要只定义了类级别的注解，保留到运行时，读者完全可以根据自身需要自由发挥</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by Poison on 8/16/2016.</div><div class="line"> * This is a marker annotation.</div><div class="line"> * Use this annotation on DAO interface level, represent that all methods in this interface will operate your specified database.</div><div class="line"> */</div><div class="line"><span class="meta">@Documented</span></div><div class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</div><div class="line"><span class="meta">@Target</span>(ElementType.TYPE)</div><div class="line"><span class="keyword">public</span> <span class="meta">@interface</span> DataSource &#123;</div><div class="line">    <span class="function">Database <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> Database.SLAVE</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-<li><p>修改AOP相关代码，只有在DAO接口上应用了@DataSource注解，并且注解值为Database.MASTER时才走主库</p>
+<li><p>修改 AOP 相关代码，只有在 DAO 接口上应用了 @DataSource 注解，并且注解值为 Database.MASTER 时才走主库</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by Poison on 8/15/2016.</div><div class="line"> */</div><div class="line"></div><div class="line"><span class="meta">@Aspect</span></div><div class="line"><span class="meta">@Component</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AroundDataSource</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Around</span>(<span class="string">"execution(* me.tianshuang.dao..*.*(..))"</span>)</div><div class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">doBasicProfiling</span><span class="params">(ProceedingJoinPoint pjp)</span> <span class="keyword">throws</span> Throwable </span>&#123;</div><div class="line">        Object result;</div><div class="line">        <span class="keyword">if</span> (hasMasterAnnotation(pjp)) &#123;</div><div class="line">            DataSourceContextHolder.setDataSource(Database.MASTER);</div><div class="line">            result = pjp.proceed();</div><div class="line">            DataSourceContextHolder.restoreToSlaveDataSource();</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            result = pjp.proceed();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">hasMasterAnnotation</span><span class="params">(ProceedingJoinPoint pjp)</span> </span>&#123;</div><div class="line">        Class&lt;?&gt; declaringClass = ((MethodSignature) pjp.getSignature()).getMethod().getDeclaringClass();</div><div class="line">        <span class="keyword">if</span> (declaringClass.isAnnotationPresent(DataSource.class)) &#123;</div><div class="line">            DataSource dataSource = declaringClass.getAnnotation(DataSource.class);</div><div class="line">            <span class="keyword">if</span> (dataSource.value() == Database.MASTER) &#123;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></li>
 </ol>
 

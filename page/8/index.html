@@ -465,7 +465,7 @@
       
         
           
-            <script src="/assets/js/APlayer.min.js"> </script><p>HikariCP的ConcurrentBag解释中提到了False sharing，查了下wiki，道理我都懂，不就是和Java内存模型中的主内存和每个线程的工作内存类似的原理吗（参见《深入理解Java虚拟机 JVM高级特性与最佳实践（第2版）》 第12章 Java内存模型与线程），既然看到了这里，诸位也可以自行回顾一下volatile的相关知识。</p>
+            <script src="/assets/js/APlayer.min.js"> </script><p>HikariCP 的 ConcurrentBag 解释中提到了 False sharing ，查了下 wiki ，道理我都懂，不就是和 Java 内存模型中的主内存和每个线程的工作内存类似的原理吗（参见《深入理解 Java 虚拟机 JVM 高级特性与最佳实践（第2版）》 第 12 章 Java 内存模型与线程），既然看到了这里，诸位也可以自行回顾一下 volatile 的相关知识。</p>
 <p><a href="http://tutorials.jenkov.com/java-concurrency/volatile.html" target="_blank" rel="external">Java Volatile Keyword</a><br><a href="https://en.wikipedia.org/wiki/False_sharing" target="_blank" rel="external">False sharing</a></p>
 
           
@@ -844,7 +844,7 @@
 
       
         
-          <p>之前介绍了多数据源的接入，参见<a href="https://tianshuang.me/Multiple%20Datasource/index.html">Multiple Datasource</a>，后来一个数据分析的项目（大部分都是读操作）需要用到读写分离，在分析时读取从库的数据，避免增加对线上数据库的压力，少部分写操作依然写主库，然后再被同步至从库，根据同事的建议，希望采用注解方式实现，从而在开发时只需加上特定的注解即可表明此DAO操作主库还是从库，原理依然与之前类似，以下是调整的部分：</p>
+          <p>之前介绍了多数据源的接入，参见 <a href="https://tianshuang.me/Multiple%20Datasource/index.html">Multiple Datasource</a> ，后来一个数据分析的项目（大部分都是读操作）需要用到读写分离，在分析时读取从库的数据，避免增加对线上数据库的压力，少部分写操作依然写主库，然后再被同步至从库，根据同事的建议，希望采用注解方式实现，从而在开发时只需加上特定的注解即可表明此 DAO 操作主库还是从库，原理依然与之前类似，以下是调整的部分：</p>
           <!--noindex-->
           <div class="post-more-link text-center">
             <a class="btn" href="/读写分离/index.html#more" rel="contents">
