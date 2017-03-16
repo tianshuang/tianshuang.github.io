@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tianshuang.me/"/>
-  <updated>2017-03-01T14:34:00.000Z</updated>
+  <updated>2017-03-16T13:30:08.000Z</updated>
   <id>https://tianshuang.me/</id>
   
   <author>
@@ -14,6 +14,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>从一道面试题开始说起</title>
+    <link href="https://tianshuang.me/%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B%E8%AF%B4%E8%B5%B7/index.html"/>
+    <id>https://tianshuang.me/从一道面试题开始说起/index.html</id>
+    <published>2017-03-15T13:38:19.000Z</published>
+    <updated>2017-03-16T13:30:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>其实这道题笔者在第二家的实习面试中被问到过，但是笔者当时并没有回答正确，所幸其他问题回答得还算不赖，没有因为这一个问题表现不佳而被挂掉。最近看《Wireshark 网络分析就这么简单》第一篇文章就是这道题。</p>
+<p>让我们开始吧。</p>
+<p>问题：两台服务器 A 和 B 的网络配置如下，B 的子网掩码本应该是 255.255.255.0，被不小心配成了 255.255.255.224。它们还能正常通信吗？</p>
+<p>服务器A：<br><img src="https://ohpew91u7.qnssl.com/2017/03/A.jpeg" alt="服务器A"></p>
+<p>服务器B：<br><img src="https://ohpew91u7.qnssl.com/2017/03/B.jpeg" alt="服务器B"><br><a id="more"></a></p>
+<p>这一篇文章在林沛满的博客中有记录，参见 <a href="http://blog.sina.com.cn/s/blog_70398db501018qcc.html" target="_blank" rel="external">Wireshark入门：第一次亲密接触</a>。</p>
+<p>如果你坚持看完了上面这篇林沛满先生的文章，那么回到这里。笔者在看完之后不太明白的是为什么在 B 看来 A 属于不同子网，而在 A 看来 B 属于同一子网，于是拿起纸和笔手动计算了一下。过程如下：</p>
+<p>在服务器 B 看来，在往服务器 A 发送包之前，是仅仅知道服务器 A 的 IP 地址的，并不知道服务器 A 的子网掩码，所以服务器 B 使用自己的子网掩码与服务器 B 自身的 IP 地址相与得到服务器 B 的网络地址，然后继续使用服务器 B 的子网掩码与服务器 A 的 IP 地址相与得到服务器 A 的网络地址，根据 B 和 A 的网络地址是否相等来判断是否属于同一子网：<br>B 的子网掩码为 255.255.255.224，二进制格式如下：<br>11111111 11111111 11111111 11100000（B 的子网掩码）<br>B 的 IP 地址为 192.168.26.3，二进制格式如下：<br>11000000 10101000 00011010 00000011（B 的 IP 地址）<br>服务器 B 使用自己的子网掩码与服务器 B 自身的 IP 地址相与得到服务器 B 的网络地址为：<br>11000000 10101000 00011010 00000000（B 的网络地址）</p>
+<p>A 的 IP 地址为 192.168.26.129，二进制格式如下：<br>11000000 10101000 00011010 10000001（A 的 IP 地址）<br>使用服务器 B 的子网掩码与服务器 A 的 IP 地址相与得到服务器 A 的网络地址为：<br>11000000 10101000 00011010 10000000（A 的网络地址）</p>
+<p>通过以上结果，我们可以发现，在服务器 B 看来，B 的网络地址和 A 的网络地址是不同的，这也是服务器 B 通过 ARP 广播查询默认网关 MAC 地址的原因。</p>
+<p>在服务器 A 看来：<br>A 的子网掩码为 255.255.255.0，二进制格式如下：<br>11111111 11111111 11111111 00000000（A 的子网掩码）<br>A 的 IP 地址为 192.168.26.129，二进制格式如下：<br>11000000 10101000 00011010 10000001（A 的 IP 地址）<br>服务器 A 使用自己的子网掩码与服务器 A 自身的 IP 地址相与得到服务器 A 的网络地址为：<br>11000000 10101000 00011010 00000000（A 的网络地址）</p>
+<p>B 的 IP 地址为 192.168.26.3，二进制格式如下：<br>11000000 10101000 00011010 00000011（B 的 IP 地址）<br>使用服务器 A 的子网掩码与服务器 B 的 IP 地址相与得到服务器 B 的网络地址为：<br>11000000 10101000 00011010 00000000（B 的网络地址）</p>
+<p>通过以上结果，我们可以发现，在服务器 A 看来，A 的网络地址和 B 的网络地址是相同的，这也是服务器 A 直接和服务器 B 进行通信的原因。</p>
+<p>最后推荐下林沛满的这两本书：<a href="https://book.douban.com/subject/26268767/" target="_blank" rel="external">《Wireshark 网络分析就这么简单》</a>，<a href="https://book.douban.com/subject/26710788/" target="_blank" rel="external">《Wireshark 网络分析的艺术》</a>。可以说是是国内技术书籍中的上乘之作。这两本书让笔者对 TCP/UDP 有了更深入的理解，纸上得来终觉浅，绝知此事要躬行，只有自己亲自抓几个包看看才能真正理解相关细节。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;其实这道题笔者在第二家的实习面试中被问到过，但是笔者当时并没有回答正确，所幸其他问题回答得还算不赖，没有因为这一个问题表现不佳而被挂掉。最近看《Wireshark 网络分析就这么简单》第一篇文章就是这道题。&lt;/p&gt;
+&lt;p&gt;让我们开始吧。&lt;/p&gt;
+&lt;p&gt;问题：两台服务器 A 和 B 的网络配置如下，B 的子网掩码本应该是 255.255.255.0，被不小心配成了 255.255.255.224。它们还能正常通信吗？&lt;/p&gt;
+&lt;p&gt;服务器A：&lt;br&gt;&lt;img src=&quot;https://ohpew91u7.qnssl.com/2017/03/A.jpeg&quot; alt=&quot;服务器A&quot;&gt;&lt;/p&gt;
+&lt;p&gt;服务器B：&lt;br&gt;&lt;img src=&quot;https://ohpew91u7.qnssl.com/2017/03/B.jpeg&quot; alt=&quot;服务器B&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="TCP" scheme="https://tianshuang.me/tags/TCP/"/>
+    
+      <category term="Wireshark" scheme="https://tianshuang.me/tags/Wireshark/"/>
+    
+      <category term="UDP" scheme="https://tianshuang.me/tags/UDP/"/>
+    
+  </entry>
   
   <entry>
     <title>2014年昆明火车站暴力恐怖袭击事件</title>
@@ -599,7 +641,7 @@
     <link href="https://tianshuang.me/DNS-root-servers/index.html"/>
     <id>https://tianshuang.me/DNS-root-servers/index.html</id>
     <published>2017-01-13T06:53:49.000Z</published>
-    <updated>2017-03-09T02:15:49.000Z</updated>
+    <updated>2017-03-09T02:17:03.000Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>A root name server is a name server for the root zone of the Domain Name System (DNS) of the Internet. It directly answers requests for records in the root zone and answers other requests by returning a list of the authoritative name servers for the appropriate top-level domain (TLD).</p>
 <p><a href="http://www.root-servers.org/" target="_blank" rel="external">http://www.root-servers.org/</a><br><a href="http://www.ruanyifeng.com/blog/2016/06/dns.html" target="_blank" rel="external">DNS 原理入门</a></p>
