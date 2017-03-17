@@ -637,19 +637,22 @@
   </entry>
   
   <entry>
-    <title>DNS: root servers</title>
-    <link href="https://tianshuang.me/DNS-root-servers/index.html"/>
-    <id>https://tianshuang.me/DNS-root-servers/index.html</id>
+    <title>那些你未曾注意的DNS细节</title>
+    <link href="https://tianshuang.me/%E9%82%A3%E4%BA%9B%E4%BD%A0%E6%9C%AA%E6%9B%BE%E6%B3%A8%E6%84%8F%E7%9A%84DNS%E7%BB%86%E8%8A%82/index.html"/>
+    <id>https://tianshuang.me/那些你未曾注意的DNS细节/index.html</id>
     <published>2017-01-13T06:53:49.000Z</published>
-    <updated>2017-03-09T02:17:03.000Z</updated>
+    <updated>2017-03-17T14:44:53.000Z</updated>
     
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>A root name server is a name server for the root zone of the Domain Name System (DNS) of the Internet. It directly answers requests for records in the root zone and answers other requests by returning a list of the authoritative name servers for the appropriate top-level domain (TLD).</p>
-<p><a href="http://www.root-servers.org/" target="_blank" rel="external">http://www.root-servers.org/</a><br><a href="http://www.ruanyifeng.com/blog/2016/06/dns.html" target="_blank" rel="external">DNS 原理入门</a></p>
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>DNS 消息是使用二进制数据编写的，查询报文和回答报文有着相同的格式，比如这位朋友写的 <a href="https://github.com/shadowsocks/shadowsocks/blob/master/shadowsocks/asyncdns.py" target="_blank" rel="external">asyncdns</a> 就表达得非常清楚。</p>
+<p>大家平时经常见到的 A 记录其实是 Address 的缩写，MX 记录是 Mail eXchange 的缩写。RR 就是 Resource Record 的缩写。LDNS 是 Local DNS 的缩写。</p>
+<p>根域（Top-Level Domain, TLD） DNS 服务器在运营上使用多台服务器来对应一个 IP 地址，因此尽管 IP 地址只有 13 个，但其实服务器的数量是很多的。参见 <a href="https://www.iana.org/domains/root/servers" target="_blank" rel="external">Root Servers</a>。</p>
+<p>从理论上讲，任何 DNS 查询既可以是迭代的也能是递归的。</p>
+<p><a href="http://www.ruanyifeng.com/blog/2016/06/dns.html" target="_blank" rel="external">DNS 原理入门</a><br><a href="https://en.wikipedia.org/wiki/Domain_Name_System" target="_blank" rel="external">Domain Name System</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;A root name server is a name server for the root zone of the Domain Name System (DNS) o
+      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;DNS 消息是使用二进制数据编写的，查询报文和回答报文有着相同的格式，比如这位朋友写的 &lt;a href=&quot;https://github.com/shadowsocks/sha
     
     </summary>
     
