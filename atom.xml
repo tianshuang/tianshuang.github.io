@@ -1410,7 +1410,7 @@
     <link href="https://tianshuang.me/%E5%85%B3%E4%BA%8E%E6%AD%A4%E5%8D%9A%E5%AE%A2/index.html"/>
     <id>https://tianshuang.me/关于此博客/index.html</id>
     <published>2016-01-20T20:43:28.000Z</published>
-    <updated>2017-03-06T15:13:24.000Z</updated>
+    <updated>2017-03-26T10:54:17.000Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>折腾两三天，总算把这个博客搭建起来了。之前大二在 <a href="http://blog.csdn.net/u012552052" target="_blank" rel="external">CSDN</a> 写过一段时间的博客，大多数都是关于技术细节的，竟然有 138 篇？后来觉得没有多大意义（好吧，其实是出于个人审美的原因），于是又陆续删除了一些，仅留下了几篇（仅仅留作怀念吧）。一直都有自己搭建博客的想法，想过自己动手码个博客，但无奈自己主要做 Java 的相关开发，前端不是很熟悉，无法做到心里想象中的前端效果，遂放弃自己动手码的想法。看到许多人用 Hexo ，于是 Google 了下相关资料，静态，再看看主题，也不错，遂决定就是 Hexo 了。随着阅历的增长，在此博客不会记录更多关于技术细节的东西了，技术上的东西更多只是点到为止。接下来说说此博客搭建的相关技术吧。</p>
 <a id="more"></a>
@@ -1455,6 +1455,12 @@
       <category term="Nginx" scheme="https://tianshuang.me/tags/Nginx/"/>
     
       <category term="SSL" scheme="https://tianshuang.me/tags/SSL/"/>
+    
+      <category term="CDN" scheme="https://tianshuang.me/tags/CDN/"/>
+    
+      <category term="HSTS" scheme="https://tianshuang.me/tags/HSTS/"/>
+    
+      <category term="OSS" scheme="https://tianshuang.me/tags/OSS/"/>
     
   </entry>
   
