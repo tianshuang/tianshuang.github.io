@@ -55,7 +55,7 @@
   
     
     
-    <link href="//ohpew91u7.qnssl.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//storage.tianshuang.me/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -98,16 +98,16 @@
 让我们开始吧。
 问题：两台服务器 A 和 B 的网络配置如下，B 的子网掩码本应该是 255.255.255.0，被不小心配成了 255.255.255.224。它们还能正常通信吗？
 服务器A">
-<meta property="og:image" content="https://ohpew91u7.qnssl.com/2017/03/A.jpeg">
-<meta property="og:image" content="https://ohpew91u7.qnssl.com/2017/03/B.jpeg">
-<meta property="og:updated_time" content="2017-03-16T13:30:08.000Z">
+<meta property="og:image" content="https://storage.tianshuang.me/2017/03/A.jpeg">
+<meta property="og:image" content="https://storage.tianshuang.me/2017/03/B.jpeg">
+<meta property="og:updated_time" content="2017-03-30T06:45:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从一道面试题开始说起">
 <meta name="twitter:description" content="其实这道题笔者在第二家的实习面试中被问到过，但是笔者当时并没有回答正确，所幸其他问题回答得还算不赖，没有因为这一个问题表现不佳而被挂掉。最近看《Wireshark 网络分析就这么简单》第一篇文章就是这道题。
 让我们开始吧。
 问题：两台服务器 A 和 B 的网络配置如下，B 的子网掩码本应该是 255.255.255.0，被不小心配成了 255.255.255.224。它们还能正常通信吗？
 服务器A">
-<meta name="twitter:image" content="https://ohpew91u7.qnssl.com/2017/03/A.jpeg">
+<meta name="twitter:image" content="https://storage.tianshuang.me/2017/03/A.jpeg">
 
 
 
@@ -267,7 +267,7 @@
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Poison">
     <meta itemprop="description" content="">
-    <meta itemprop="image" content="https://ohpew91u7.qnssl.com/avatar.jpg">
+    <meta itemprop="image" content="https://storage.tianshuang.me/avatar.jpg">
   </span>
 
   <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -347,8 +347,8 @@
         <script src="/assets/js/APlayer.min.js"> </script><p>其实这道题笔者在第二家的实习面试中被问到过，但是笔者当时并没有回答正确，所幸其他问题回答得还算不赖，没有因为这一个问题表现不佳而被挂掉。最近看《Wireshark 网络分析就这么简单》第一篇文章就是这道题。</p>
 <p>让我们开始吧。</p>
 <p>问题：两台服务器 A 和 B 的网络配置如下，B 的子网掩码本应该是 255.255.255.0，被不小心配成了 255.255.255.224。它们还能正常通信吗？</p>
-<p>服务器A：<br><img src="https://ohpew91u7.qnssl.com/2017/03/A.jpeg" alt="服务器A"></p>
-<p>服务器B：<br><img src="https://ohpew91u7.qnssl.com/2017/03/B.jpeg" alt="服务器B"><br><a id="more"></a></p>
+<p>服务器A：<br><img src="https://storage.tianshuang.me/2017/03/A.jpeg" alt="服务器A"></p>
+<p>服务器B：<br><img src="https://storage.tianshuang.me/2017/03/B.jpeg" alt="服务器B"><br><a id="more"></a></p>
 <p>这一篇文章在林沛满的博客中有记录，参见 <a href="http://blog.sina.com.cn/s/blog_70398db501018qcc.html" target="_blank" rel="external">Wireshark入门：第一次亲密接触</a>。</p>
 <p>如果你坚持看完了上面这篇林沛满先生的文章，那么回到这里。笔者在看完之后不太明白的是为什么在 B 看来 A 属于不同子网，而在 A 看来 B 属于同一子网，于是拿起纸和笔手动计算了一下。过程如下：</p>
 <p>在服务器 B 看来，在往服务器 A 发送包之前，是仅仅知道服务器 A 的 IP 地址的，并不知道服务器 A 的子网掩码，所以服务器 B 使用自己的子网掩码与服务器 B 自身的 IP 地址相与得到服务器 B 的网络地址，然后继续使用服务器 B 的子网掩码与服务器 A 的 IP 地址相与得到服务器 A 的网络地址，根据 B 和 A 的网络地址是否相等来判断是否属于同一子网：<br>B 的子网掩码为 255.255.255.224，二进制格式如下：<br>11111111 11111111 11111111 11100000（B 的子网掩码）<br>B 的 IP 地址为 192.168.26.3，二进制格式如下：<br>11000000 10101000 00011010 00000011（B 的 IP 地址）<br>服务器 B 使用自己的子网掩码与服务器 B 自身的 IP 地址相与得到服务器 B 的网络地址为：<br>11000000 10101000 00011010 00000000（B 的网络地址）</p>
@@ -366,7 +366,7 @@
       
         
 <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="https://ohpew91u7.qnssl.com/wechat_subscription.jpg" alt="Poison wechat" style="width: 200px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="https://storage.tianshuang.me/wechat_subscription.jpg" alt="Poison wechat" style="width: 200px; max-width: 100%;"/>
     <div>微信扫一扫，订阅该博客</div>
 </div>
 
@@ -462,7 +462,7 @@
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="https://ohpew91u7.qnssl.com/avatar.jpg"
+               src="https://storage.tianshuang.me/avatar.jpg"
                alt="Poison" />
           <p class="site-author-name" itemprop="name">Poison</p>
           <p class="site-description motion-element" itemprop="description">昨夜如梦 似流星划过</p>
