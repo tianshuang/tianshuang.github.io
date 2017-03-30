@@ -11,5 +11,4 @@ Disallow: /vendors/
 Disallow: /fancybox/
 
 Sitemap: https://tianshuang.me/sitemap.xml
-Sitemap: https://tianshuang.me/baidusitemap.xml
 
