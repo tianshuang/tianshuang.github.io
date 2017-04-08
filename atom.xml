@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tianshuang.me/"/>
-  <updated>2017-04-02T13:58:29.000Z</updated>
+  <updated>2017-04-08T13:38:48.000Z</updated>
   <id>https://tianshuang.me/</id>
   
   <author>
@@ -14,6 +14,111 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Awesome article</title>
+    <link href="https://tianshuang.me/2017/04/Awesome-article/index.html"/>
+    <id>https://tianshuang.me/2017/04/Awesome-article/index.html</id>
+    <published>2017-04-08T13:31:33.000Z</published>
+    <updated>2017-04-08T13:38:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p><a href="http://www.ibm.com/developerworks/cn/web/wa-lo-comet/" target="_blank" rel="external">Comet：基于 HTTP 长连接的服务器推技术</a><br><a href="http://mp.weixin.qq.com/s?__biz=MzA3MDExNzcyNA==&amp;mid=2650392086&amp;idx=1&amp;sn=6a2ecfe2548f121a4726d03bf23f4478&amp;scene=0#wechat_redirect" target="_blank" rel="external">小而巧的数字压缩算法：zigzag</a><br><a href="http://mp.weixin.qq.com/s?__biz=MzA3MDExNzcyNA==&amp;mid=2650392147&amp;idx=1&amp;sn=91ba6172edb887217eca35532c8a4af3&amp;scene=0#wechat_redirect" target="_blank" rel="external">一个简单代码的不简单实现</a><br><a href="https://tamasgyorfi.net/2016/05/01/java-8-hashmaps-keys-and-the-comparable-interface/" target="_blank" rel="external">Java 8 HashMaps, Keys and the Comparable interface</a><br><a href="http://www.programcreek.com/2013/09/the-substring-method-in-jdk-6-and-jdk-7/" target="_blank" rel="external">The substring() Method in JDK 6 and JDK 7</a><br><a href="http://www.ruanyifeng.com/blog/2016/11/byte-order.html" target="_blank" rel="external">理解字节序</a><br><a href="http://www.ruanyifeng.com/blog/2016/12/user_space_vs_kernel_space.html" target="_blank" rel="external">User space 与 Kernel space</a><br><a href="http://blog.brucefeng.info/post/high-qps-service" target="_blank" rel="external">当服务QPS增高时我们做什么</a><br><a href="http://blog.brucefeng.info/post/distributed-locks" target="_blank" rel="external">分布式锁</a><br><a href="http://insights.thoughtworkers.org/security-issues-in-restful/" target="_blank" rel="external">RESTful架构风格下的4大常见安全问题</a><br><a href="http://mp.weixin.qq.com/s?__biz=MzA3MDExNzcyNA==&amp;mid=2650392396&amp;idx=1&amp;sn=8499f6b5cc6b67cb345d01c71ceafcb5&amp;chksm=86ccd77fb1bb5e693cd24cac0a747621d2fef9c0095c2a16fba77920deb9f88ed6af3bab9243&amp;mpshare=1&amp;scene=23&amp;srcid=01102EMQq6lFMUZY05DsSXVk#rd" target="_blank" rel="external">TCP三次握手和Syn-Flood攻击</a><br><a href="http://www.ruanyifeng.com/blog/2017/02/filename-should-be-lowercase.html" target="_blank" rel="external">为什么文件名要小写？</a><br><a href="http://mp.weixin.qq.com/s/Qcb9kOPQs0aQSIeAqmNpOQ" target="_blank" rel="external">多动态图详细讲解二叉搜索树</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/cn/web/wa-lo-comet/&quot; target=&quot;_blank&quot; rel=&quot;ex
+    
+    </summary>
+    
+    
+      <category term="awesome" scheme="https://tianshuang.me/tags/awesome/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《网络是怎样连接的》笔记</title>
+    <link href="https://tianshuang.me/2017/04/%E3%80%8A%E7%BD%91%E7%BB%9C%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%9E%E6%8E%A5%E7%9A%84%E3%80%8B%E7%AC%94%E8%AE%B0/index.html"/>
+    <id>https://tianshuang.me/2017/04/《网络是怎样连接的》笔记/index.html</id>
+    <published>2017-04-07T14:58:10.000Z</published>
+    <updated>2017-04-08T12:45:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h3 id="浏览器生成消息"><a href="#浏览器生成消息" class="headerlink" title="浏览器生成消息"></a>浏览器生成消息</h3><ul>
+<li>URL: Uniform Resource Locator，统一资源定位符。</li>
+<li>URL: <a href="http://www.lab.glasscom.com/dir/" target="_blank" rel="external">http://www.lab.glasscom.com/dir/</a>，我们可以这样理解，以 “/” 结尾代表 /dir/ 后面本来应该有的文件名被省略了。根据 URL 的规则，文件名可以像前面这样省略。我们会在服务器上事先设置好文件名省略时要访问的默认文件名。这个设置根据服务器不同而不同，大多数情况下是 index.html 或者 default.htm 之类的文件名。</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li>URI: Uniform Resource Identifier，统一资源标识符。</li>
+<li>关于 HTTP 的 HEAD 方法，在我们仅仅需要 HTTP 响应头信息的时候就可以使用，比如不下载音视频的前提下通过 HEAD 方法查看一下字节数。这里推荐一个小工具 <a href="https://www.getpostman.com/" target="_blank" rel="external">POSTMAN</a>。</li>
+<li>一般当我们访问 Web 服务器获取网页数据时，使用的就是 GET 方法。PUT、DELETE 等方法现在常用于 RESTful API 的设计中，在手机 App 和后端服务器交互时就会经常用到。</li>
+<li>关于 GET 请求 URL 的最大长度，不同浏览器和服务器有不同的限制，可参考 <a href="https://technomanor.wordpress.com/2012/04/03/maximum-url-size/" target="_blank" rel="external">Maximum URL Size in HTTP GET Request</a>。</li>
+<li>关于 ETag 这个字段，可以用来提供上次响应与下次请求之间的关联信息。上次响应中，服务器会通过 ETag 向客户端发送一个唯一标识，在下次请求中客户端可以通过 If-Match、If-None-Match、If-Range 字段将这个标识告知服务器，这样服务器就知道该请求和上次的响应是相关的。这个字段的功能和 Cookie 是相同的，但 Cookie 是网景（Netscape）公司自行开发的规格，而 Etag 是将其进行标准化后的规格。</li>
+<li>HTTP 状态码摘要信息如下：<ul>
+<li>1xx 告知请求的处理进度和情况</li>
+<li>2xx 成功</li>
+<li>3xx 表示需要进一步操作</li>
+<li>4xx 客户端错误</li>
+<li>5xx 服务器错误</li>
+</ul>
+</li>
+<li>关于 DNS，可以参考 <a href="https://tianshuang.me/2017/01/%E9%82%A3%E4%BA%9B%E4%BD%A0%E6%9C%AA%E6%9B%BE%E6%B3%A8%E6%84%8F%E7%9A%84DNS%E7%BB%86%E8%8A%82/index.html">那些你未曾注意的DNS细节</a>。</li>
+</ul>
+<h3 id="用电信号传输-TCP-IP-数据"><a href="#用电信号传输-TCP-IP-数据" class="headerlink" title="用电信号传输 TCP/IP 数据"></a>用电信号传输 TCP/IP 数据</h3><ul>
+<li>最早的 TCP/IP 协议原型设计相当于现在的 TCP 和 IP 在一起的样子，后来才拆分为 TCP 和 IP 两个协议。</li>
+<li>TCP 两端并没有像绳子一样的真实连接，只是两端都在维护着连接状态而已。</li>
+<li>我们平时在 console 使用 netstat 命令看到的 <a href="https://en.wikipedia.org/wiki/0.0.0.0" target="_blank" rel="external">0.0.0.0</a> 表示本机上的所有 IP 地址。</li>
+<li>IP 地址实际上并不是分配给计算机的，而是分配给网卡的，因此当计算机上存在多块网卡时，每一块网卡都会有自己的 IP 地址。在这里可以想到阿里云的 ECS 能看到公网的网络接口，而腾讯云的 CVM 只能看到内网的网络接口。是因为 CVM 实例不与公网直接通信，而通过 NAT 网关访问外网，应答请求。</li>
+<li>MAC: Media Access Control 的缩写。以太网的每个帧前面都有报头和起始帧分界符（SFD），报头占前 7 字节，起始帧分界符占 1 字节，报头用于 “唤醒” 接收适配器，并且将它们的时钟和发送方的时钟同步。起始帧分界符的最后两个比特为 11，即警告适配器，“重要的内容” 就要来了。</li>
+<li>发送和接收同时并行的方式叫作 “全双工”，相对地，某一时刻只能进行发送或接收其中一种操作的叫作 “半双工”。</li>
+<li>根据以太网的规格，两台设备之间的网线不能超过 100 米，在这个距离内极少会发生错误。这是双绞线的情况，如果采用光纤可以更长，而且错误率不会上升。在使用集线器的半双工模式中，当发送信号时，接收线路不应该有信号进来，但情况不总是尽如人意，有很小的可能性出现多台设备同时进行发送操作的情况，一旦发生这种情况，两组信号就会发生叠加，无法彼此区分出来，这就是所谓的信号碰撞。这种情况下，继续发送信号是没有意义的，因此发送操作会终止。为了通知其他设备当前线路已发生碰撞，还会发送一段时间的阻塞信号，然后所有的发送操作会全部停止。等待一段时间后，网络中的设备会尝试重新发送信号。等待时间是根据 MAC 地址生成一个随机数计算出来的。当网络拥塞时，发生碰撞的可能性就会提高，重试发送的时候可能又会和另外一台设备的发送操作冲突，这时会将等待时间延长一倍，然后再次重试。以此类推，最多重试 10 次，如果还是不行就报告通信错误。上述都是半双工的情况，在全双工模式中不需要像半双工模式这样考虑这么多复杂的问题，即便接收线路中有信号进来，也可以直接发送信号。</li>
+<li>在接收帧时，如果 FCS 校验没有问题，接下来就要看一下 MAC 头部中接收方 MAC 地址与网卡在初始化时分配给自己的 MAC 地址是否一致，以判断这个帧是不是发给自己的，如果不是自己的帧就直接丢弃。但这里也有特例，我们可以让网卡不检查帧的接收方地址，不管是不是自己的帧都统统接收下来，这种模式叫做 “混杂模式”（Promiscuous Mode）。好吧，笔者第一次在代码里看见 Promiscuous 时，随手到谷歌翻译一查，翻译过来是 “淫乱”，当时就凌乱了，<a href="https://github.com/d1sm/finalspeed/tree/fileshare" target="_blank" rel="external">finalspeed</a> 中就用到了混杂模式。不过笔者认为 finalspeed 的代码写得比较乱，看了一些就没再看了。</li>
+</ul>
+<h3 id="从网线到网络设备"><a href="#从网线到网络设备" class="headerlink" title="从网线到网络设备"></a>从网线到网络设备</h3><ul>
+<li>交换机并不只是简单地让信号流过，而是先接收信号并将其还原为数字信息，然后再重新转换成信号并发送出去的过程。交换机是基于以太网规格工作的设备，而路由器是基于 IP 工作的。交换机时通过 MAC 头部中的接收方 MAC 地址来判断转发目标的，而路由器则是根据 IP 头部中的 IP 地址来判断的。交换机在地址表中只匹配完全一致的记录，而路由器则会忽略主机号部分，只匹配网络号部分。</li>
+<li>交换机端口的 MAC 模块不具有 MAC 地址。</li>
+<li>当交换机发现一个包要发回到原端口时，就会直接丢弃这个包。当在地址表中找不到指定的 MAC 地址时，交换机无法判断应该把包转发到哪个端口，只能将包转发到除了源端口之外的所有端口上，无论该设备连接在哪个端口上都能收到这个包。</li>
+<li>在以太网中，当没有数据在传输时，网络中会填充一种被称为连接脉冲的脉冲信号。在没有数据信号时就填充连接脉冲，这使得网络中一直都有一定的信号流过，从而能够检测对方是否在正常工作，或者说网线有没有正常连接。以太网设备的网线接口周围有一个绿色的 LED 指示灯，它表示是否检测到正常的脉冲信号。如果绿灯亮，说明 PHY(MAU) 模块以及网线连接正常。</li>
+<li>路由器的各个端口都具有 MAC 地址和 IP 地址。</li>
+<li>路由器在进行匹配时首先寻找网络号比特数最长的一条记录，如果路由表中存在网络号长度相同的多条记录，这时，需要根据跃点计数的值来进行判断。跃点计数越小说明该路由越近，因此应选择跃点计数较小的记录。</li>
+<li>路由器中子网掩码为 0.0.0.0 的记录表示 “默认路由”。</li>
+<li>在路由器更新 TTL 和分片的过程中，IP 头部的内容发生了改变，因此必须重新计算校验和。</li>
+<li>在内网中可用作私有地址的范围仅限以下这些：<ul>
+<li>10.0.0.0 ~ 10.255.255.255</li>
+<li>172.16.0.0 ~ 172.31.255.255</li>
+<li>192.168.0.0 ~ 192.168.255.255</li>
+</ul>
+</li>
+<li><a href="https://zh.wikipedia.org/wiki/%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2" target="_blank" rel="external">NAT</a>，上面讲腾讯云的 CVM 时提了下，细节可参考词条链接。关于 tcptwrecyle 的使用，可参考 <a href="http://tech.youzan.com/linux_nat/" target="_blank" rel="external">优化Linux NAT网关</a>。</li>
+</ul>
+<h3 id="通过接入网进入互联网内部"><a href="#通过接入网进入互联网内部" class="headerlink" title="通过接入网进入互联网内部"></a>通过接入网进入互联网内部</h3><ul>
+<li>电信号和光信号传播的速度大体上相同，之所以电缆不如光纤通信速率高，是因为电信号在提升通信速率的同时，其衰减率也会提高，而光信号本来的衰减率就很低，提高通信速率也并不会提高衰减率。此外，光纤还不受电磁噪声的影响，因此光纤能够进行高速通信。</li>
+<li>双绞线的极限距离时 100 米，但光纤的连接距离可以长达几公里。</li>
+<li>ADSL: Asymmetric Digital Subscriber Line, 不对称数字用户线。它是一种利用架设在电线杆上的金属电话线来进行高速通信的技术，它的上行方向（用户到互联网）和下行方向（互联网到用户）的通信速率时不对称的。记得笔者家里起初安装网络时就是使用的 ADSL，并且速率只有 1Mbps，当时还不懂为什么下载速度最高只能达到 128 KB/s，后来才知道原因是 1 Byte 等于 8 bit 啊。</li>
+<li>关于分离器：在信号从用户端发送出去时，电话和 ADSL 信号只是同时流到一条线路上而已，分离器实际上并没有做什么事。分离器的作用其实在相反的方向，也就是信号从电话线传入的时候。这时，分离器需要将电话和 ADSL 的信号进行分离。分离器将一定频率以上的信号过滤掉，也就是过滤掉了 ADSL 使用的高频信号，这样以来，只有电话信号才会传入电话机，但对于另一头的 ADSL Modem，则是传输原本的混合信号给它。ADSL Modem 内部已经具备将 ADSL 频率外的信号过滤掉的功能，因此不需要在分离器进行过滤。</li>
+<li>光纤由一种双层结构的纤维状透明材质（玻璃和塑料）构成，ADSL 信号是由多个频段的信号组成的，比较复杂，但光信号却非常简单，亮表示 1，暗表示 0。数字信息并不能一下子变成光信号，而是先将数字信息转换成电信号，然后再将电信号转换成光信号。</li>
+</ul>
+<h3 id="Web-服务器程序解释请求消息并作出响应"><a href="#Web-服务器程序解释请求消息并作出响应" class="headerlink" title="Web 服务器程序解释请求消息并作出响应"></a>Web 服务器程序解释请求消息并作出响应</h3><ul>
+<li>在 HTTP1.0 中，是服务器先发起断开操作。</li>
+</ul>
+<p>参考书目：<br><a href="https://book.douban.com/subject/26176870/" target="_blank" rel="external">《计算机网络 自顶向下方法》</a><br><a href="https://book.douban.com/subject/26825411/" target="_blank" rel="external">《TCP/IP详解 卷1 协议》</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;浏览器生成消息&quot;&gt;&lt;a href=&quot;#浏览器生成消息&quot; class=&quot;headerlink&quot; title=&quot;浏览器生成消息&quot;&gt;&lt;/a&gt;浏览器生成消息&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;URL: Uniform Resource Locator，统一资源定位符。&lt;/li&gt;
+&lt;li&gt;URL: &lt;a href=&quot;http://www.lab.glasscom.com/dir/&quot;&gt;http://www.lab.glasscom.com/dir/&lt;/a&gt;，我们可以这样理解，以 “/” 结尾代表 /dir/ 后面本来应该有的文件名被省略了。根据 URL 的规则，文件名可以像前面这样省略。我们会在服务器上事先设置好文件名省略时要访问的默认文件名。这个设置根据服务器不同而不同，大多数情况下是 index.html 或者 default.htm 之类的文件名。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="网络" scheme="https://tianshuang.me/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+      <category term="笔记" scheme="https://tianshuang.me/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>拉萨</title>
@@ -68,11 +173,11 @@
     </summary>
     
     
-      <category term="HTTP" scheme="https://tianshuang.me/tags/HTTP/"/>
+      <category term="调优" scheme="https://tianshuang.me/tags/%E8%B0%83%E4%BC%98/"/>
     
       <category term="TCP" scheme="https://tianshuang.me/tags/TCP/"/>
     
-      <category term="调优" scheme="https://tianshuang.me/tags/%E8%B0%83%E4%BC%98/"/>
+      <category term="HTTP" scheme="https://tianshuang.me/tags/HTTP/"/>
     
       <category term="Tomcat" scheme="https://tianshuang.me/tags/Tomcat/"/>
     
@@ -121,47 +226,6 @@
       <category term="Wireshark" scheme="https://tianshuang.me/tags/Wireshark/"/>
     
       <category term="UDP" scheme="https://tianshuang.me/tags/UDP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>High Performance Browser Networking</title>
-    <link href="https://tianshuang.me/2017/02/High-Performance-Browser-Networking/index.html"/>
-    <id>https://tianshuang.me/2017/02/High-Performance-Browser-Networking/index.html</id>
-    <published>2017-02-24T14:57:17.000Z</published>
-    <updated>2017-03-30T06:45:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>看了下目录，感觉与 <a href="https://book.douban.com/subject/1391207/" target="_blank" rel="external">《计算机网络 自顶向下方法》</a> 的内容有几分相似之处，留下以备不时之需。</p>
-<p><a href="https://hpbn.co/" target="_blank" rel="external">《High Performance Browser Networking》</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;看了下目录，感觉与 &lt;a href=&quot;https://book.douban.com/subject/1391207/&quot; target=&quot;_blank&quot; rel=&quot;exter
-    
-    </summary>
-    
-    
-      <category term="网络" scheme="https://tianshuang.me/tags/%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>多动态图详细讲解二叉搜索树</title>
-    <link href="https://tianshuang.me/2017/02/%E5%A4%9A%E5%8A%A8%E6%80%81%E5%9B%BE%E8%AF%A6%E7%BB%86%E8%AE%B2%E8%A7%A3%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/index.html"/>
-    <id>https://tianshuang.me/2017/02/多动态图详细讲解二叉搜索树/index.html</id>
-    <published>2017-02-24T14:55:45.000Z</published>
-    <updated>2017-03-30T06:45:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>转自 <a href="http://mp.weixin.qq.com/s/Qcb9kOPQs0aQSIeAqmNpOQ" target="_blank" rel="external">多动态图详细讲解二叉搜索树</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;转自 &lt;a href=&quot;http://mp.weixin.qq.com/s/Qcb9kOPQs0aQSIeAqmNpOQ&quot; target=&quot;_blank&quot; rel=&quot;exte
-    
-    </summary>
-    
     
   </entry>
   
@@ -278,9 +342,9 @@
     <link href="https://tianshuang.me/2017/02/%E9%81%93%E5%93%A5%E7%9A%84%E9%BB%91%E6%9D%BF%E6%8A%A5/index.html"/>
     <id>https://tianshuang.me/2017/02/道哥的黑板报/index.html</id>
     <published>2017-02-15T15:35:53.000Z</published>
-    <updated>2017-03-30T06:45:46.000Z</updated>
+    <updated>2017-04-08T13:21:00.000Z</updated>
     
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>知道道哥是因为大二读闲书时读了 <a href="https://book.douban.com/subject/10546925/" target="_blank" rel="external">《白帽子讲Web安全》</a> ，由于最近几天笔者在我司忙于迁移对象存储及测试 daily 环境下重新调整后的稳定性，笔者的 Pocket 里堆满了未读文章。昨日工作基本做完了，今日得以有空来筛选 Pocket 里的知识，这篇 <a href="http://mp.weixin.qq.com/s/_snozlQIcfROxuexpVTe9Q" target="_blank" rel="external">「我回阿里的29个月」</a> 是道哥 2 月 8 日就发布的，今日才得以阅读，印象最深的一点就是 “没有捷径可走” ，这也是 caoz 多次提到的，就算是富二代，那也是别人父亲一手打拼起来的啊。所以，许多时候还是该沉下心来做事，你我和这些大神比起来都太过渺小，做好当下的工作，不要浪费每一天。</p>
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>知道道哥是因为大二读闲书时读了 <a href="https://book.douban.com/subject/10546925/" target="_blank" rel="external">《白帽子讲Web安全》</a> ，由于最近几天笔者在我司忙于迁移对象存储及测试 daily 环境下重新调整后的稳定性，笔者的 Pocket 里堆满了未读文章。昨日工作基本做完了，今日得以有空来筛选 Pocket 里的知识，这篇 <a href="http://mp.weixin.qq.com/s/_snozlQIcfROxuexpVTe9Q" target="_blank" rel="external">「我回阿里的29个月」</a> 是道哥 2 月 8 日就发布的，今日才得以阅读，印象最深的一点就是 “没有捷径可走” ，还是该沉下心来做事，你我和这些大神比起来都太过渺小，做好当下的工作，不要浪费每一天。</p>
 ]]></content>
     
     <summary type="html">
@@ -318,71 +382,11 @@
   </entry>
   
   <entry>
-    <title>域名服务器缓存污染</title>
-    <link href="https://tianshuang.me/2017/02/%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%93%E5%AD%98%E6%B1%A1%E6%9F%93/index.html"/>
-    <id>https://tianshuang.me/2017/02/域名服务器缓存污染/index.html</id>
-    <published>2017-02-15T07:20:38.000Z</published>
-    <updated>2017-04-02T14:07:25.000Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>可关联知识点：</p>
-<ul>
-<li>DNS</li>
-<li>UDP</li>
-<li>TCP</li>
-<li>HTTPDNS</li>
-<li>CDN</li>
-</ul>
-<a id="more"></a>
-<p><a href="https://zh.wikipedia.org/zh-cn/%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%93%E5%AD%98%E6%B1%A1%E6%9F%93" target="_blank" rel="external">域名服务器缓存污染</a><br><a href="https://zh.wikipedia.org/zh-cn/%E6%B7%B1%E5%BA%A6%E5%8C%85%E6%A3%80%E6%B5%8B" target="_blank" rel="external">深度包检测</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;可关联知识点：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;DNS&lt;/li&gt;
-&lt;li&gt;UDP&lt;/li&gt;
-&lt;li&gt;TCP&lt;/li&gt;
-&lt;li&gt;HTTPDNS&lt;/li&gt;
-&lt;li&gt;CDN&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="DNS" scheme="https://tianshuang.me/tags/DNS/"/>
-    
-      <category term="GFW" scheme="https://tianshuang.me/tags/GFW/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>为什么文件名要小写？</title>
-    <link href="https://tianshuang.me/2017/02/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%96%87%E4%BB%B6%E5%90%8D%E8%A6%81%E5%B0%8F%E5%86%99%EF%BC%9F/index.html"/>
-    <id>https://tianshuang.me/2017/02/为什么文件名要小写？/index.html</id>
-    <published>2017-02-11T04:46:08.000Z</published>
-    <updated>2017-03-30T06:45:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>转自 <a href="http://www.ruanyifeng.com/blog/2017/02/filename-should-be-lowercase.html" target="_blank" rel="external">为什么文件名要小写？</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;转自 &lt;a href=&quot;http://www.ruanyifeng.com/blog/2017/02/filename-should-be-lowercase.html&quot; t
-    
-    </summary>
-    
-    
-      <category term="文件名" scheme="https://tianshuang.me/tags/%E6%96%87%E4%BB%B6%E5%90%8D/"/>
-    
-  </entry>
-  
-  <entry>
     <title>迟来的2016年度总结</title>
     <link href="https://tianshuang.me/2017/02/%E8%BF%9F%E6%9D%A5%E7%9A%842016%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/index.html"/>
     <id>https://tianshuang.me/2017/02/迟来的2016年度总结/index.html</id>
     <published>2017-02-08T15:35:33.000Z</published>
-    <updated>2017-04-02T14:33:32.000Z</updated>
+    <updated>2017-04-08T13:19:49.000Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><blockquote class="blockquote-center">青春啊<br>总是在这样分裂的失落的煎熬的夜晚让人伤心<br>我多么想你<br>只能轻轻唱歌</blockquote>
 
@@ -392,7 +396,7 @@
 <p>长辈的离世，让我恍如从梦中惊醒，一切都成了昨天，化为了回忆，不知不觉一晃二十余年，一直以为时间还有很多，想起送我的心形夜光石，不知散落到了何处，有的事只能长眠于记忆。</p>
 <p>同事准备在成都买房，苦于迟迟没有下手，十月出了新政，错过等一年，希望他能在下一波上涨前买下。</p>
 <p>吃饭，唱K，室友 Moses 追女生技术欠佳，屡次失手，室友 RH 就不一样了，成功率蛮高，当然，室友 HB 更是高人，只是不愿出招，还有三四个月就毕业了，四年转瞬即逝，即将各奔东西，不知还能相聚几次。</p>
-<p>二十多岁的年纪，经历最多的就是「迷茫」，能怎么办？像李逼说的，熬呗，就是熬，没有其他办法。</p>
+<p>二十多岁的年纪，迷茫，熬。</p>
 <p>晚安吧。</p>
 <audio controls><br>  <source src="https://storage.tianshuang.me/2017/02/%E6%9D%8E%E5%BF%97%20-%20%E6%A2%B5%E9%AB%98%E5%85%88%E7%94%9F%202015%E4%BC%B4%E5%A5%8F%E7%89%88.mp3" type="audio/mpeg"><br>  Your browser does not support the audio tag.<br></audio>
 ]]></content>
@@ -430,29 +434,6 @@
     
     
       <category term="/dev/shm" scheme="https://tianshuang.me/tags/dev-shm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>A ZeroMQ string</title>
-    <link href="https://tianshuang.me/2017/02/A-ZeroMQ-string/index.html"/>
-    <id>https://tianshuang.me/2017/02/A-ZeroMQ-string/index.html</id>
-    <published>2017-02-04T06:40:01.000Z</published>
-    <updated>2017-03-30T06:45:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p><img src="https://storage.tianshuang.me/2017/02/A%20ZeroMQ%20string.png" alt="A ZeroMQ string"></p>
-<p>ZeroMQ strings are length-specified and are sent on the wire without a trailing null. In the simplest case (and we’ll do this in our examples), a ZeroMQ string maps neatly to a ZeroMQ message frame, which looks like the above figure—a length and some bytes.</p>
-<p>看到这里诸位可以联想到Redis里的“simple dynamic string”也是采用类似的实现。详情请点击 <a href="http://redisbook.com/preview/sds/implementation.html" target="_blank" rel="external">SDS 的定义</a> 。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;&lt;img src=&quot;https://storage.tianshuang.me/2017/02/A%20ZeroMQ%20string.png&quot; alt=&quot;A ZeroMQ 
-    
-    </summary>
-    
-    
-      <category term="ZeroMQ" scheme="https://tianshuang.me/tags/ZeroMQ/"/>
     
   </entry>
   
@@ -530,17 +511,16 @@
     <link href="https://tianshuang.me/2017/01/%E4%B8%BD%E6%B1%9F%E4%B9%8B%E8%A1%8C/index.html"/>
     <id>https://tianshuang.me/2017/01/丽江之行/index.html</id>
     <published>2017-01-31T13:09:56.000Z</published>
-    <updated>2017-03-30T06:45:46.000Z</updated>
+    <updated>2017-04-08T13:13:43.000Z</updated>
     
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>原本是没有计划春节出行的，完全是因为出乎意料的发了年终，本以为实习生是没有年终的，没想到最后也发了。好不容易有十天假，趁在毕业前还有点时间，那就出去一趟吧，川内的著名景点大多都去过了，那这次就选个省外的，打开同程旅游，看一下国内游，首先映入眼帘的就是丽江，那就去这吧，选择自由行，下单，准备放假时出发吧。</p>
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>好不容易有十天假，趁在毕业前还有点时间，那就出去一趟吧，川内的著名景点大多都去过了，那这次就选个省外的，打开同程旅游，看一下国内游，首先映入眼帘的就是丽江，那就去这吧，选择自由行，下单，准备放假时出发吧。</p>
 <a id="more"></a>
-<p>在去往丽江的航班上，与邻座的阿姨聊天时得知我还没有毕业时，阿姨问到我是学什么专业的，告之计算机，然后阿姨说这专业不错啊，她儿子也是学计算机的，清华大学毕业十多年了，现在年薪一百多w，但是税要扣很多，实际到手只有八十多w，再私下做点其他的，一年能拿到一百w左右。笔者转念一想，这不就是知乎上的平均水平百万年薪吗？这可让我这种渣学历转正后才税前十几 w 的情何以堪，没想到旅行也能随时给笔者励志啊。</p>
-<p>到达丽江后习惯性得看了看空气质量，终于不像成都那样随时两三百的AQI了，当然肯定是要看美标，中标现在大家都懂的，现如今合格的空气都是一种奢求，在成都时公司里那几台空气净化器整天工作个不停，户外还得戴口罩，在这里，可以大口呼吸，简直就是两个世界，好像来到了资本主义的地盘。</p>
+<p>到达丽江后习惯性得看了看空气质量，终于不像成都那样随时两三百的 AQI了，当然肯定是要看美标，中标现在大家都懂的，现如今合格的空气都是一种奢求，在成都时公司里那几台空气净化器整天工作个不停，户外还得戴口罩，在这里，可以大口呼吸，简直就是两个世界，好像来到了资本主义的地盘。</p>
 <p><img src="https://storage.tianshuang.me/2017/01/1.jpg" alt="玉龙雪山"></p>
-<p>到达后与接机的卢哥聊天，途中路过丽江市第一高级中学，询之这里的学生是否补课，卢哥说这边基本都不补课，周末都放两天，还每月开一次运动会。当然，如果世世代代都在这里生活没有什么不妥，但如果准备去一二线城市的话相对来说还是很吃亏的，社会中下层的孩子，在公立学校接受了所谓的“快乐教育”后，构成了新一代的社会中下层，龟兔赛跑，如果兔子拼命向前跑呢？</p>
+<p>到达后与接机的卢哥聊天，途中路过丽江市第一高级中学，询之这里的学生是否补课，卢哥说这边基本都不补课，周末都放两天，还每月开一次运动会。当然，如果世世代代都在这里生活没有什么不妥，但如果准备去一二线城市的话相对来说还是很吃亏的，社会中下层的孩子，在公立学校接受了所谓的 “快乐教育” 后，构成了新一代的社会中下层，龟兔赛跑，如果兔子拼命向前跑呢？</p>
 <p>丽江古镇维护费每人80元，并且维护费不是景区门票，学生证等没有半价优惠，笔者不得不感叹这招实在是高。卢哥说最近古镇里的商贩还集体闹了一次，因为古镇并不是全封闭的，所以各个主要路口都有检查古镇维护费凭证的，而这些检查的工作人员一般六点半就下班了，这就导致了很多人为了避免缴纳古镇维护费，都选择晚上去逛古镇，白天古镇人流量较少，影响了古镇里商家们的生意。</p>
 <p><img src="https://storage.tianshuang.me/2017/01/2.jpg" alt="古镇"></p>
-<p>酒吧，客栈，小吃等等，白天去的话出来后留在心里的就是一阵“我的小宝贝”的旋律。傍晚的话酒吧开始营业，歌手驻唱，又听到了“港岛妹妹，你献给我的西班牙馅饼”，导游说过注意酒托，前年好像严打了一阵，现在又开始慢慢出现了。其实现在的古镇基本都全部商业化了，大多数开店的都是江浙一带的，本地人不是很多。</p>
+<p>酒吧，客栈，小吃等等，白天去的话出来后留在心里的就是一阵“我的小宝贝”的旋律。傍晚的话酒吧开始营业，歌手驻唱，导游说过注意酒托，前年好像严打了一阵，现在又开始慢慢出现了。其实现在的古镇基本都全部商业化了，大多数开店的都是江浙一带的，本地人不是很多。</p>
 <p><img src="https://storage.tianshuang.me/2017/01/3.jpg" alt="拉市海"></p>
 <p>拉市海没什么好说的，就是骑马划船，阳光很好。</p>
 <p><img src="https://storage.tianshuang.me/2017/01/4.jpg" alt="蓝月谷"></p>
@@ -557,7 +537,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;原本是没有计划春节出行的，完全是因为出乎意料的发了年终，本以为实习生是没有年终的，没想到最后也发了。好不容易有十天假，趁在毕业前还有点时间，那就出去一趟吧，川内的著名景点大多都去过了，那这次就选个省外的，打开同程旅游，看一下国内游，首先映入眼帘的就是丽江，那就去这吧，选择自由行，下单，准备放假时出发吧。&lt;/p&gt;
+      &lt;p&gt;好不容易有十天假，趁在毕业前还有点时间，那就出去一趟吧，川内的著名景点大多都去过了，那这次就选个省外的，打开同程旅游，看一下国内游，首先映入眼帘的就是丽江，那就去这吧，选择自由行，下单，准备放假时出发吧。&lt;/p&gt;
     
     </summary>
     
@@ -601,7 +581,7 @@
     <link href="https://tianshuang.me/2017/01/%E9%82%A3%E4%BA%9B%E4%BD%A0%E6%9C%AA%E6%9B%BE%E6%B3%A8%E6%84%8F%E7%9A%84DNS%E7%BB%86%E8%8A%82/index.html"/>
     <id>https://tianshuang.me/2017/01/那些你未曾注意的DNS细节/index.html</id>
     <published>2017-01-13T06:53:49.000Z</published>
-    <updated>2017-03-30T06:45:46.000Z</updated>
+    <updated>2017-04-07T16:53:26.000Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>DNS 消息是使用二进制数据编写的，查询报文和回答报文有着相同的格式，比如这位朋友写的 <a href="https://github.com/shadowsocks/shadowsocks/blob/master/shadowsocks/asyncdns.py" target="_blank" rel="external">asyncdns</a> 就表达得非常清楚。</p>
 <p>域名是大小写不敏感的。域名中的每一个标识至多 63 字符长。</p>
@@ -621,92 +601,6 @@
     
     
       <category term="DNS" scheme="https://tianshuang.me/tags/DNS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TCP三次握手和Syn-Flood攻击</title>
-    <link href="https://tianshuang.me/2017/01/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8CSyn-Flood%E6%94%BB%E5%87%BB/index.html"/>
-    <id>https://tianshuang.me/2017/01/TCP三次握手和Syn-Flood攻击/index.html</id>
-    <published>2017-01-10T09:18:28.000Z</published>
-    <updated>2017-03-30T06:45:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>转自 <a href="http://mp.weixin.qq.com/s?__biz=MzA3MDExNzcyNA==&amp;mid=2650392396&amp;idx=1&amp;sn=8499f6b5cc6b67cb345d01c71ceafcb5&amp;chksm=86ccd77fb1bb5e693cd24cac0a747621d2fef9c0095c2a16fba77920deb9f88ed6af3bab9243&amp;mpshare=1&amp;scene=23&amp;srcid=01102EMQq6lFMUZY05DsSXVk#rd" target="_blank" rel="external">TCP三次握手和Syn-Flood攻击</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;转自 &lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzA3MDExNzcyNA==&amp;amp;mid=2650392396&amp;amp;idx
-    
-    </summary>
-    
-    
-      <category term="TCP" scheme="https://tianshuang.me/tags/TCP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RESTful架构风格下的4大常见安全问题</title>
-    <link href="https://tianshuang.me/2017/01/RESTful%E6%9E%B6%E6%9E%84%E9%A3%8E%E6%A0%BC%E4%B8%8B%E7%9A%844%E5%A4%A7%E5%B8%B8%E8%A7%81%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98/index.html"/>
-    <id>https://tianshuang.me/2017/01/RESTful架构风格下的4大常见安全问题/index.html</id>
-    <published>2017-01-06T01:39:48.000Z</published>
-    <updated>2017-03-30T06:45:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>转自 <a href="http://insights.thoughtworkers.org/security-issues-in-restful/" target="_blank" rel="external">RESTful架构风格下的4大常见安全问题</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;转自 &lt;a href=&quot;http://insights.thoughtworkers.org/security-issues-in-restful/&quot; target=&quot;_bl
-    
-    </summary>
-    
-    
-      <category term="RESTful" scheme="https://tianshuang.me/tags/RESTful/"/>
-    
-      <category term="安全" scheme="https://tianshuang.me/tags/%E5%AE%89%E5%85%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>分布式锁</title>
-    <link href="https://tianshuang.me/2016/12/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/index.html"/>
-    <id>https://tianshuang.me/2016/12/分布式锁/index.html</id>
-    <published>2016-12-29T08:58:20.000Z</published>
-    <updated>2017-03-30T06:45:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>转自 <a href="http://blog.brucefeng.info/post/distributed-locks" target="_blank" rel="external">分布式锁</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;转自 &lt;a href=&quot;http://blog.brucefeng.info/post/distributed-locks&quot; target=&quot;_blank&quot; rel=&quot;ext
-    
-    </summary>
-    
-    
-      <category term="分布式" scheme="https://tianshuang.me/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>当服务QPS增高时我们做什么</title>
-    <link href="https://tianshuang.me/2016/12/%E5%BD%93%E6%9C%8D%E5%8A%A1QPS%E5%A2%9E%E9%AB%98%E6%97%B6%E6%88%91%E4%BB%AC%E5%81%9A%E4%BB%80%E4%B9%88/index.html"/>
-    <id>https://tianshuang.me/2016/12/当服务QPS增高时我们做什么/index.html</id>
-    <published>2016-12-21T03:33:53.000Z</published>
-    <updated>2017-04-02T14:34:11.000Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>转自 <a href="http://blog.brucefeng.info/post/high-qps-service" target="_blank" rel="external">当服务QPS增高时我们做什么</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;转自 &lt;a href=&quot;http://blog.brucefeng.info/post/high-qps-service&quot; target=&quot;_blank&quot; rel=&quot;exte
-    
-    </summary>
-    
-    
-      <category term="Tuning" scheme="https://tianshuang.me/tags/Tuning/"/>
     
   </entry>
   
@@ -811,155 +705,6 @@
       <category term="CSAPP" scheme="https://tianshuang.me/tags/CSAPP/"/>
     
       <category term="CS" scheme="https://tianshuang.me/tags/CS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>User space 与 Kernel space</title>
-    <link href="https://tianshuang.me/2016/12/User-space-%E4%B8%8E-Kernel-space/index.html"/>
-    <id>https://tianshuang.me/2016/12/User-space-与-Kernel-space/index.html</id>
-    <published>2016-12-07T08:22:25.000Z</published>
-    <updated>2017-03-30T06:45:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>转自 <a href="http://www.ruanyifeng.com/blog/2016/12/user_space_vs_kernel_space.html" target="_blank" rel="external">User space 与 Kernel space</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;转自 &lt;a href=&quot;http://www.ruanyifeng.com/blog/2016/12/user_space_vs_kernel_space.html&quot; tar
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="https://tianshuang.me/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>理解字节序</title>
-    <link href="https://tianshuang.me/2016/12/%E7%90%86%E8%A7%A3%E5%AD%97%E8%8A%82%E5%BA%8F/index.html"/>
-    <id>https://tianshuang.me/2016/12/理解字节序/index.html</id>
-    <published>2016-12-07T08:22:10.000Z</published>
-    <updated>2017-03-30T06:45:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>转自 <a href="http://www.ruanyifeng.com/blog/2016/11/byte-order.html" target="_blank" rel="external">理解字节序</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;转自 &lt;a href=&quot;http://www.ruanyifeng.com/blog/2016/11/byte-order.html&quot; target=&quot;_blank&quot; rel
-    
-    </summary>
-    
-    
-      <category term="CS" scheme="https://tianshuang.me/tags/CS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>The substring() Method in JDK 6 and JDK 7</title>
-    <link href="https://tianshuang.me/2016/11/The-substring-Method-in-JDK-6-and-JDK-7/index.html"/>
-    <id>https://tianshuang.me/2016/11/The-substring-Method-in-JDK-6-and-JDK-7/index.html</id>
-    <published>2016-11-18T02:35:43.000Z</published>
-    <updated>2017-03-30T06:45:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>转自 <a href="http://www.programcreek.com/2013/09/the-substring-method-in-jdk-6-and-jdk-7/" target="_blank" rel="external">The substring() Method in JDK 6 and JDK 7</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;转自 &lt;a href=&quot;http://www.programcreek.com/2013/09/the-substring-method-in-jdk-6-and-jdk-7
-    
-    </summary>
-    
-    
-      <category term="Java" scheme="https://tianshuang.me/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java 8 HashMaps, Keys and the Comparable interface</title>
-    <link href="https://tianshuang.me/2016/11/Java-8-HashMaps-Keys-and-the-Comparable-interface/index.html"/>
-    <id>https://tianshuang.me/2016/11/Java-8-HashMaps-Keys-and-the-Comparable-interface/index.html</id>
-    <published>2016-11-18T02:34:15.000Z</published>
-    <updated>2017-03-30T06:45:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>转自 <a href="https://tamasgyorfi.net/2016/05/01/java-8-hashmaps-keys-and-the-comparable-interface/" target="_blank" rel="external">Java 8 HashMaps, Keys and the Comparable interface</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;转自 &lt;a href=&quot;https://tamasgyorfi.net/2016/05/01/java-8-hashmaps-keys-and-the-comparable-
-    
-    </summary>
-    
-    
-      <category term="Java" scheme="https://tianshuang.me/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Integer Swap</title>
-    <link href="https://tianshuang.me/2016/11/Integer-Swap/index.html"/>
-    <id>https://tianshuang.me/2016/11/Integer-Swap/index.html</id>
-    <published>2016-11-18T02:32:26.000Z</published>
-    <updated>2017-03-30T06:45:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>转自 <a href="http://mp.weixin.qq.com/s?__biz=MzA3MDExNzcyNA==&amp;mid=2650392147&amp;idx=1&amp;sn=91ba6172edb887217eca35532c8a4af3&amp;scene=0#wechat_redirect" target="_blank" rel="external">一个简单代码的不简单实现</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;转自 &lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzA3MDExNzcyNA==&amp;amp;mid=2650392147&amp;amp;idx
-    
-    </summary>
-    
-    
-      <category term="Java" scheme="https://tianshuang.me/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>小而巧的数字压缩算法：zigzag</title>
-    <link href="https://tianshuang.me/2016/11/%E5%B0%8F%E8%80%8C%E5%B7%A7%E7%9A%84%E6%95%B0%E5%AD%97%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95%EF%BC%9Azigzag/index.html"/>
-    <id>https://tianshuang.me/2016/11/小而巧的数字压缩算法：zigzag/index.html</id>
-    <published>2016-11-18T02:30:14.000Z</published>
-    <updated>2017-03-30T06:45:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>转自 <a href="http://mp.weixin.qq.com/s?__biz=MzA3MDExNzcyNA==&amp;mid=2650392086&amp;idx=1&amp;sn=6a2ecfe2548f121a4726d03bf23f4478&amp;scene=0#wechat_redirect" target="_blank" rel="external">小而巧的数字压缩算法：zigzag</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;转自 &lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzA3MDExNzcyNA==&amp;amp;mid=2650392086&amp;amp;idx
-    
-    </summary>
-    
-    
-      <category term="算法" scheme="https://tianshuang.me/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Comet：基于 HTTP 长连接的服务器推技术</title>
-    <link href="https://tianshuang.me/2016/10/Comet%EF%BC%9A%E5%9F%BA%E4%BA%8E-HTTP-%E9%95%BF%E8%BF%9E%E6%8E%A5%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8E%A8%E6%8A%80%E6%9C%AF/index.html"/>
-    <id>https://tianshuang.me/2016/10/Comet：基于-HTTP-长连接的服务器推技术/index.html</id>
-    <published>2016-10-20T02:16:36.000Z</published>
-    <updated>2017-03-30T06:45:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>在学校的时候帮老师做过的项目中涉及到推送的部分使用了 Comet ，今天无意又看到这篇文章，顺手贴下以作留念。</p>
-<p><a href="http://www.ibm.com/developerworks/cn/web/wa-lo-comet/" target="_blank" rel="external">Comet：基于 HTTP 长连接的服务器推技术</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;在学校的时候帮老师做过的项目中涉及到推送的部分使用了 Comet ，今天无意又看到这篇文章，顺手贴下以作留念。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.ibm.
-    
-    </summary>
-    
-    
-      <category term="HTTP" scheme="https://tianshuang.me/tags/HTTP/"/>
     
   </entry>
   
