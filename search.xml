@@ -201,7 +201,7 @@
     <entry>
       <title><![CDATA[Git notes]]></title>
       <url>%2F2016%2F07%2FGit-notes%2Findex.html</url>
-      <content type="text"><![CDATA[12git submodule initgit submodule update Permanently authenticating with Git repositories can use the .netrc file Push a new local branch to a remote Git repository and track it too:1git push -u origin &lt;branch&gt;]]></content>
+      <content type="text"><![CDATA[12git submodule initgit submodule update Permanently authenticating with Git repositories can use the .netrc file 123git initgit commit -m &quot;first commit&quot;git remote add origin &lt;url&gt; Push a new local branch to a remote Git repository and track it too:1git push -u origin &lt;branch&gt;]]></content>
     </entry>
 
     
