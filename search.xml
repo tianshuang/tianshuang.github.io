@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[Awesome article]]></title>
       <url>%2F2017%2F04%2FAwesome-article%2Findex.html</url>
-      <content type="text"><![CDATA[Comet：基于 HTTP 长连接的服务器推技术小而巧的数字压缩算法：zigzag一个简单代码的不简单实现Java 8 HashMaps, Keys and the Comparable interfaceThe substring() Method in JDK 6 and JDK 7理解字节序User space 与 Kernel space当服务 QPS 增高时我们做什么分布式锁RESTful 架构风格下的 4 大常见安全问题TCP 三次握手和 Syn-Flood 攻击为什么文件名要小写？多动态图详细讲解二叉搜索树]]></content>
+      <content type="text"><![CDATA[Comet：基于 HTTP 长连接的服务器推技术 小而巧的数字压缩算法：zigzag 一个简单代码的不简单实现 Java 8 HashMaps, Keys and the Comparable interface The substring() Method in JDK 6 and JDK 7 理解字节序 User space 与 Kernel space 当服务 QPS 增高时我们做什么 分布式锁 RESTful 架构风格下的 4 大常见安全问题 TCP 三次握手和 Syn-Flood 攻击 为什么文件名要小写？ 多动态图详细讲解二叉搜索树 The TCP/IP Guide 我回阿里的29个月 一则经典技术面试题目的解读 What-happens-when What-happens-when (中文版) What Is /dev/shm And Its Practical Usage tmpfs OLTP vs. OLAP]]></content>
     </entry>
 
     
@@ -26,7 +26,7 @@
     <entry>
       <title><![CDATA[Tuning]]></title>
       <url>%2F2017%2F03%2FTuning%2Findex.html</url>
-      <content type="text"><![CDATA[Apache Tomcat Tuning for ProductionLinux TCP/IP Tuning for ScalabilityHTTP persistent connectionMaximum segment lifetime]]></content>
+      <content type="text"><![CDATA[Apache Tomcat Tuning for Production Linux TCP/IP Tuning for Scalability HTTP persistent connection Maximum segment lifetime]]></content>
     </entry>
 
     
@@ -45,37 +45,9 @@
 
     
     <entry>
-      <title><![CDATA[一则经典技术面试题目的解读]]></title>
-      <url>%2F2017%2F02%2F%E4%B8%80%E5%88%99%E7%BB%8F%E5%85%B8%E6%8A%80%E6%9C%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9B%AE%E7%9A%84%E8%A7%A3%E8%AF%BB%2Findex.html</url>
-      <content type="text"><![CDATA[笔者从 Pocket 里翻出了这篇 caoz 的 「一则经典技术面试题目的解读」 ，其实这篇文章说的这道面试题在许令波的 《深入分析Java Web技术内幕（修订版）》 也提到过，笔者也是当年大二读过此书后对用户的一次访问有了全局性的认识，后面再慢慢将相关的知识点补齐，现在的大多数文章就像快餐，要想系统性的学习还是要看完相关书籍，这也应了那句话，“没有捷径可走”。 What-happens-whenWhat-happens-when (中文版)]]></content>
-    </entry>
-
-    
-    <entry>
-      <title><![CDATA[道哥的黑板报]]></title>
-      <url>%2F2017%2F02%2F%E9%81%93%E5%93%A5%E7%9A%84%E9%BB%91%E6%9D%BF%E6%8A%A5%2Findex.html</url>
-      <content type="text"><![CDATA[知道道哥是因为大二读闲书时读了 《白帽子讲Web安全》 ，由于最近几天笔者在我司忙于迁移对象存储及测试 daily 环境下重新调整后的稳定性，笔者的 Pocket 里堆满了未读文章。昨日工作基本做完了，今日得以有空来筛选 Pocket 里的知识，这篇 「我回阿里的29个月」 是道哥 2 月 8 日就发布的，今日才得以阅读，印象最深的一点就是 “没有捷径可走” ，还是该沉下心来做事，你我和这些大神比起来都太过渺小，做好当下的工作，不要浪费每一天。]]></content>
-    </entry>
-
-    
-    <entry>
-      <title><![CDATA[RegExr 可视化正则工具]]></title>
-      <url>%2F2017%2F02%2FRegExr-%E5%8F%AF%E8%A7%86%E5%8C%96%E6%AD%A3%E5%88%99%E5%B7%A5%E5%85%B7%2Findex.html</url>
-      <content type="text"><![CDATA[微博上看见网路冷眼推荐的，之前需要测试自己写的正则是否正确都是手写程序验证的，不及可视化来得实在，不用再解释了，上链接。 RegExr is an online tool to learn, build, &amp; test Regular Expressions (RegEx / RegExp).]]></content>
-    </entry>
-
-    
-    <entry>
       <title><![CDATA[迟来的2016年度总结]]></title>
       <url>%2F2017%2F02%2F%E8%BF%9F%E6%9D%A5%E7%9A%842016%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93%2Findex.html</url>
       <content type="text"><![CDATA[青春啊总是在这样分裂的失落的煎熬的夜晚让人伤心我多么想你只能轻轻唱歌 在这正月十二的夜晚，笔者挑灯夜战之后，写下这份迟来的 2016 年度总结。 16 年已经成为过去，这一年，经历了太多事，四月初出学校实习，长辈的离世，各项事务繁杂不清。 2016 ，注定是悲伤的一年。 开学早早来到学校，三月面了阿里的实习内推，当然，历史总是惊人的相似，挂了，不过，作为一个渣学历的本科生，被刷是很正常的，当然，这不是失败的借口。笔者的第二次面试就是笔者现在的公司，然后就实习呗，当然，这次的面试官之前也是阿里的，这面试和笔者阿里实习内推面问的知识点是差不多的，因为岗位都是 Java 服务器端工程师，还告诉笔者阿里现在校招集团要求学校评级是 A 以上，没过也很正常。然后笔者就开始了实习生涯，因为这边给的 Offer 虽然比不上知乎上的随手几十 w 的年薪，但相对来说，也不会算低，并且在成都，笔者17年要面临毕业，学校还有一些事务需要处理，所以暂时不方便离开成都，这也是笔者后面没有再去参加其他面试的原因之一。以上是笔者的实习求职过程，生活的艰辛在这种时候体现得淋漓尽致。 长辈的离世，让我恍如从梦中惊醒，一切都成了昨天，化为了回忆，不知不觉一晃二十余年，一直以为时间还有很多，想起送我的心形夜光石，不知散落到了何处，有的事只能长眠于记忆。 同事准备在成都买房，苦于迟迟没有下手，十月出了新政，错过等一年，希望他能在下一波上涨前买下。 吃饭，唱K，室友 Moses 追女生技术欠佳，屡次失手，室友 RH 就不一样了，成功率蛮高，当然，室友 HB 更是高人，只是不愿出招，还有三四个月就毕业了，四年转瞬即逝，即将各奔东西，不知还能相聚几次。 二十多岁的年纪，迷茫，熬。 晚安吧。 Your browser does not support the audio tag.]]></content>
-    </entry>
-
-    
-    <entry>
-      <title><![CDATA[What Is /dev/shm And Its Practical Usage]]></title>
-      <url>%2F2017%2F02%2FWhat-Is-dev-shm-And-Its-Practical-Usage%2Findex.html</url>
-      <content type="text"><![CDATA[之前看 caoz 的文章里写到 /dev/shm 的用处，顺手 Google 之，感兴趣者可参见下方链接。 What Is /dev/shm And Its Practical Usagetmpfs]]></content>
     </entry>
 
     
@@ -94,13 +66,6 @@
 
     
     <entry>
-      <title><![CDATA[OLTP vs. OLAP]]></title>
-      <url>%2F2017%2F01%2FOLTP-vs-OLAP%2Findex.html</url>
-      <content type="text"><![CDATA[OLTP (On-line Transaction Processing) is characterized by a large number of short on-line transactions (INSERT, UPDATE, DELETE). The main emphasis for OLTP systems is put on very fast query processing, maintaining data integrity in multi-access environments and an effectiveness measured by number of transactions per second. In OLTP database there is detailed and current data, and schema used to store transactional databases is the entity model (usually 3NF). OLAP (On-line Analytical Processing) is characterized by relatively low volume of transactions. Queries are often very complex and involve aggregations. For OLAP systems a response time is an effectiveness measure. OLAP applications are widely used by Data Mining techniques. In OLAP database there is aggregated, historical data, stored in multi-dimensional schemas (usually star schema). OLTP vs. OLAP]]></content>
-    </entry>
-
-    
-    <entry>
       <title><![CDATA[那些你未曾注意的DNS细节]]></title>
       <url>%2F2017%2F01%2F%E9%82%A3%E4%BA%9B%E4%BD%A0%E6%9C%AA%E6%9B%BE%E6%B3%A8%E6%84%8F%E7%9A%84DNS%E7%BB%86%E8%8A%82%2Findex.html</url>
       <content type="text"><![CDATA[DNS 消息是使用二进制数据编写的，查询报文和回答报文有着相同的格式，比如这位朋友写的 asyncdns 就表达得非常清楚。 域名是大小写不敏感的。域名中的每一个标识至多 63 字符长。 一个区域的管理者必须为该区域提供一个主名字服务器和至少一个辅名字服务器。主、辅名字服务器必须是独立和冗余的，以便当某个名字服务器发生故障时不会影响该区域的名字服务。 大家平时经常见到的 A 记录其实是 Address 的缩写，MX 记录是 Mail eXchange 的缩写。RR 就是 Resource Record 的缩写。LDNS 是 Local DNS 的缩写。 根域（Top-Level Domain, TLD） DNS 服务器在运营上使用多台服务器来对应一个 IP 地址，因此尽管 IP 地址只有 13 个，但其实服务器的数量是很多的。参见 Root Servers。 从理论上讲，任何 DNS 查询既可以是迭代的也能是递归的。 DNS 均支持 UDP 和 TCP 访问，但主要使用 UDP。 DNS 原理入门Domain Name SystemRFC 1035]]></content>
@@ -115,34 +80,6 @@
 
     
     <entry>
-      <title><![CDATA[CSAPP:计算机系统漫游]]></title>
-      <url>%2F2016%2F12%2FCSAPP-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8%2Findex.html</url>
-      <content type="text"><![CDATA[超线程，有时称为同时多线程 (simultaneous multi-threading) ，是一项允许一个 CPU 执行多个控制流的技术。它涉及 CPU 某些硬件有多个备份，比如程序计数器和寄存器文件；而其他的硬件部分只有一份，比如执行浮点算术运算的单元。常规的处理器需要大约 20000 个时钟周期做不同线程间的转换，而超线程的处理器可以在单个周期的基础上决定要执行哪一个线程。这使得 CPU 能够更好地利用它的处理资源。例如，假设一个线程必须等到某些数据被装载到高速缓存中，那 CPU 就可以继续去执行另一个线程。举例来说， Intel Core i7 处理器可以让一个核执行两个线程，所以一个 4 核的系统实际上可以并行地执行 8 个线程。]]></content>
-    </entry>
-
-    
-    <entry>
-      <title><![CDATA[CSAPP:信息的表示和处理]]></title>
-      <url>%2F2016%2F12%2FCSAPP-%E4%BF%A1%E6%81%AF%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%A4%84%E7%90%86%2Findex.html</url>
-      <content type="text"><![CDATA[算数运算对计算机的算数运算有深刻的理解是写出可靠程序的关键。比如，程序员和编译器不能用表达式 (x - y &lt; 0) 来替代 (x &lt; y) ，因为前者可能会产生溢出。甚至于也不能用表达式 (-y &lt; -x) 来替代，因为在二进制补码表示中负数和正数的范围是不对称的。算术溢出是造成程序错误和安全漏洞的一个常见根源。 字每台计算机都有一个字长 (word size) ，指明整数和指针数据的标称大小 (nominal size) 。因为虚拟地址是以这样的一个字来编码的，所以字长决定的最重要的系统参数就是虚拟地址空间的最大大小。也就是说，对于一个字长尾w位的机器而言，虚拟地址的范围为 0～2w-1 ，程序最多访问 2w 个字节。 寻址和字节顺序某些机器选择在存储器中按照最低有效字节到最高有效字节的顺序存储对象，而另一些机器则按照从最高有效字节到最低有效字节的顺序存储。前一种规则————最低有效字节在最前面的方式，称为小端法 (little endian) 。大多数Intel兼容机都采用这种规则。后一种规则————最高有效字节在最前面的方式，称为大端法 (big endian) 。大多数 IBM 和 Sun Microsystems 的机器都采用这种规则。注意我们说的是“大多数”。这些规则并没有按照企业界限来划分。比如， IBM 和 Sun 制造的个人计算机使用的是 Intel 兼容的处理器，因此用的就是小端法。许多比较新的微处理器使用双端法 (bi-endian) ，也就是说可以把它们配置成座位大端或者小端的机器运行。 移位运算一般而言，机器支持两种形式的右移：逻辑右移和算术右移。逻辑右移在左端补 k 个 0 ，算术右移是在左端补 k 个最高有效位的值。 C 语言标准并没有明确定义应该是用哪种类型的右移。对于无符号数据 (也就是以限定词unsigned声明的整型对象) ，右移必须是逻辑的。而对于有符号数据 (默认的声明的整型对象) ，算术的或者逻辑的右移都可以。不幸的是，这就意味着假设一种或者另一种右移形式的代码都潜在着可移植性问题。然而，实际上，几乎所有的编译器／机器组合都对有符号数据使用算术右移，且许多程序员也都假设机器会使用这种右移。另一方面， Java 对于如何进行右移有明确的定义。表达式 x&gt;&gt;k 会将 x 算术右移 k 个位置，而 x&gt;&gt;&gt;k 会对 x 做逻辑右移。 移动k位，这里k很大123int lval = 0xFEDCBA98 &lt;&lt; 32;int aval = 0xFEDCBA98 &gt;&gt; 36;unsigned uval = 0xFEDCBA98u &gt;&gt; 40; C 语言标准很小心地规避了说明在这种情况下该如何做。在许多机器上，当移动一个w位的值时，移位指令只考虑位移量的低 log2w 位，因此实际上位移量就是通过计算 k mod w 得到的。例如，在一台采用这个规则的 32 位机器上，上面三个移位运算分别是移动 0、4 和 8 位，得到结果：123lval 0xFEDCBA98aval 0xFFEDCBA9uval 0x00FEDCBA 不过这种行为对于 C 程序来说是没有保证的，所以移位数量应该保持小于字长。另一方面， Java 特别要求位移数量应该按照我们前面所讲的求模的方法来计算。 与移位运算有关的操作符优先级问题常常有人会写这样的表达式 1 &lt;&lt; 2 + 3 &lt;&lt; 4 ，其本意是 (1 &lt;&lt; 2) + (3 &lt;&lt; 4) 。但是在 C 语言中，前面的表达式等价于 1 &lt;&lt; (2 + 3) &lt;&lt; 4 ，这是由于加法（和减法）的优先级比移位运算要高。然后，按照从左至右综合性规则，括号应该是这样打的 (1 &lt;&lt; (2 + 3)) &lt;&lt; 4 ，因此得到的结果是 512 ，而不是期望的 52 。在 C 表达式中搞错优先级是一种常见的程序错误，而且常常很难检查出来。所以当你拿不准的时候，请加上括号！]]></content>
-    </entry>
-
-    
-    <entry>
-      <title><![CDATA[异或操作的妙用]]></title>
-      <url>%2F2016%2F12%2F%E5%BC%82%E6%88%96%E6%93%8D%E4%BD%9C%E7%9A%84%E5%A6%99%E7%94%A8%2Findex.html</url>
-      <content type="text"><![CDATA[使特定位翻转，要使哪几位翻转就将与其进行 ^ 运算的该几位置为1即可。 与 0 相 ^ ，保留原值。 交换两个值，不用临时变量。这种交换方式并没有性能上的优势，它仅仅是一个智力游戏。]]></content>
-    </entry>
-
-    
-    <entry>
-      <title><![CDATA[False sharing]]></title>
-      <url>%2F2016%2F09%2FFalse-sharing%2Findex.html</url>
-      <content type="text"><![CDATA[HikariCP 的 ConcurrentBag 解释中提到了 False sharing ，查了下 wiki ，类似于 Java 内存模型中的主内存和每个线程的工作内存的关系（参见《深入理解 Java 虚拟机 JVM 高级特性与最佳实践（第2版）》 第 12 章 Java 内存模型与线程），既然看到了这里，诸位也可以自行回顾一下 volatile 的相关知识。 Java Volatile KeywordFalse sharing]]></content>
-    </entry>
-
-    
-    <entry>
       <title><![CDATA[SQL JOINS]]></title>
       <url>%2F2016%2F09%2FSQL-JOINS%2Findex.html</url>
       <content type="text"><![CDATA[]]></content>
@@ -150,58 +87,23 @@
 
     
     <entry>
-      <title><![CDATA[How to run process as background and never die?]]></title>
-      <url>%2F2016%2F09%2FHow-to-run-process-as-background-and-never-die%2Findex.html</url>
-      <content type="text"><![CDATA[nohup ./caddy &gt; /dev/null 2&gt;&amp;1 &amp; How to run process as background and never die?]]></content>
-    </entry>
-
-    
-    <entry>
       <title><![CDATA[读写分离]]></title>
       <url>%2F2016%2F08%2F%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB%2Findex.html</url>
-      <content type="text"><![CDATA[之前介绍了多数据源的接入，参见 Multiple Datasource ，后来一个数据分析的项目（大部分都是读操作）需要用到读写分离，在分析时读取从库的数据，避免增加对线上数据库的压力，少部分写操作依然写主库，然后再被同步至从库，根据同事的建议，希望采用注解方式实现，从而在开发时只需加上特定的注解即可表明此 DAO 操作主库还是从库，原理依然与之前类似，以下是调整的部分： 为了保护隐私，以下代码部分命名被修改 定义主从数据库的枚举，因为项目中大多数走从库，所以吧 SLAVE 写在了第一个 1234567/** * Created by Poison on 8/15/2016. */public enum Database &#123; SLAVE, MASTER&#125; 定义切换数据源的注解，注解基础可参见 Lesson: Annotations ，根据同事需要只定义了类级别的注解，保留到运行时，读者完全可以根据自身需要自由发挥 1234567891011/** * Created by Poison on 8/16/2016. * This is a marker annotation. * Use this annotation on DAO interface level, represent that all methods in this interface will operate your specified database. */@Documented@Retention(RetentionPolicy.RUNTIME)@Target(ElementType.TYPE)public @interface DataSource &#123; Database value() default Database.SLAVE;&#125; 修改 AOP 相关代码，只有在 DAO 接口上应用了 @DataSource 注解，并且注解值为 Database.MASTER 时才走主库 123456789101112131415161718192021222324252627282930313233/** * Created by Poison on 8/15/2016. */@Aspect@Componentpublic class AroundDataSource &#123; @Around("execution(* me.tianshuang.dao..*.*(..))") public Object doBasicProfiling(ProceedingJoinPoint pjp) throws Throwable &#123; Object result; if (hasMasterAnnotation(pjp)) &#123; DataSourceContextHolder.setDataSource(Database.MASTER); result = pjp.proceed(); DataSourceContextHolder.restoreToSlaveDataSource(); &#125; else &#123; result = pjp.proceed(); &#125; return result; &#125; private boolean hasMasterAnnotation(ProceedingJoinPoint pjp) &#123; Class&lt;?&gt; declaringClass = ((MethodSignature) pjp.getSignature()).getMethod().getDeclaringClass(); if (declaringClass.isAnnotationPresent(DataSource.class)) &#123; DataSource dataSource = declaringClass.getAnnotation(DataSource.class); if (dataSource.value() == Database.MASTER) &#123; return true; &#125; &#125; return false; &#125;&#125;]]></content>
-    </entry>
-
-    
-    <entry>
-      <title><![CDATA[From concurrent to parallel]]></title>
-      <url>%2F2016%2F08%2FFrom-concurrent-to-parallel%2Findex.html</url>
-      <content type="text"><![CDATA[More modern curricula describe concurrency as being about correctly and efficiently controlling access to shared resources, whereas parallelism is about using more resources to solve a problem faster. Constructing thread-safe data structures is the domain of concurrency, as enabled by primitives such as locks, events, semaphores, coroutines, or software transactional memory (STM). On the other hand, parallelism uses techniques like partitioning or sharding to enable multiple activities to make progress on the task without coordination. Brian GoetzFrom concurrent to parallel]]></content>
+      <content type="text"><![CDATA[之前介绍了多数据源的接入，参见 Multiple Datasource ，后来一个数据分析的项目（大部分都是读操作）需要用到读写分离，在分析时读取从库的数据，避免增加对线上数据库的压力，少部分写操作依然写主库，然后再被同步至从库，根据同事的建议，希望采用注解方式实现，从而在开发时只需加上特定的注解即可表明此 DAO 操作主库还是从库，原理依然与之前类似，以下是调整的部分： 为了保护隐私，以下代码部分命名被修改 定义主从数据库的枚举，因为项目中大多数走从库，所以吧 SLAVE 写在了第一个 1234567/** * Created by Poison on 8/15/2016. */public enum Database &#123; SLAVE, MASTER&#125; 定义切换数据源的注解，注解基础可参见 Lesson: Annotations ，根据同事需要只定义了类级别的注解，保留到运行时，读者完全可以根据自身需要自由发挥 1234567891011/** * Created by Poison on 8/16/2016. * This is a marker annotation. * Use this annotation on DAO interface level, represent that all methods in this interface will operate your specified database. */@Documented@Retention(RetentionPolicy.RUNTIME)@Target(ElementType.TYPE)public @interface DataSource &#123; Database value() default Database.SLAVE;&#125; 修改 AOP 相关代码，只有在 DAO 接口上应用了 @DataSource 注解，并且注解值为 Database.MASTER 时才走主库 1234567891011121314151617181920212223242526272829303132/** * Created by Poison on 8/15/2016. */@Aspect@Componentpublic class AroundDataSource &#123; @Around("execution(* me.tianshuang.dao..*.*(..))") public Object doBasicProfiling(ProceedingJoinPoint pjp) throws Throwable &#123; Object result; if (hasMasterAnnotation(pjp)) &#123; DataSourceContextHolder.setDataSource(Database.MASTER); result = pjp.proceed(); DataSourceContextHolder.restoreToSlaveDataSource(); &#125; else &#123; result = pjp.proceed(); &#125; return result; &#125; private boolean hasMasterAnnotation(ProceedingJoinPoint pjp) &#123; Class&lt;?&gt; declaringClass = ((MethodSignature) pjp.getSignature()).getMethod().getDeclaringClass(); if (declaringClass.isAnnotationPresent(DataSource.class)) &#123; DataSource dataSource = declaringClass.getAnnotation(DataSource.class); if (dataSource.value() == Database.MASTER) &#123; return true; &#125; &#125; return false; &#125;&#125;]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[Multiple Datasource]]></title>
       <url>%2F2016%2F08%2FMultiple%20Datasource%2Findex.html</url>
-      <content type="text"><![CDATA[最近项目中需要接入多个数据源，起初准备让 Mybatis 来进行数据源的动态选择，但查询 Mybatis 的相关文档后，未发现官方对多数据源的支持，并且笔者的项目中 Mybatis 的使用采用全注解的方式，如果实例化两个 SqlSessionFactory ，在全注解使用 Mybatis 的情况下，无法显式指定某个 Mapper 使用哪一个 sqlSessionFactory 。继续查询相关资料，发现 Spring 自 2.0.1 开始就提供了对动态数据源的支持，参见 Dynamic DataSource Routing ，咳咳，由于文章历史悠久，追溯至2007年，所以在笔者的项目中笔者对其进行了改进，思路依然与原文基本一致，只不过把文中基于XML的相关配置改为了我们项目中的基于 Java Code 的配置。 为了保护隐私，以下代码部分命名被修改 定义多个数据源的枚举，本例中仅包含两个数据源 1234567/** * Created by Poison on 8/15/2016. */enum DataSource &#123; FIRST, SECOND&#125; 定义 DataSourceContextHolder 1234567891011121314151617181920/** * Created by Poison on 8/15/2016. */class DataSourceContextHolder &#123; private static ThreadLocal&lt;DataSource&gt; contextHolder = new ThreadLocal&lt;&gt;(); static void setDataSource(DataSource dataSource) &#123; contextHolder.set(dataSource); &#125; static DataSource getDataSource() &#123; return contextHolder.get(); &#125; static void restoreToFirstDataSource() &#123; contextHolder.set(DataSource.FIRST); &#125;&#125; 定义 RoutingDataSource 1234567891011/** * Created by Poison on 8/15/2016. */class RoutingDataSource extends AbstractRoutingDataSource &#123; @Override protected Object determineCurrentLookupKey() &#123; return DataSourceContextHolder.getDataSource(); &#125;&#125; Datasource 相关配置 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172@Beanpublic javax.sql.DataSource dataSourceForFirst() &#123; HikariConfig hikariConfig = new HikariConfig(); hikariConfig.setDataSourceClassName(getProperty("jdbc.dataSourceClassName")); hikariConfig.setUsername(getProperty("jdbc.username")); hikariConfig.setPassword(getProperty("jdbc.password")); hikariConfig.setMinimumIdle(Integer.parseInt(getProperty("jdbc.minimumIdle"))); hikariConfig.setMaximumPoolSize(Integer.parseInt(getProperty("jdbc.maximumPoolSize"))); hikariConfig.addDataSourceProperty("serverName", getProperty("jdbc.serverName")); hikariConfig.addDataSourceProperty("port", getProperty("jdbc.port")); hikariConfig.addDataSourceProperty("databaseName", getProperty("jdbc.databaseName")); optimizeHikariConfigForMysql(hikariConfig); return new HikariDataSource(hikariConfig);&#125;private void optimizeHikariConfigForMysql(HikariConfig hikariConfig) &#123; hikariConfig.addDataSourceProperty("cachePrepStmts", true); hikariConfig.addDataSourceProperty("prepStmtCacheSize", 250); hikariConfig.addDataSourceProperty("prepStmtCacheSqlLimit", 2048);&#125;@Beanpublic javax.sql.DataSource dataSourceForSecond() &#123; HikariConfig hikariConfig = new HikariConfig(); hikariConfig.setDataSourceClassName(env.getProperty("jdbc.second.dataSourceClassName")); hikariConfig.setUsername(getProperty("jdbc.second.username")); hikariConfig.setPassword(getProperty("jdbc.second.password")); hikariConfig.setMinimumIdle(Integer.parseInt(env.getProperty("jdbc.second.minimumIdle"))); hikariConfig.setMaximumPoolSize(Integer.parseInt(env.getProperty("jdbc.second.maximumPoolSize"))); hikariConfig.addDataSourceProperty("serverName", getProperty("jdbc.second.serverName")); hikariConfig.addDataSourceProperty("port", getProperty("jdbc.second.port")); hikariConfig.addDataSourceProperty("databaseName", getProperty("jdbc.second.databaseName")); optimizeHikariConfigForMysql(hikariConfig); return new HikariDataSource(hikariConfig);&#125;@Beanpublic javax.sql.DataSource dataSource() &#123; RoutingDataSource routingDataSource = new RoutingDataSource(); Map&lt;Object, Object&gt; targetDataSources = new HashMap&lt;&gt;(); targetDataSources.put(DataSource.FIRST, dataSourceForFirst()); targetDataSources.put(DataSource.SECOND, dataSourceForSecond()); routingDataSource.setTargetDataSources(targetDataSources); routingDataSource.setDefaultTargetDataSource(dataSourceForFirst()); return routingDataSource;&#125;@Beanpublic SqlSessionFactory sqlSessionFactory() throws Exception &#123; SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean(); sessionFactory.setDataSource(dataSource()); sessionFactory.setTypeAliasesPackage("me.tianshuang.domain"); sessionFactory.setTypeHandlers(new TypeHandler[]&#123;new LocalDateTimeTypeHandler()&#125;); org.apache.ibatis.session.Configuration configuration = new org.apache.ibatis.session.Configuration(); configuration.setMapUnderscoreToCamelCase(true); sessionFactory.setConfiguration(configuration); return sessionFactory.getObject();&#125; AOP 相关配置 1234567891011121314151617/** * Created by Poison on 8/15/2016. */@Aspect@Componentpublic class AroundDataSource &#123; @Around("execution(* me.tianshuang.dao.second..*.*(..))") public Object doBasicProfiling(ProceedingJoinPoint pjp) throws Throwable &#123; DataSourceContextHolder.setDataSource(DataSource.SECOND); Object result = pjp.proceed(); DataSourceContextHolder.restoreToFirstDataSource(); return result; &#125;&#125; 在对数据源进行路由的控制这方面，采用了 AOP 的思想，在我们的项目中，因为第二个数据源用的频率很低，所以为需要操作第二个数据源的 Mapper 单独建立了一个包 (me.tianshuang.dao.second) ，在此包下的所有 Mapper 的方法在执行前将切换数据源为 SECOND ，执行完方法后又切回数据源 First 。 以上只是切换数据源的一种方案，本文的关键就在于 RoutingDataSource ，而在哪里切换数据源，读者完全可根据自身项目需要选择最适合的方案，该例只是适合笔者所在项目的一个例子。]]></content>
-    </entry>
-
-    
-    <entry>
-      <title><![CDATA[你看见的，不一定是真的]]></title>
-      <url>%2F2016%2F08%2F%E4%BD%A0%E7%9C%8B%E8%A7%81%E7%9A%84%EF%BC%8C%E4%B8%8D%E4%B8%80%E5%AE%9A%E6%98%AF%E7%9C%9F%E7%9A%84%2Findex.html</url>
-      <content type="text"><![CDATA[最近在使用 Java 读取 Shell 脚本执行后打印到控制台上的文本时，需要获取包含指定关键字的一行，当然，又随手写下了以下代码：123if (line.contains("读写失败总数")) &#123; // do something&#125; 测试时可无论如何也if判断条件都不为真啊，明明控制台打印出了以上中文，到底是哪里出了问题？转念一想，是被控制台这小子耍了啊，在使用 XShell 类似的软件连接远程服务器时，你看到的输出不是控制台原生的输出，在本例中，看到输出了中文，实则是 XShell 帮我们进行了相关转码，随即，将以上中文转为 Unicode 后再次进行测试：123if (line.contains("\u8bfb\u5199\u5931\u8d25\u603b\u6570")) &#123; // do something&#125; 成功通过测试。]]></content>
-    </entry>
-
-    
-    <entry>
-      <title><![CDATA[记一起while引发的惨剧]]></title>
-      <url>%2F2016%2F08%2F%E8%AE%B0%E4%B8%80%E8%B5%B7while%E5%BC%95%E5%8F%91%E7%9A%84%E6%83%A8%E5%89%A7%2Findex.html</url>
-      <content type="text"><![CDATA[最近在使用 Java 调用 Shell 脚本时，需要获取 Shell 脚本执行后输出到控制台的文本，然后随手就写出了以下代码（本着尽量使用第三方类库不自己造轮子的思想）…123while (StringUtils.isNotBlank(line = stdInput.readLine())) &#123; lines.add(line);&#125; 跑测试时可怎么也读不到 Shell 脚本的输出啊，尼玛，检查万分，梦中惊醒，这可是 while 啊，我用 StringUtils.isNotBlank 搞毛线啊，读到一行第一行为空的就不继续读了，这里的终止条件应该为读到流结束（即 readLine 返回为 null ）啊，果断更改代码为：123while ((line = stdInput.readLine()) != null) &#123; lines.add(line);&#125; 更改后一切正常…代码写多了后经常不假思索就敲了下去，这次就是一个教训，谨记。12345678910111213141516/** * Reads a line of text. A line is considered to be terminated by any one * of a line feed ('\n'), a carriage return ('\r'), or a carriage return * followed immediately by a linefeed. * * @return A String containing the contents of the line, not including * any line-termination characters, or null if the end of the * stream has been reached * * @exception IOException If an I/O error occurs * * @see java.nio.file.Files#readAllLines */public String readLine() throws IOException &#123; return readLine(false);&#125; or null if the end of the stream has been reached]]></content>
-    </entry>
-
-    
-    <entry>
-      <title><![CDATA[Java Streams]]></title>
-      <url>%2F2016%2F08%2FJava-Streams%2Findex.html</url>
-      <content type="text"><![CDATA[In addition to using streams for computation, you might want to consider using streams to return aggregates from API methods, where previously you might have returned an array or collection. Returning a stream is often more efficient, since you don’t have to copy all the data into a new array or collection. Returning a stream is also often more flexible; the form of collection the library chooses to return might not be what the caller needs, and it’s easy to convert a stream into any collection type. (The main situation in which returning a stream is inappropriate, and falling back to returning a materialized collection is better, is when the caller would need to see a consistent snapshot of the state at a point in time.) Brian GoetzAn introduction to the java.util.stream library]]></content>
+      <content type="text"><![CDATA[最近项目中需要接入多个数据源，起初准备让 Mybatis 来进行数据源的动态选择，但查询 Mybatis 的相关文档后，未发现官方对多数据源的支持，并且笔者的项目中 Mybatis 的使用采用全注解的方式，如果实例化两个 SqlSessionFactory ，在全注解使用 Mybatis 的情况下，无法显式指定某个 Mapper 使用哪一个 sqlSessionFactory 。继续查询相关资料，发现 Spring 自 2.0.1 开始就提供了对动态数据源的支持，参见 Dynamic DataSource Routing ，咳咳，由于文章历史悠久，追溯至2007年，所以在笔者的项目中笔者对其进行了改进，思路依然与原文基本一致，只不过把文中基于XML的相关配置改为了我们项目中的基于 Java Code 的配置。 为了保护隐私，以下代码部分命名被修改 定义多个数据源的枚举，本例中仅包含两个数据源 1234567/** * Created by Poison on 8/15/2016. */enum DataSource &#123; FIRST, SECOND&#125; 定义 DataSourceContextHolder 1234567891011121314151617181920/** * Created by Poison on 8/15/2016. */class DataSourceContextHolder &#123; private static ThreadLocal&lt;DataSource&gt; contextHolder = new ThreadLocal&lt;&gt;(); static void setDataSource(DataSource dataSource) &#123; contextHolder.set(dataSource); &#125; static DataSource getDataSource() &#123; return contextHolder.get(); &#125; static void restoreToFirstDataSource() &#123; contextHolder.set(DataSource.FIRST); &#125;&#125; 定义 RoutingDataSource 1234567891011/** * Created by Poison on 8/15/2016. */class RoutingDataSource extends AbstractRoutingDataSource &#123; @Override protected Object determineCurrentLookupKey() &#123; return DataSourceContextHolder.getDataSource(); &#125;&#125; Datasource 相关配置 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172@Beanpublic javax.sql.DataSource dataSourceForFirst() &#123; HikariConfig hikariConfig = new HikariConfig(); hikariConfig.setDataSourceClassName(getProperty("jdbc.dataSourceClassName")); hikariConfig.setUsername(getProperty("jdbc.username")); hikariConfig.setPassword(getProperty("jdbc.password")); hikariConfig.setMinimumIdle(Integer.parseInt(getProperty("jdbc.minimumIdle"))); hikariConfig.setMaximumPoolSize(Integer.parseInt(getProperty("jdbc.maximumPoolSize"))); hikariConfig.addDataSourceProperty("serverName", getProperty("jdbc.serverName")); hikariConfig.addDataSourceProperty("port", getProperty("jdbc.port")); hikariConfig.addDataSourceProperty("databaseName", getProperty("jdbc.databaseName")); optimizeHikariConfigForMysql(hikariConfig); return new HikariDataSource(hikariConfig);&#125;private void optimizeHikariConfigForMysql(HikariConfig hikariConfig) &#123; hikariConfig.addDataSourceProperty("cachePrepStmts", true); hikariConfig.addDataSourceProperty("prepStmtCacheSize", 250); hikariConfig.addDataSourceProperty("prepStmtCacheSqlLimit", 2048);&#125;@Beanpublic javax.sql.DataSource dataSourceForSecond() &#123; HikariConfig hikariConfig = new HikariConfig(); hikariConfig.setDataSourceClassName(env.getProperty("jdbc.second.dataSourceClassName")); hikariConfig.setUsername(getProperty("jdbc.second.username")); hikariConfig.setPassword(getProperty("jdbc.second.password")); hikariConfig.setMinimumIdle(Integer.parseInt(env.getProperty("jdbc.second.minimumIdle"))); hikariConfig.setMaximumPoolSize(Integer.parseInt(env.getProperty("jdbc.second.maximumPoolSize"))); hikariConfig.addDataSourceProperty("serverName", getProperty("jdbc.second.serverName")); hikariConfig.addDataSourceProperty("port", getProperty("jdbc.second.port")); hikariConfig.addDataSourceProperty("databaseName", getProperty("jdbc.second.databaseName")); optimizeHikariConfigForMysql(hikariConfig); return new HikariDataSource(hikariConfig);&#125;@Beanpublic javax.sql.DataSource dataSource() &#123; RoutingDataSource routingDataSource = new RoutingDataSource(); Map&lt;Object, Object&gt; targetDataSources = new HashMap&lt;&gt;(); targetDataSources.put(DataSource.FIRST, dataSourceForFirst()); targetDataSources.put(DataSource.SECOND, dataSourceForSecond()); routingDataSource.setTargetDataSources(targetDataSources); routingDataSource.setDefaultTargetDataSource(dataSourceForFirst()); return routingDataSource;&#125;@Beanpublic SqlSessionFactory sqlSessionFactory() throws Exception &#123; SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean(); sessionFactory.setDataSource(dataSource()); sessionFactory.setTypeAliasesPackage("me.tianshuang.domain"); sessionFactory.setTypeHandlers(new TypeHandler[]&#123;new LocalDateTimeTypeHandler()&#125;); org.apache.ibatis.session.Configuration configuration = new org.apache.ibatis.session.Configuration(); configuration.setMapUnderscoreToCamelCase(true); sessionFactory.setConfiguration(configuration); return sessionFactory.getObject();&#125; AOP 相关配置 12345678910111213141516/** * Created by Poison on 8/15/2016. */@Aspect@Componentpublic class AroundDataSource &#123; @Around("execution(* me.tianshuang.dao.second..*.*(..))") public Object doBasicProfiling(ProceedingJoinPoint pjp) throws Throwable &#123; DataSourceContextHolder.setDataSource(DataSource.SECOND); Object result = pjp.proceed(); DataSourceContextHolder.restoreToFirstDataSource(); return result; &#125;&#125; 在对数据源进行路由的控制这方面，采用了 AOP 的思想，在我们的项目中，因为第二个数据源用的频率很低，所以为需要操作第二个数据源的 Mapper 单独建立了一个包 (me.tianshuang.dao.second) ，在此包下的所有 Mapper 的方法在执行前将切换数据源为 SECOND ，执行完方法后又切回数据源 First 。 以上只是切换数据源的一种方案，本文的关键就在于 RoutingDataSource ，而在哪里切换数据源，读者完全可根据自身项目需要选择最适合的方案，该例只是适合笔者所在项目的一个例子。]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[Git notes]]></title>
       <url>%2F2016%2F07%2FGit-notes%2Findex.html</url>
-      <content type="text"><![CDATA[12git submodule initgit submodule update Permanently authenticating with Git repositories can use the .netrc file 123git initgit commit -m &quot;first commit&quot;git remote add origin &lt;url&gt; Push a new local branch to a remote Git repository and track it too:1git push -u origin &lt;branch&gt;]]></content>
+      <content type="text"><![CDATA[12git submodule initgit submodule update Permanently authenticating with Git repositories can use the .netrc file 123git initgit commit -m "first commit"git remote add origin &lt;url&gt; Push a new local branch to a remote Git repository and track it too:1git push -u origin &lt;branch&gt;]]></content>
     </entry>
 
     
