@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tianshuang.me/"/>
-  <updated>2017-04-19T13:38:57.000Z</updated>
+  <updated>2017-04-23T08:47:42.000Z</updated>
   <id>https://tianshuang.me/</id>
   
   <author>
@@ -20,12 +20,11 @@
     <link href="https://tianshuang.me/2017/04/Java-%E5%AF%B9%E8%B1%A1%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80/index.html"/>
     <id>https://tianshuang.me/2017/04/Java-对象内存布局/index.html</id>
     <published>2017-04-19T12:58:53.000Z</published>
-    <updated>2017-04-19T13:38:57.000Z</updated>
+    <updated>2017-04-23T08:47:42.000Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>我把示例代码放了一份在 Github 上，<a href="https://github.com/tianshuang/jol-samples" target="_blank" rel="external">jol-samples</a>，想看的同学可以 clone 下来把每个 example 跑一跑就能看到 JVM 对象在内存中布局的一些信息，包括对象头占多大、字节怎么对齐、字段在内存中的顺序不一定与声明的顺序一致、涉及到继承时字段是如何存放的、带 transient 修饰符的字段被特殊处理、Java8 新增的 @Contended 注解的作用、JVM 的平台相关性、对象头中的 mark word 及 class word、轻量锁、偏向锁、重量锁、Hashcode、GC 需要用到的对象引用图、哈希碰撞时转换为链表以及 Java8 中极端情况下转换为红黑树、观察 mark word 中的 age 字段的值在 GC 后的变化 等等，我没有一个一个写出来，因为 25 个例子太多了，设计到的知识点也比较多，需要一些前置知识才能理解。</p>
 <a id="more"></a>
-<p>JOL (Java Object Layout) is the tiny toolbox to analyze object layout schemes in JVMs. These tools are using Unsafe, JVMTI, and Serviceability Agent (SA) heavily to decoder the actual object layout, footprint, and references. This makes JOL much more accurate than other tools relying on heap dumps, specification assumptions, etc.</p>
-<p><a href="http://openjdk.java.net/projects/code-tools/jol/" target="_blank" rel="external">JOL</a></p>
+<p><a href="http://openjdk.java.net/projects/code-tools/jol/" target="_blank" rel="external">JOL</a> (Java Object Layout) is the tiny toolbox to analyze object layout schemes in JVMs. These tools are using Unsafe, JVMTI, and Serviceability Agent (SA) heavily to decoder the actual object layout, footprint, and references. This makes JOL much more accurate than other tools relying on heap dumps, specification assumptions, etc.</p>
 <p>以下是在看到输出后可能会迷惑的地方：</p>
 <ul>
 <li>首先要明确输出是大端字节序还是小端字节序，将二进制转换为十进制与后面的数字比较下就能确定。</li>
