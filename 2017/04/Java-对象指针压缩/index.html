@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="田爽,tianshuang,Poison,Java,server,network,concurrent" />
+  <meta name="keywords" content="Java," />
 
 
 
@@ -86,15 +86,16 @@
 
 
 
-<meta name="description" content="昨夜如梦 似流星划过">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Poison">
-<meta property="og:url" content="https://tianshuang.me/tags/调优/index.html">
+<meta name="description" content="很久之前就看到过 Java 对象指针压缩这个技术，只是一直没具体想为什么要偏移 3 位，好吧，最近才知道原因是因为大多数 JVM 实现都是采用 8 位对齐，所以二进制位中的后三位都是 0。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java 对象指针压缩">
+<meta property="og:url" content="https://tianshuang.me/2017/04/Java-对象指针压缩/index.html">
 <meta property="og:site_name" content="Poison">
-<meta property="og:description" content="昨夜如梦 似流星划过">
+<meta property="og:description" content="很久之前就看到过 Java 对象指针压缩这个技术，只是一直没具体想为什么要偏移 3 位，好吧，最近才知道原因是因为大多数 JVM 实现都是采用 8 位对齐，所以二进制位中的后三位都是 0。">
+<meta property="og:updated_time" content="2017-04-23T11:54:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Poison">
-<meta name="twitter:description" content="昨夜如梦 似流星划过">
+<meta name="twitter:title" content="Java 对象指针压缩">
+<meta name="twitter:description" content="很久之前就看到过 Java 对象指针压缩这个技术，只是一直没具体想为什么要偏移 3 位，好吧，最近才知道原因是因为大多数 JVM 实现都是采用 8 位对齐，所以二进制位中的后三位都是 0。">
 
 
 
@@ -122,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="https://tianshuang.me/tags/调优/"/>
+  <link rel="canonical" href="https://tianshuang.me/2017/04/Java-对象指针压缩/"/>
 
 
 
 
 
-  <title> 标签: 调优 | Poison </title>
+  <title> Java 对象指针压缩 | Poison </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -149,7 +150,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -252,46 +253,165 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        调优
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://tianshuang.me/2017/04/Java-对象指针压缩/index.html">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Poison">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://storage.tianshuang.me/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Poison">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Poison" src="">
+    </span>
+  </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Java 对象指针压缩
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-23T19:32:00+08:00">
+                2017-04-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/04/Java-对象指针压缩/index.html" class="leancloud_visitors" data-flag-title="Java 对象指针压缩">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <script src="/assets/js/APlayer.min.js"> </script><p>很久之前就看到过 Java 对象指针压缩这个技术，只是一直没具体想为什么要偏移 3 位，好吧，最近才知道原因是因为大多数 JVM 实现都是采用 8 位对齐，所以二进制位中的后三位都是 0。<br><a id="more"></a></p>
+<blockquote>
+<p>Let’s talk a bit about Ordinary Object Pointers (OOPs) and Compressed OOPs (Coops). OOPs are the handles/pointers the JVM uses as object references. When oops are only 32 bits long, they can reference only 4 GB of memory, which is why a 32-bit JVM is limited to a 4 GB heap size. (The same restriction applies at the operating system level, which is why any 32-bit process is limited to 4GB of address space.) When oops are 64 bits long, they can reference terabytes of memory.<br>What if there were 35-bit oops? Then the pointer could reference 32 GB of memory and still take up less space in the heap than 64-bit references. The problem is that there aren’t 35-bit registers in which to store such references. Instead, though, the JVM can assume that the last 3 bits of the reference are all 0. Now every reference can be stored in 32 bits in the heap. When the reference is stored into a 64-bit register, the JVM can shift it left by 3 bits (adding three zeros at the end). When the reference is saved from a register, the JVM can right-shift it by 3 bits, discarding the zeros at the end.<br>This allows JVM to use pointers that can reference 32 GB of memory while using only 32 bits in the heap. However it also means that the JVM cannot access any object at an address that isn’t divisible by 8, since any address from a compressed oop ends with three zeros. The first possible oop is 0x1, which when shifted becomes 0x8. The next oop is 0x2, which when shifted becomes 0x10 (16). Objects must therefore be located on an 8-byte boundary. As we know objects are already aligned on an 8-byte boundary in the JVM (in both the 32- and 64-bit versions); this is the optimal alignment for most processors. So nothing is lost by using compressed oops.<br>A program that uses a 31 GB heap and compressed oops will usually be faster than a program that uses a 33 GB heap. Although the 33 GB heap is larger, the extra space used by the pointers in that heap means that the larger heap will perform more frequent GC cycles and have worse performance.<br>Compressed oops are enabled using the -XX:+UseCompressedOops flag; in Java 7 and later versions, they are enabled by default whenever the maximum heap size is less than 32 GB.</p>
+</blockquote>
+<p><a href="http://arturmkrtchyan.com/java-object-header" target="_blank" rel="external">Java Object header</a></p>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2017/03/Tuning/index.html" itemprop="url">
-              
-                <span itemprop="name">Tuning</span>
-              
-            </a>
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="https://storage.tianshuang.me/wechat_subscription.jpg" alt="Poison wechat" style="width: 200px; max-width: 100%;"/>
+    <div>微信扫一扫，订阅该博客</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-21T11:12:05+08:00"
-              content="2017-03-21" >
-          03-21
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/Java-对象内存布局/index.html" rel="next" title="Java 对象内存布局">
+                <i class="fa fa-chevron-left"></i> Java 对象内存布局
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -299,6 +419,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -521,6 +645,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 

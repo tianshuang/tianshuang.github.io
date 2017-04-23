@@ -92,7 +92,7 @@
 <meta property="og:url" content="https://tianshuang.me/2017/04/Java-对象内存布局/index.html">
 <meta property="og:site_name" content="Poison">
 <meta property="og:description" content="我把示例代码放了一份在 Github 上，jol-samples，想看的同学可以 clone 下来把每个 example 跑一跑就能看到 JVM 对象在内存中布局的一些信息，包括对象头占多大、字节怎么对齐、字段在内存中的顺序不一定与声明的顺序一致、涉及到继承时字段是如何存放的、带 transient 修饰符的字段被特殊处理、Java8 新增的 @Contended 注解的作用、JVM 的平台相关性">
-<meta property="og:updated_time" content="2017-04-23T08:47:42.000Z">
+<meta property="og:updated_time" content="2017-04-23T11:52:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 对象内存布局">
 <meta name="twitter:description" content="我把示例代码放了一份在 Github 上，jol-samples，想看的同学可以 clone 下来把每个 example 跑一跑就能看到 JVM 对象在内存中布局的一些信息，包括对象头占多大、字节怎么对齐、字段在内存中的顺序不一定与声明的顺序一致、涉及到继承时字段是如何存放的、带 transient 修饰符的字段被特殊处理、Java8 新增的 @Contended 注解的作用、JVM 的平台相关性">
@@ -345,9 +345,7 @@
       
 
       
-        <script src="/assets/js/APlayer.min.js"> </script><p>我把示例代码放了一份在 Github 上，<a href="https://github.com/tianshuang/jol-samples" target="_blank" rel="external">jol-samples</a>，想看的同学可以 clone 下来把每个 example 跑一跑就能看到 JVM 对象在内存中布局的一些信息，包括对象头占多大、字节怎么对齐、字段在内存中的顺序不一定与声明的顺序一致、涉及到继承时字段是如何存放的、带 transient 修饰符的字段被特殊处理、Java8 新增的 @Contended 注解的作用、JVM 的平台相关性、对象头中的 mark word 及 class word、轻量锁、偏向锁、重量锁、Hashcode、GC 需要用到的对象引用图、哈希碰撞时转换为链表以及 Java8 中极端情况下转换为红黑树、观察 mark word 中的 age 字段的值在 GC 后的变化 等等，我没有一个一个写出来，因为 25 个例子太多了，设计到的知识点也比较多，需要一些前置知识才能理解。</p>
-<a id="more"></a>
-<p><a href="http://openjdk.java.net/projects/code-tools/jol/" target="_blank" rel="external">JOL</a> (Java Object Layout) is the tiny toolbox to analyze object layout schemes in JVMs. These tools are using Unsafe, JVMTI, and Serviceability Agent (SA) heavily to decoder the actual object layout, footprint, and references. This makes JOL much more accurate than other tools relying on heap dumps, specification assumptions, etc.</p>
+        <script src="/assets/js/APlayer.min.js"> </script><p>我把示例代码放了一份在 Github 上，<a href="https://github.com/tianshuang/jol-samples" target="_blank" rel="external">jol-samples</a>，想看的同学可以 clone 下来把每个 example 跑一跑就能看到 JVM 对象在内存中布局的一些信息，包括对象头占多大、字节怎么对齐、字段在内存中的顺序不一定与声明的顺序一致、涉及到继承时字段是如何存放的、带 transient 修饰符的字段被特殊处理、Java8 新增的 @Contended 注解的作用、JVM 的平台相关性、对象头中的 mark word 及 class word、轻量锁、偏向锁、重量锁、Hashcode、GC 需要用到的对象引用图、哈希碰撞时转换为链表以及 Java8 中极端情况下转换为红黑树、观察 mark word 中的 age 字段的值在 GC 后的变化 等等，我没有一个一个写出来，因为 25 个例子太多了，设计到的知识点也比较多，需要一些前置知识才能理解。<br><a id="more"></a><br><a href="http://openjdk.java.net/projects/code-tools/jol/" target="_blank" rel="external">JOL</a> (Java Object Layout) is the tiny toolbox to analyze object layout schemes in JVMs. These tools are using Unsafe, JVMTI, and Serviceability Agent (SA) heavily to decoder the actual object layout, footprint, and references. This makes JOL much more accurate than other tools relying on heap dumps, specification assumptions, etc.</p>
 <p>以下是在看到输出后可能会迷惑的地方：</p>
 <ul>
 <li>首先要明确输出是大端字节序还是小端字节序，将二进制转换为十进制与后面的数字比较下就能确定。</li>
@@ -406,6 +404,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2017/04/Java-对象指针压缩/index.html" rel="prev" title="Java 对象指针压缩">
+                Java 对象指针压缩 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -463,7 +465,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives/index.html">
-              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-count">19</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

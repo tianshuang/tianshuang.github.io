@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tianshuang.me/"/>
-  <updated>2017-04-23T08:47:42.000Z</updated>
+  <updated>2017-04-23T11:54:45.000Z</updated>
   <id>https://tianshuang.me/</id>
   
   <author>
@@ -16,15 +16,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Java 对象指针压缩</title>
+    <link href="https://tianshuang.me/2017/04/Java-%E5%AF%B9%E8%B1%A1%E6%8C%87%E9%92%88%E5%8E%8B%E7%BC%A9/index.html"/>
+    <id>https://tianshuang.me/2017/04/Java-对象指针压缩/index.html</id>
+    <published>2017-04-23T11:32:00.000Z</published>
+    <updated>2017-04-23T11:54:45.000Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>很久之前就看到过 Java 对象指针压缩这个技术，只是一直没具体想为什么要偏移 3 位，好吧，最近才知道原因是因为大多数 JVM 实现都是采用 8 位对齐，所以二进制位中的后三位都是 0。<br><a id="more"></a></p>
+<blockquote>
+<p>Let’s talk a bit about Ordinary Object Pointers (OOPs) and Compressed OOPs (Coops). OOPs are the handles/pointers the JVM uses as object references. When oops are only 32 bits long, they can reference only 4 GB of memory, which is why a 32-bit JVM is limited to a 4 GB heap size. (The same restriction applies at the operating system level, which is why any 32-bit process is limited to 4GB of address space.) When oops are 64 bits long, they can reference terabytes of memory.<br>What if there were 35-bit oops? Then the pointer could reference 32 GB of memory and still take up less space in the heap than 64-bit references. The problem is that there aren’t 35-bit registers in which to store such references. Instead, though, the JVM can assume that the last 3 bits of the reference are all 0. Now every reference can be stored in 32 bits in the heap. When the reference is stored into a 64-bit register, the JVM can shift it left by 3 bits (adding three zeros at the end). When the reference is saved from a register, the JVM can right-shift it by 3 bits, discarding the zeros at the end.<br>This allows JVM to use pointers that can reference 32 GB of memory while using only 32 bits in the heap. However it also means that the JVM cannot access any object at an address that isn’t divisible by 8, since any address from a compressed oop ends with three zeros. The first possible oop is 0x1, which when shifted becomes 0x8. The next oop is 0x2, which when shifted becomes 0x10 (16). Objects must therefore be located on an 8-byte boundary. As we know objects are already aligned on an 8-byte boundary in the JVM (in both the 32- and 64-bit versions); this is the optimal alignment for most processors. So nothing is lost by using compressed oops.<br>A program that uses a 31 GB heap and compressed oops will usually be faster than a program that uses a 33 GB heap. Although the 33 GB heap is larger, the extra space used by the pointers in that heap means that the larger heap will perform more frequent GC cycles and have worse performance.<br>Compressed oops are enabled using the -XX:+UseCompressedOops flag; in Java 7 and later versions, they are enabled by default whenever the maximum heap size is less than 32 GB.</p>
+</blockquote>
+<p><a href="http://arturmkrtchyan.com/java-object-header" target="_blank" rel="external">Java Object header</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;很久之前就看到过 Java 对象指针压缩这个技术，只是一直没具体想为什么要偏移 3 位，好吧，最近才知道原因是因为大多数 JVM 实现都是采用 8 位对齐，所以二进制位中的后三位都是 0。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://tianshuang.me/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Java 对象内存布局</title>
     <link href="https://tianshuang.me/2017/04/Java-%E5%AF%B9%E8%B1%A1%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80/index.html"/>
     <id>https://tianshuang.me/2017/04/Java-对象内存布局/index.html</id>
     <published>2017-04-19T12:58:53.000Z</published>
-    <updated>2017-04-23T08:47:42.000Z</updated>
+    <updated>2017-04-23T11:52:03.000Z</updated>
     
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>我把示例代码放了一份在 Github 上，<a href="https://github.com/tianshuang/jol-samples" target="_blank" rel="external">jol-samples</a>，想看的同学可以 clone 下来把每个 example 跑一跑就能看到 JVM 对象在内存中布局的一些信息，包括对象头占多大、字节怎么对齐、字段在内存中的顺序不一定与声明的顺序一致、涉及到继承时字段是如何存放的、带 transient 修饰符的字段被特殊处理、Java8 新增的 @Contended 注解的作用、JVM 的平台相关性、对象头中的 mark word 及 class word、轻量锁、偏向锁、重量锁、Hashcode、GC 需要用到的对象引用图、哈希碰撞时转换为链表以及 Java8 中极端情况下转换为红黑树、观察 mark word 中的 age 字段的值在 GC 后的变化 等等，我没有一个一个写出来，因为 25 个例子太多了，设计到的知识点也比较多，需要一些前置知识才能理解。</p>
-<a id="more"></a>
-<p><a href="http://openjdk.java.net/projects/code-tools/jol/" target="_blank" rel="external">JOL</a> (Java Object Layout) is the tiny toolbox to analyze object layout schemes in JVMs. These tools are using Unsafe, JVMTI, and Serviceability Agent (SA) heavily to decoder the actual object layout, footprint, and references. This makes JOL much more accurate than other tools relying on heap dumps, specification assumptions, etc.</p>
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>我把示例代码放了一份在 Github 上，<a href="https://github.com/tianshuang/jol-samples" target="_blank" rel="external">jol-samples</a>，想看的同学可以 clone 下来把每个 example 跑一跑就能看到 JVM 对象在内存中布局的一些信息，包括对象头占多大、字节怎么对齐、字段在内存中的顺序不一定与声明的顺序一致、涉及到继承时字段是如何存放的、带 transient 修饰符的字段被特殊处理、Java8 新增的 @Contended 注解的作用、JVM 的平台相关性、对象头中的 mark word 及 class word、轻量锁、偏向锁、重量锁、Hashcode、GC 需要用到的对象引用图、哈希碰撞时转换为链表以及 Java8 中极端情况下转换为红黑树、观察 mark word 中的 age 字段的值在 GC 后的变化 等等，我没有一个一个写出来，因为 25 个例子太多了，设计到的知识点也比较多，需要一些前置知识才能理解。<br><a id="more"></a><br><a href="http://openjdk.java.net/projects/code-tools/jol/" target="_blank" rel="external">JOL</a> (Java Object Layout) is the tiny toolbox to analyze object layout schemes in JVMs. These tools are using Unsafe, JVMTI, and Serviceability Agent (SA) heavily to decoder the actual object layout, footprint, and references. This makes JOL much more accurate than other tools relying on heap dumps, specification assumptions, etc.</p>
 <p>以下是在看到输出后可能会迷惑的地方：</p>
 <ul>
 <li>首先要明确输出是大端字节序还是小端字节序，将二进制转换为十进制与后面的数字比较下就能确定。</li>
@@ -36,7 +59,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;我把示例代码放了一份在 Github 上，&lt;a href=&quot;https://github.com/tianshuang/jol-samples&quot;&gt;jol-samples&lt;/a&gt;，想看的同学可以 clone 下来把每个 example 跑一跑就能看到 JVM 对象在内存中布局的一些信息，包括对象头占多大、字节怎么对齐、字段在内存中的顺序不一定与声明的顺序一致、涉及到继承时字段是如何存放的、带 transient 修饰符的字段被特殊处理、Java8 新增的 @Contended 注解的作用、JVM 的平台相关性、对象头中的 mark word 及 class word、轻量锁、偏向锁、重量锁、Hashcode、GC 需要用到的对象引用图、哈希碰撞时转换为链表以及 Java8 中极端情况下转换为红黑树、观察 mark word 中的 age 字段的值在 GC 后的变化 等等，我没有一个一个写出来，因为 25 个例子太多了，设计到的知识点也比较多，需要一些前置知识才能理解。&lt;/p&gt;
+      &lt;p&gt;我把示例代码放了一份在 Github 上，&lt;a href=&quot;https://github.com/tianshuang/jol-samples&quot;&gt;jol-samples&lt;/a&gt;，想看的同学可以 clone 下来把每个 example 跑一跑就能看到 JVM 对象在内存中布局的一些信息，包括对象头占多大、字节怎么对齐、字段在内存中的顺序不一定与声明的顺序一致、涉及到继承时字段是如何存放的、带 transient 修饰符的字段被特殊处理、Java8 新增的 @Contended 注解的作用、JVM 的平台相关性、对象头中的 mark word 及 class word、轻量锁、偏向锁、重量锁、Hashcode、GC 需要用到的对象引用图、哈希碰撞时转换为链表以及 Java8 中极端情况下转换为红黑树、观察 mark word 中的 age 字段的值在 GC 后的变化 等等，我没有一个一个写出来，因为 25 个例子太多了，设计到的知识点也比较多，需要一些前置知识才能理解。&lt;br&gt;
     
     </summary>
     
