@@ -77,7 +77,7 @@
     <link href="https://tianshuang.me/2017/04/Awesome-article/index.html"/>
     <id>https://tianshuang.me/2017/04/Awesome-article/index.html</id>
     <published>2017-04-08T13:31:33.000Z</published>
-    <updated>2017-04-21T10:47:01.000Z</updated>
+    <updated>2017-04-25T02:21:10.000Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h3 id="CS"><a href="#CS" class="headerlink" title="CS"></a>CS</h3><ul>
 <li><a href="http://www.ruanyifeng.com/blog/2016/11/byte-order.html" target="_blank" rel="external">理解字节序</a></li>
@@ -105,6 +105,7 @@
 <li><a href="https://tamasgyorfi.net/2016/05/01/java-8-hashmaps-keys-and-the-comparable-interface/" target="_blank" rel="external">Java 8 HashMaps, Keys and the Comparable interface</a></li>
 <li><a href="http://www.journaldev.com/1024/java-thread-join-example" target="_blank" rel="external">Java Thread Join Example</a></li>
 <li><a href="http://stackoverflow.com/questions/8106209/why-is-there-a-java-radix-limit" target="_blank" rel="external">Why is there a Java radix limit?</a></li>
+<li><a href="http://blog.alexnesterov.com/post/spring-your-next-microframework/" target="_blank" rel="external">Spring: your next Java microframework</a></li>
 </ul>
 <h3 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h3><ul>
 <li><a href="http://arturmkrtchyan.com/java-object-header" target="_blank" rel="external">Java Object Header</a></li>
