@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tianshuang.me/"/>
-  <updated>2017-04-23T11:54:45.000Z</updated>
+  <updated>2017-04-25T08:44:55.000Z</updated>
   <id>https://tianshuang.me/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Quiz Yourself</title>
+    <link href="https://tianshuang.me/2017/04/Quiz-Yourself/index.html"/>
+    <id>https://tianshuang.me/2017/04/Quiz-Yourself/index.html</id>
+    <published>2017-04-25T08:34:06.000Z</published>
+    <updated>2017-04-25T08:44:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p><img src="https://storage.tianshuang.me/2017/04/Quiz1.jpg" alt="One"><br><a id="more"></a><br><img src="https://storage.tianshuang.me/2017/04/Quiz2.jpg" alt="Two"><br><img src="https://storage.tianshuang.me/2017/04/Quiz3.jpg" alt="Three"><br><img src="https://storage.tianshuang.me/2017/04/Quiz4.jpg" alt="Four"></p>
+<p><a href="https://storage.tianshuang.me/2017/04/Java%20Magazine%20MarchApril%202017.pdf" target="_blank" rel="external">Java Magazine MarchApril 2017</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://storage.tianshuang.me/2017/04/Quiz1.jpg&quot; alt=&quot;One&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://tianshuang.me/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>Java 对象指针压缩</title>
@@ -45,7 +67,7 @@
     <link href="https://tianshuang.me/2017/04/Java-%E5%AF%B9%E8%B1%A1%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80/index.html"/>
     <id>https://tianshuang.me/2017/04/Java-对象内存布局/index.html</id>
     <published>2017-04-19T12:58:53.000Z</published>
-    <updated>2017-04-23T11:52:03.000Z</updated>
+    <updated>2017-04-26T06:39:54.000Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>我把示例代码放了一份在 Github 上，<a href="https://github.com/tianshuang/jol-samples" target="_blank" rel="external">jol-samples</a>，想看的同学可以 clone 下来把每个 example 跑一跑就能看到 JVM 对象在内存中布局的一些信息，包括对象头占多大、字节怎么对齐、字段在内存中的顺序不一定与声明的顺序一致、涉及到继承时字段是如何存放的、带 transient 修饰符的字段被特殊处理、Java8 新增的 @Contended 注解的作用、JVM 的平台相关性、对象头中的 mark word 及 class word、轻量锁、偏向锁、重量锁、Hashcode、GC 需要用到的对象引用图、哈希碰撞时转换为链表以及 Java8 中极端情况下转换为红黑树、观察 mark word 中的 age 字段的值在 GC 后的变化 等等，我没有一个一个写出来，因为 25 个例子太多了，设计到的知识点也比较多，需要一些前置知识才能理解。<br><a id="more"></a><br><a href="http://openjdk.java.net/projects/code-tools/jol/" target="_blank" rel="external">JOL</a> (Java Object Layout) is the tiny toolbox to analyze object layout schemes in JVMs. These tools are using Unsafe, JVMTI, and Serviceability Agent (SA) heavily to decoder the actual object layout, footprint, and references. This makes JOL much more accurate than other tools relying on heap dumps, specification assumptions, etc.</p>
 <p>以下是在看到输出后可能会迷惑的地方：</p>
@@ -77,7 +99,7 @@
     <link href="https://tianshuang.me/2017/04/Awesome-article/index.html"/>
     <id>https://tianshuang.me/2017/04/Awesome-article/index.html</id>
     <published>2017-04-08T13:31:33.000Z</published>
-    <updated>2017-04-25T02:21:10.000Z</updated>
+    <updated>2017-04-26T10:24:51.000Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h3 id="CS"><a href="#CS" class="headerlink" title="CS"></a>CS</h3><ul>
 <li><a href="http://www.ruanyifeng.com/blog/2016/11/byte-order.html" target="_blank" rel="external">理解字节序</a></li>
@@ -91,6 +113,10 @@
 </ul>
 <h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><ul>
 <li><a href="http://www.ibm.com/developerworks/cn/web/wa-lo-comet/" target="_blank" rel="external">Comet：基于 HTTP 长连接的服务器推技术</a></li>
+<li><a href="https://www.zhihu.com/question/34074946" target="_blank" rel="external">HTTP/2.0 相比1.0有哪些重大改进？</a></li>
+<li><a href="https://en.wikipedia.org/wiki/HTTP_persistent_connection" target="_blank" rel="external">HTTP persistent connection</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Maximum_segment_lifetime" target="_blank" rel="external">Maximum segment lifetime</a></li>
+<li><a href="https://www.mnot.net/talks/h2fe/" target="_blank" rel="external">HTTP/2 for Front-End Developers</a></li>
 </ul>
 <h3 id="TCP-IP"><a href="#TCP-IP" class="headerlink" title="TCP/IP"></a>TCP/IP</h3><ul>
 <li><a href="http://www.tcpipguide.com/free/index.htm" target="_blank" rel="external">The TCP/IP Guide</a></li>
@@ -106,14 +132,21 @@
 <li><a href="http://www.journaldev.com/1024/java-thread-join-example" target="_blank" rel="external">Java Thread Join Example</a></li>
 <li><a href="http://stackoverflow.com/questions/8106209/why-is-there-a-java-radix-limit" target="_blank" rel="external">Why is there a Java radix limit?</a></li>
 <li><a href="http://blog.alexnesterov.com/post/spring-your-next-microframework/" target="_blank" rel="external">Spring: your next Java microframework</a></li>
+<li><a href="https://www.ibm.com/developerworks/cn/java/java-lo-concurrenthashmap/" target="_blank" rel="external">探索 ConcurrentHashMap 高并发性的实现机制</a></li>
+<li><a href="https://storage.tianshuang.me/2017/03/PerformanceTuningApacheTomcat.pdf" target="_blank" rel="external">Apache Tomcat Tuning for Production</a></li>
+<li><a href="http://ifeve.com/disruptor/" target="_blank" rel="external">并发框架Disruptor译文</a></li>
+<li><a href="https://antoniogoncalves.org/2015/01/15/micro-benchmarking-with-jmh-measure-dont-guess/" target="_blank" rel="external">Micro Benchmarking with JMH: Measure, don’t guess!</a></li>
 </ul>
 <h3 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h3><ul>
 <li><a href="http://arturmkrtchyan.com/java-object-header" target="_blank" rel="external">Java Object Header</a></li>
 <li><a href="http://arturmkrtchyan.com/jvm-biased-locking" target="_blank" rel="external">JVM Biased Locking</a></li>
+<li><a href="http://calvin1978.blogcn.com/articles/javatuning.html" target="_blank" rel="external">Java性能优化指南1.8版，及唯品会的实战</a></li>
+<li><a href="https://storage.tianshuang.me/2017/04/Java%20Tuning%20Guide%20v1.8.pdf" target="_blank" rel="external">Java Tuning Guide v1.8.pdf</a></li>
 </ul>
 <h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><ul>
 <li><a href="https://www.cyberciti.biz/tips/what-is-devshm-and-its-practical-usage.html" target="_blank" rel="external">What Is /dev/shm And Its Practical Usage</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Tmpfs" target="_blank" rel="external">tmpfs</a></li>
+<li><a href="http://blog.engineyard.com/2012/linux-scalability" target="_blank" rel="external">Linux TCP/IP Tuning for Scalability</a></li>
 </ul>
 <h3 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h3><ul>
 <li><a href="http://blog.brucefeng.info/post/high-qps-service" target="_blank" rel="external">当服务 QPS 增高时我们做什么</a></li>
@@ -145,7 +178,7 @@
     <link href="https://tianshuang.me/2017/04/%E3%80%8A%E7%BD%91%E7%BB%9C%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%9E%E6%8E%A5%E7%9A%84%E3%80%8B%E7%AC%94%E8%AE%B0/index.html"/>
     <id>https://tianshuang.me/2017/04/《网络是怎样连接的》笔记/index.html</id>
     <published>2017-04-07T14:58:10.000Z</published>
-    <updated>2017-04-08T12:45:19.000Z</updated>
+    <updated>2017-04-26T06:39:29.000Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h3 id="浏览器生成消息"><a href="#浏览器生成消息" class="headerlink" title="浏览器生成消息"></a>浏览器生成消息</h3><ul>
 <li>URL: Uniform Resource Locator，统一资源定位符。</li>
@@ -159,11 +192,13 @@
 <li>关于 GET 请求 URL 的最大长度，不同浏览器和服务器有不同的限制，可参考 <a href="https://technomanor.wordpress.com/2012/04/03/maximum-url-size/" target="_blank" rel="external">Maximum URL Size in HTTP GET Request</a>。</li>
 <li>关于 ETag 这个字段，可以用来提供上次响应与下次请求之间的关联信息。上次响应中，服务器会通过 ETag 向客户端发送一个唯一标识，在下次请求中客户端可以通过 If-Match、If-None-Match、If-Range 字段将这个标识告知服务器，这样服务器就知道该请求和上次的响应是相关的。这个字段的功能和 Cookie 是相同的，但 Cookie 是网景（Netscape）公司自行开发的规格，而 Etag 是将其进行标准化后的规格。</li>
 <li>HTTP 状态码摘要信息如下：<ul>
-<li>1xx 告知请求的处理进度和情况</li>
+<li>1xx 告知请求的处理进度和情况<ul>
 <li>2xx 成功</li>
 <li>3xx 表示需要进一步操作</li>
 <li>4xx 客户端错误</li>
 <li>5xx 服务器错误</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>关于 DNS，可以参考 <a href="https://tianshuang.me/2017/01/%E9%82%A3%E4%BA%9B%E4%BD%A0%E6%9C%AA%E6%9B%BE%E6%B3%A8%E6%84%8F%E7%9A%84DNS%E7%BB%86%E8%8A%82/index.html">那些你未曾注意的DNS细节</a>。</li>
@@ -225,43 +260,6 @@
   </entry>
   
   <entry>
-    <title>Tuning</title>
-    <link href="https://tianshuang.me/2017/03/Tuning/index.html"/>
-    <id>https://tianshuang.me/2017/03/Tuning/index.html</id>
-    <published>2017-03-21T03:12:05.000Z</published>
-    <updated>2017-04-16T13:45:05.000Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><ul>
-<li><a href="https://storage.tianshuang.me/2017/03/PerformanceTuningApacheTomcat.pdf" target="_blank" rel="external">Apache Tomcat Tuning for Production</a></li>
-<li><a href="http://blog.engineyard.com/2012/linux-scalability" target="_blank" rel="external">Linux TCP/IP Tuning for Scalability</a></li>
-<li><a href="https://en.wikipedia.org/wiki/HTTP_persistent_connection" target="_blank" rel="external">HTTP persistent connection</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Maximum_segment_lifetime" target="_blank" rel="external">Maximum segment lifetime</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://storage.tianshuang.me/2017/03/PerformanceTuningApacheTomcat.pdf&quot;
-    
-    </summary>
-    
-    
-      <category term="JVM" scheme="https://tianshuang.me/tags/JVM/"/>
-    
-      <category term="调优" scheme="https://tianshuang.me/tags/%E8%B0%83%E4%BC%98/"/>
-    
-      <category term="TCP" scheme="https://tianshuang.me/tags/TCP/"/>
-    
-      <category term="HTTP" scheme="https://tianshuang.me/tags/HTTP/"/>
-    
-      <category term="Tomcat" scheme="https://tianshuang.me/tags/Tomcat/"/>
-    
-      <category term="Tuning" scheme="https://tianshuang.me/tags/Tuning/"/>
-    
-  </entry>
-  
-  <entry>
     <title>从一道面试题开始说起</title>
     <link href="https://tianshuang.me/2017/03/%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B%E8%AF%B4%E8%B5%B7/index.html"/>
     <id>https://tianshuang.me/2017/03/从一道面试题开始说起/index.html</id>
@@ -308,7 +306,7 @@
     <link href="https://tianshuang.me/2017/02/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4Java%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C-%E7%AC%94%E8%AE%B0/index.html"/>
     <id>https://tianshuang.me/2017/02/阿里巴巴Java开发手册-笔记/index.html</id>
     <published>2017-02-17T10:12:35.000Z</published>
-    <updated>2017-04-18T13:11:29.000Z</updated>
+    <updated>2017-04-26T06:46:15.000Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h3 id="编程规约"><a href="#编程规约" class="headerlink" title="编程规约"></a>编程规约</h3><ul>
 <li>POJO 类中布尔类型的变量，都不要加 is ，否则部分框架解析会引起序列化错误。假设定义一个 boolean 的 isSuccess 属性，它的方法 Getter 被 IDE 生成为 isSuccess() ， RPC 等三方框架在反向解析的时候， “以为” 对应的属性名称是 success ，导致属性获取不到，进而抛出异常。这点也是笔者之前遇到过的，查了很久哪里的错最后发现是这个问题，不过经历一次后基本后面就能避免。</li>
@@ -455,12 +453,12 @@
     <link href="https://tianshuang.me/2016/12/MySQL-Sorting-Rows/index.html"/>
     <id>https://tianshuang.me/2016/12/MySQL-Sorting-Rows/index.html</id>
     <published>2016-12-15T02:50:01.000Z</published>
-    <updated>2017-04-16T13:59:38.000Z</updated>
+    <updated>2017-04-26T06:41:05.000Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>之前一直以为 MySQL 的「ORDER BY」关键字在多列排序时未显式声明排序方式的列会沿用最后显式声明排序方式的列，今天才发现自己弄错了，罪过罪过。在多列排序时，不同的列拥有不同的排序方式，如果未显式声明，则采用默认的升序排序方式。</p>
 <p>You can sort on multiple columns, and you can sort different columns in different directions. For example, to sort by type of animal in ascending order, then by birth date within animal type in descending order (youngest animals first), use the following query:<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">mysql&gt; SELECT name, species, birth FROM pet</div><div class="line">    -&gt; ORDER BY species, birth DESC;</div><div class="line">+----------+---------+------------+</div><div class="line">| name     | species | birth      |</div><div class="line">+----------+---------+------------+</div><div class="line">| Chirpy   | bird    | 1998-09-11 |</div><div class="line">| Whistler | bird    | 1997-12-09 |</div><div class="line">| Claws    | cat     | 1994-03-17 |</div><div class="line">| Fluffy   | cat     | 1993-02-04 |</div><div class="line">| Fang     | dog     | 1990-08-27 |</div><div class="line">| Bowser   | dog     | 1989-08-31 |</div><div class="line">| Buffy    | dog     | 1989-05-13 |</div><div class="line">| Puffball | hamster | 1999-03-30 |</div><div class="line">| Slim     | snake   | 1996-04-29 |</div><div class="line">+----------+---------+------------+</div></pre></td></tr></table></figure></p>
 <p>The DESC keyword applies only to the column name immediately preceding it (birth); it does not affect the species column sort order.</p>
-<p>参见 <a href="http://dev.mysql.com/doc/refman/5.7/en/sorting-rows.html" target="_blank" rel="external">MySQL 5.7 Reference Manual 4.3.4.4 Sorting Rows</a></p>
+<p><a href="http://dev.mysql.com/doc/refman/5.7/en/sorting-rows.html" target="_blank" rel="external">MySQL 5.7 Reference Manual 4.3.4.4 Sorting Rows</a></p>
 ]]></content>
     
     <summary type="html">
@@ -501,7 +499,7 @@
     <link href="https://tianshuang.me/2016/08/%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB/index.html"/>
     <id>https://tianshuang.me/2016/08/读写分离/index.html</id>
     <published>2016-08-17T02:38:42.000Z</published>
-    <updated>2017-04-18T15:00:06.000Z</updated>
+    <updated>2017-04-26T06:44:35.000Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>之前介绍了多数据源的接入，参见 <a href="https://tianshuang.me/2016/08/Multiple%20Datasource/index.html">Multiple Datasource</a> ，后来一个数据分析的项目（大部分都是读操作）需要用到读写分离，在分析时读取从库的数据，避免增加对线上数据库的压力，少部分写操作依然写主库，然后再被同步至从库，根据同事的建议，希望采用注解方式实现，从而在开发时只需加上特定的注解即可表明此 DAO 操作主库还是从库，原理依然与之前类似，以下是调整的部分：</p>
 <a id="more"></a>
@@ -539,7 +537,7 @@
     <link href="https://tianshuang.me/2016/08/Multiple%20Datasource/index.html"/>
     <id>https://tianshuang.me/2016/08/Multiple Datasource/index.html</id>
     <published>2016-08-15T07:53:52.000Z</published>
-    <updated>2017-04-18T14:56:19.000Z</updated>
+    <updated>2017-04-26T06:40:56.000Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>最近项目中需要接入多个数据源，起初准备让 Mybatis 来进行数据源的动态选择，但查询 Mybatis 的相关文档后，未发现官方对多数据源的支持，并且笔者的项目中 Mybatis 的使用采用全注解的方式，如果实例化两个 SqlSessionFactory ，在全注解使用 Mybatis 的情况下，无法显式指定某个 Mapper 使用哪一个 sqlSessionFactory 。<br>继续查询相关资料，发现 Spring 自 2.0.1 开始就提供了对动态数据源的支持，参见 <a href="http://spring.io/blog/2007/01/23/dynamic-datasource-routing/" target="_blank" rel="external">Dynamic DataSource Routing</a> ，咳咳，由于文章历史悠久，追溯至2007年，所以在笔者的项目中笔者对其进行了改进，思路依然与原文基本一致，只不过把文中基于XML的相关配置改为了我们项目中的基于 Java Code 的配置。</p>
 <a id="more"></a>
@@ -639,7 +637,7 @@
     <link href="https://tianshuang.me/2016/01/%E5%85%B3%E4%BA%8E%E6%AD%A4%E5%8D%9A%E5%AE%A2/index.html"/>
     <id>https://tianshuang.me/2016/01/关于此博客/index.html</id>
     <published>2016-01-20T20:43:28.000Z</published>
-    <updated>2017-04-23T08:25:04.000Z</updated>
+    <updated>2017-04-26T06:44:24.000Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>折腾两三天，总算把这个博客搭建起来了。之前大二在 <a href="http://blog.csdn.net/u012552052" target="_blank" rel="external">CSDN</a> 写过一段时间的博客，大多数都是关于技术细节的，竟然有 138 篇？一直都有自己搭建博客的想法，想过自己动手码个博客，但无奈自己主要做 Java 的相关开发，前端不是很熟悉，无法做到心里想象中的前端效果，遂放弃自己动手码的想法。看到许多人用 Hexo ，于是 Google 了下相关资料，静态，再看看主题，也不错，遂决定就是 Hexo 了。接下来说说此博客搭建的相关技术吧。</p>
 <a id="more"></a>

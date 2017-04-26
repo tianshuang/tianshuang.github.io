@@ -94,7 +94,7 @@ POJO 类中布尔类型的变量，都不要加 is ，否则部分框架解析�
 <meta property="og:site_name" content="Poison">
 <meta property="og:description" content="编程规约
 POJO 类中布尔类型的变量，都不要加 is ，否则部分框架解析会引起序列化错误。假设定义一个 boolean 的 isSuccess 属性，它的方法 Getter 被 IDE 生成为 isSuccess() ， RPC 等三方框架在反向解析的时候， “以为” 对应的属性名称是 success ，导致属性获取不到，进而抛出异常。这点也是笔者之前遇到过的，查了很久哪里的错最后发现是这个问题">
-<meta property="og:updated_time" content="2017-04-18T13:11:29.000Z">
+<meta property="og:updated_time" content="2017-04-26T06:46:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="阿里巴巴Java开发手册 笔记">
 <meta name="twitter:description" content="编程规约
@@ -538,7 +538,7 @@ POJO 类中布尔类型的变量，都不要加 is ，否则部分框架解析�
           
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">30</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
