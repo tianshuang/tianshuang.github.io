@@ -178,7 +178,7 @@
     <link href="https://tianshuang.me/2017/04/%E3%80%8A%E7%BD%91%E7%BB%9C%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%9E%E6%8E%A5%E7%9A%84%E3%80%8B%E7%AC%94%E8%AE%B0/index.html"/>
     <id>https://tianshuang.me/2017/04/《网络是怎样连接的》笔记/index.html</id>
     <published>2017-04-07T14:58:10.000Z</published>
-    <updated>2017-04-26T06:39:29.000Z</updated>
+    <updated>2017-04-26T15:45:10.000Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h3 id="浏览器生成消息"><a href="#浏览器生成消息" class="headerlink" title="浏览器生成消息"></a>浏览器生成消息</h3><ul>
 <li>URL: Uniform Resource Locator，统一资源定位符。</li>
@@ -192,13 +192,11 @@
 <li>关于 GET 请求 URL 的最大长度，不同浏览器和服务器有不同的限制，可参考 <a href="https://technomanor.wordpress.com/2012/04/03/maximum-url-size/" target="_blank" rel="external">Maximum URL Size in HTTP GET Request</a>。</li>
 <li>关于 ETag 这个字段，可以用来提供上次响应与下次请求之间的关联信息。上次响应中，服务器会通过 ETag 向客户端发送一个唯一标识，在下次请求中客户端可以通过 If-Match、If-None-Match、If-Range 字段将这个标识告知服务器，这样服务器就知道该请求和上次的响应是相关的。这个字段的功能和 Cookie 是相同的，但 Cookie 是网景（Netscape）公司自行开发的规格，而 Etag 是将其进行标准化后的规格。</li>
 <li>HTTP 状态码摘要信息如下：<ul>
-<li>1xx 告知请求的处理进度和情况<ul>
+<li>1xx 告知请求的处理进度和情况</li>
 <li>2xx 成功</li>
 <li>3xx 表示需要进一步操作</li>
 <li>4xx 客户端错误</li>
 <li>5xx 服务器错误</li>
-</ul>
-</li>
 </ul>
 </li>
 <li>关于 DNS，可以参考 <a href="https://tianshuang.me/2017/01/%E9%82%A3%E4%BA%9B%E4%BD%A0%E6%9C%AA%E6%9B%BE%E6%B3%A8%E6%84%8F%E7%9A%84DNS%E7%BB%86%E8%8A%82/index.html">那些你未曾注意的DNS细节</a>。</li>
@@ -264,7 +262,7 @@
     <link href="https://tianshuang.me/2017/03/%E4%BB%8E%E4%B8%80%E9%81%93%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BC%80%E5%A7%8B%E8%AF%B4%E8%B5%B7/index.html"/>
     <id>https://tianshuang.me/2017/03/从一道面试题开始说起/index.html</id>
     <published>2017-03-15T13:38:19.000Z</published>
-    <updated>2017-03-30T06:45:46.000Z</updated>
+    <updated>2017-04-26T15:47:37.000Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>其实这道题笔者在第二家的实习面试中被问到过，但是笔者当时并没有回答正确，所幸其他问题回答得还算不赖，没有因为这一个问题表现不佳而被挂掉。最近看《Wireshark 网络分析就这么简单》第一篇文章就是这道题。</p>
 <p>让我们开始吧。</p>
@@ -273,11 +271,17 @@
 <p>服务器B：<br><img src="https://storage.tianshuang.me/2017/03/B.jpeg" alt="服务器B"><br><a id="more"></a></p>
 <p>这一篇文章在林沛满的博客中有记录，参见 <a href="http://blog.sina.com.cn/s/blog_70398db501018qcc.html" target="_blank" rel="external">Wireshark入门：第一次亲密接触</a>。</p>
 <p>如果你坚持看完了上面这篇林沛满先生的文章，那么回到这里。笔者在看完之后不太明白的是为什么在 B 看来 A 属于不同子网，而在 A 看来 B 属于同一子网，于是拿起纸和笔手动计算了一下。过程如下：</p>
-<p>在服务器 B 看来，在往服务器 A 发送包之前，是仅仅知道服务器 A 的 IP 地址的，并不知道服务器 A 的子网掩码，所以服务器 B 使用自己的子网掩码与服务器 B 自身的 IP 地址相与得到服务器 B 的网络地址，然后继续使用服务器 B 的子网掩码与服务器 A 的 IP 地址相与得到服务器 A 的网络地址，根据 B 和 A 的网络地址是否相等来判断是否属于同一子网：<br>B 的子网掩码为 255.255.255.224，二进制格式如下：<br>11111111 11111111 11111111 11100000（B 的子网掩码）<br>B 的 IP 地址为 192.168.26.3，二进制格式如下：<br>11000000 10101000 00011010 00000011（B 的 IP 地址）<br>服务器 B 使用自己的子网掩码与服务器 B 自身的 IP 地址相与得到服务器 B 的网络地址为：<br>11000000 10101000 00011010 00000000（B 的网络地址）</p>
-<p>A 的 IP 地址为 192.168.26.129，二进制格式如下：<br>11000000 10101000 00011010 10000001（A 的 IP 地址）<br>使用服务器 B 的子网掩码与服务器 A 的 IP 地址相与得到服务器 A 的网络地址为：<br>11000000 10101000 00011010 10000000（A 的网络地址）</p>
+<p>在服务器 B 看来，在往服务器 A 发送包之前，是仅仅知道服务器 A 的 IP 地址的，并不知道服务器 A 的子网掩码，所以服务器 B 使用自己的子网掩码与服务器 B 自身的 IP 地址相与得到服务器 B 的网络地址，然后继续使用服务器 B 的子网掩码与服务器 A 的 IP 地址相与得到服务器 A 的网络地址，根据 B 和 A 的网络地址是否相等来判断是否属于同一子网：<br>B 的子网掩码为 255.255.255.224，二进制格式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">11111111 11111111 11111111 11100000（B 的子网掩码）</div></pre></td></tr></table></figure></p>
+<p>B 的 IP 地址为 192.168.26.3，二进制格式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">11000000 10101000 00011010 00000011（B 的 IP 地址）</div></pre></td></tr></table></figure></p>
+<p>服务器 B 使用自己的子网掩码与服务器 B 自身的 IP 地址相与得到服务器 B 的网络地址为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">11000000 10101000 00011010 00000000（B 的网络地址）</div></pre></td></tr></table></figure></p>
+<p>A 的 IP 地址为 192.168.26.129，二进制格式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">11000000 10101000 00011010 10000001（A 的 IP 地址）</div></pre></td></tr></table></figure></p>
+<p>使用服务器 B 的子网掩码与服务器 A 的 IP 地址相与得到服务器 A 的网络地址为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">11000000 10101000 00011010 10000000（A 的网络地址）</div></pre></td></tr></table></figure></p>
 <p>通过以上结果，我们可以发现，在服务器 B 看来，B 的网络地址和 A 的网络地址是不同的，这也是服务器 B 通过 ARP 广播查询默认网关 MAC 地址的原因。</p>
-<p>在服务器 A 看来：<br>A 的子网掩码为 255.255.255.0，二进制格式如下：<br>11111111 11111111 11111111 00000000（A 的子网掩码）<br>A 的 IP 地址为 192.168.26.129，二进制格式如下：<br>11000000 10101000 00011010 10000001（A 的 IP 地址）<br>服务器 A 使用自己的子网掩码与服务器 A 自身的 IP 地址相与得到服务器 A 的网络地址为：<br>11000000 10101000 00011010 00000000（A 的网络地址）</p>
-<p>B 的 IP 地址为 192.168.26.3，二进制格式如下：<br>11000000 10101000 00011010 00000011（B 的 IP 地址）<br>使用服务器 A 的子网掩码与服务器 B 的 IP 地址相与得到服务器 B 的网络地址为：<br>11000000 10101000 00011010 00000000（B 的网络地址）</p>
+<p>在服务器 A 看来：<br>A 的子网掩码为 255.255.255.0，二进制格式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">11111111 11111111 11111111 00000000（A 的子网掩码）</div></pre></td></tr></table></figure></p>
+<p>A 的 IP 地址为 192.168.26.129，二进制格式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">11000000 10101000 00011010 10000001（A 的 IP 地址）</div></pre></td></tr></table></figure></p>
+<p>服务器 A 使用自己的子网掩码与服务器 A 自身的 IP 地址相与得到服务器 A 的网络地址为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">11000000 10101000 00011010 00000000（A 的网络地址）</div></pre></td></tr></table></figure></p>
+<p>B 的 IP 地址为 192.168.26.3，二进制格式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">11000000 10101000 00011010 00000011（B 的 IP 地址）</div></pre></td></tr></table></figure></p>
+<p>使用服务器 A 的子网掩码与服务器 B 的 IP 地址相与得到服务器 B 的网络地址为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">11000000 10101000 00011010 00000000（B 的网络地址）</div></pre></td></tr></table></figure></p>
 <p>通过以上结果，我们可以发现，在服务器 A 看来，A 的网络地址和 B 的网络地址是相同的，这也是服务器 A 直接和服务器 B 进行通信的原因。</p>
 <p>最后推荐下林沛满的这两本书：<a href="https://book.douban.com/subject/26268767/" target="_blank" rel="external">《Wireshark 网络分析就这么简单》</a>，<a href="https://book.douban.com/subject/26710788/" target="_blank" rel="external">《Wireshark 网络分析的艺术》</a>。可以说是是国内技术书籍中的上乘之作。这两本书让笔者对 TCP/UDP 有了更深入的理解，纸上得来终觉浅，绝知此事要躬行，只有自己亲自抓几个包看看才能真正理解相关细节。</p>
 ]]></content>
@@ -306,7 +310,7 @@
     <link href="https://tianshuang.me/2017/02/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4Java%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C-%E7%AC%94%E8%AE%B0/index.html"/>
     <id>https://tianshuang.me/2017/02/阿里巴巴Java开发手册-笔记/index.html</id>
     <published>2017-02-17T10:12:35.000Z</published>
-    <updated>2017-04-26T06:46:15.000Z</updated>
+    <updated>2017-04-26T15:48:39.000Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h3 id="编程规约"><a href="#编程规约" class="headerlink" title="编程规约"></a>编程规约</h3><ul>
 <li>POJO 类中布尔类型的变量，都不要加 is ，否则部分框架解析会引起序列化错误。假设定义一个 boolean 的 isSuccess 属性，它的方法 Getter 被 IDE 生成为 isSuccess() ， RPC 等三方框架在反向解析的时候， “以为” 对应的属性名称是 success ，导致属性获取不到，进而抛出异常。这点也是笔者之前遇到过的，查了很久哪里的错最后发现是这个问题，不过经历一次后基本后面就能避免。</li>
@@ -338,7 +342,7 @@
 <li>避免出现重复的代码 (Don’t Repeat Yourself) ，即 DRY 原则。关于这部分可参考 <a href="https://book.douban.com/subject/5387402/" target="_blank" rel="external">《程序员修炼之道》</a> 。</li>
 <li>谨慎地记录日志。生产环境禁止输出 debug 日志；有选择地输出 info 日志；如果使用 warn 来记录刚上线时的业务行为信息，一定要注意日志输出量的问题，避免把服务器磁盘撑爆，并记得及时删除这些观察日志。关于日志把 server 磁盘撑爆的问题，我司也出现过，后面加了相关监控来避免。</li>
 </ul>
-<h3 id="MySQL规约"><a href="#MySQL规约" class="headerlink" title="MySQL规约"></a>MySQL规约</h3><ul>
+<h3 id="MySQL-规约"><a href="#MySQL-规约" class="headerlink" title="MySQL 规约"></a>MySQL 规约</h3><ul>
 <li>表达是与否概念的字段，必须使用 is_xxx 的方式命名，数据类型是 unsigned tinyint (1表示是，0表示否)，此规则同样适用于 odps 建表。任何字段如果为非负数，必须是 unsigned 。因为这样的话可用容量提升了一倍。</li>
 <li>表名不使用复数名词。表名应该仅仅表示表里面的实体内容，不应该表示实体数量，对应于 DO 类名也是单数形式，符合表达习惯。</li>
 <li>禁用保留字，如 desc、range、match、delayed 等，禁止在代码里对 SQL 关键字进行单独处理。</li>
@@ -370,7 +374,7 @@
 <li>在使用平台资源，譬如短信、邮件、电话、下单、支付，必须实现正确的防重放限制， 如数量限制、疲劳度控制、验证码校验，避免被滥刷、资损。</li>
 <li>关于安全这块可以阅读 <a href="https://book.douban.com/subject/10546925/" target="_blank" rel="external">《白帽子讲Web安全》</a> 。</li>
 </ul>
-<p><a href="https://storage.tianshuang.me/2017/02/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4Java%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C.pdf" target="_blank" rel="external">阿里巴巴Java开发手册</a></p>
+<p><a href="https://storage.tianshuang.me/2017/02/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4Java%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C.pdf" target="_blank" rel="external">阿里巴巴 Java 开发手册</a></p>
 ]]></content>
     
     <summary type="html">
@@ -537,9 +541,10 @@
     <link href="https://tianshuang.me/2016/08/Multiple%20Datasource/index.html"/>
     <id>https://tianshuang.me/2016/08/Multiple Datasource/index.html</id>
     <published>2016-08-15T07:53:52.000Z</published>
-    <updated>2017-04-26T06:40:56.000Z</updated>
+    <updated>2017-04-26T15:51:05.000Z</updated>
     
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>最近项目中需要接入多个数据源，起初准备让 Mybatis 来进行数据源的动态选择，但查询 Mybatis 的相关文档后，未发现官方对多数据源的支持，并且笔者的项目中 Mybatis 的使用采用全注解的方式，如果实例化两个 SqlSessionFactory ，在全注解使用 Mybatis 的情况下，无法显式指定某个 Mapper 使用哪一个 sqlSessionFactory 。<br>继续查询相关资料，发现 Spring 自 2.0.1 开始就提供了对动态数据源的支持，参见 <a href="http://spring.io/blog/2007/01/23/dynamic-datasource-routing/" target="_blank" rel="external">Dynamic DataSource Routing</a> ，咳咳，由于文章历史悠久，追溯至2007年，所以在笔者的项目中笔者对其进行了改进，思路依然与原文基本一致，只不过把文中基于XML的相关配置改为了我们项目中的基于 Java Code 的配置。</p>
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>最近项目中需要接入多个数据源，起初准备让 Mybatis 来进行数据源的动态选择，但查询 Mybatis 的相关文档后，未发现官方对多数据源的支持，并且笔者的项目中 Mybatis 的使用采用全注解的方式，如果实例化两个 SqlSessionFactory ，在全注解使用 Mybatis 的情况下，无法显式指定某个 Mapper 使用哪一个 sqlSessionFactory 。</p>
+<p>继续查询相关资料，发现 Spring 自 2.0.1 开始就提供了对动态数据源的支持，参见 <a href="http://spring.io/blog/2007/01/23/dynamic-datasource-routing/" target="_blank" rel="external">Dynamic DataSource Routing</a> ，咳咳，由于文章历史悠久，追溯至2007年，所以在笔者的项目中笔者对其进行了改进，思路依然与原文基本一致，只不过把文中基于XML的相关配置改为了我们项目中的基于 Java Code 的配置。</p>
 <a id="more"></a>
 <blockquote>
 <p>为了保护隐私，以下代码部分命名被修改</p>
@@ -567,7 +572,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;最近项目中需要接入多个数据源，起初准备让 Mybatis 来进行数据源的动态选择，但查询 Mybatis 的相关文档后，未发现官方对多数据源的支持，并且笔者的项目中 Mybatis 的使用采用全注解的方式，如果实例化两个 SqlSessionFactory ，在全注解使用 Mybatis 的情况下，无法显式指定某个 Mapper 使用哪一个 sqlSessionFactory 。&lt;br&gt;继续查询相关资料，发现 Spring 自 2.0.1 开始就提供了对动态数据源的支持，参见 &lt;a href=&quot;http://spring.io/blog/2007/01/23/dynamic-datasource-routing/&quot;&gt;Dynamic DataSource Routing&lt;/a&gt; ，咳咳，由于文章历史悠久，追溯至2007年，所以在笔者的项目中笔者对其进行了改进，思路依然与原文基本一致，只不过把文中基于XML的相关配置改为了我们项目中的基于 Java Code 的配置。&lt;/p&gt;
+      &lt;p&gt;最近项目中需要接入多个数据源，起初准备让 Mybatis 来进行数据源的动态选择，但查询 Mybatis 的相关文档后，未发现官方对多数据源的支持，并且笔者的项目中 Mybatis 的使用采用全注解的方式，如果实例化两个 SqlSessionFactory ，在全注解使用 Mybatis 的情况下，无法显式指定某个 Mapper 使用哪一个 sqlSessionFactory 。&lt;/p&gt;
+&lt;p&gt;继续查询相关资料，发现 Spring 自 2.0.1 开始就提供了对动态数据源的支持，参见 &lt;a href=&quot;http://spring.io/blog/2007/01/23/dynamic-datasource-routing/&quot;&gt;Dynamic DataSource Routing&lt;/a&gt; ，咳咳，由于文章历史悠久，追溯至2007年，所以在笔者的项目中笔者对其进行了改进，思路依然与原文基本一致，只不过把文中基于XML的相关配置改为了我们项目中的基于 Java Code 的配置。&lt;/p&gt;
     
     </summary>
     

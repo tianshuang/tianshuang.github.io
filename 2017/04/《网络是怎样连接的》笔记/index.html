@@ -96,7 +96,7 @@ URL: http://www.lab.glasscom.com/dir/，我们可以这样理解，以 “/” �
 <meta property="og:description" content="浏览器生成消息
 URL: Uniform Resource Locator，统一资源定位符。
 URL: http://www.lab.glasscom.com/dir/，我们可以这样理解，以 “/” 结尾代表 /dir/ 后面本来应该有的文件名被省略了。根据 URL 的规则，文件名可以像前面这样省略。我们会在服务器上事先设置好文件名省略时要访问的默认文件名。这个设置根据服务器不同而不同，大多数情况">
-<meta property="og:updated_time" content="2017-04-26T06:39:29.000Z">
+<meta property="og:updated_time" content="2017-04-26T15:45:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《网络是怎样连接的》笔记">
 <meta name="twitter:description" content="浏览器生成消息
@@ -363,13 +363,11 @@ URL: http://www.lab.glasscom.com/dir/，我们可以这样理解，以 “/” �
 <li>关于 GET 请求 URL 的最大长度，不同浏览器和服务器有不同的限制，可参考 <a href="https://technomanor.wordpress.com/2012/04/03/maximum-url-size/" target="_blank" rel="external">Maximum URL Size in HTTP GET Request</a>。</li>
 <li>关于 ETag 这个字段，可以用来提供上次响应与下次请求之间的关联信息。上次响应中，服务器会通过 ETag 向客户端发送一个唯一标识，在下次请求中客户端可以通过 If-Match、If-None-Match、If-Range 字段将这个标识告知服务器，这样服务器就知道该请求和上次的响应是相关的。这个字段的功能和 Cookie 是相同的，但 Cookie 是网景（Netscape）公司自行开发的规格，而 Etag 是将其进行标准化后的规格。</li>
 <li>HTTP 状态码摘要信息如下：<ul>
-<li>1xx 告知请求的处理进度和情况<ul>
+<li>1xx 告知请求的处理进度和情况</li>
 <li>2xx 成功</li>
 <li>3xx 表示需要进一步操作</li>
 <li>4xx 客户端错误</li>
 <li>5xx 服务器错误</li>
-</ul>
-</li>
 </ul>
 </li>
 <li>关于 DNS，可以参考 <a href="https://tianshuang.me/2017/01/%E9%82%A3%E4%BA%9B%E4%BD%A0%E6%9C%AA%E6%9B%BE%E6%B3%A8%E6%84%8F%E7%9A%84DNS%E7%BB%86%E8%8A%82/index.html">那些你未曾注意的DNS细节</a>。</li>

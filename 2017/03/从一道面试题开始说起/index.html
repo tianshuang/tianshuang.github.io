@@ -100,7 +100,7 @@
 服务器A">
 <meta property="og:image" content="https://storage.tianshuang.me/2017/03/A.jpeg">
 <meta property="og:image" content="https://storage.tianshuang.me/2017/03/B.jpeg">
-<meta property="og:updated_time" content="2017-03-30T06:45:46.000Z">
+<meta property="og:updated_time" content="2017-04-26T15:47:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从一道面试题开始说起">
 <meta name="twitter:description" content="其实这道题笔者在第二家的实习面试中被问到过，但是笔者当时并没有回答正确，所幸其他问题回答得还算不赖，没有因为这一个问题表现不佳而被挂掉。最近看《Wireshark 网络分析就这么简单》第一篇文章就是这道题。
@@ -364,11 +364,17 @@
 <p>服务器B：<br><img src="https://storage.tianshuang.me/2017/03/B.jpeg" alt="服务器B"><br><a id="more"></a></p>
 <p>这一篇文章在林沛满的博客中有记录，参见 <a href="http://blog.sina.com.cn/s/blog_70398db501018qcc.html" target="_blank" rel="external">Wireshark入门：第一次亲密接触</a>。</p>
 <p>如果你坚持看完了上面这篇林沛满先生的文章，那么回到这里。笔者在看完之后不太明白的是为什么在 B 看来 A 属于不同子网，而在 A 看来 B 属于同一子网，于是拿起纸和笔手动计算了一下。过程如下：</p>
-<p>在服务器 B 看来，在往服务器 A 发送包之前，是仅仅知道服务器 A 的 IP 地址的，并不知道服务器 A 的子网掩码，所以服务器 B 使用自己的子网掩码与服务器 B 自身的 IP 地址相与得到服务器 B 的网络地址，然后继续使用服务器 B 的子网掩码与服务器 A 的 IP 地址相与得到服务器 A 的网络地址，根据 B 和 A 的网络地址是否相等来判断是否属于同一子网：<br>B 的子网掩码为 255.255.255.224，二进制格式如下：<br>11111111 11111111 11111111 11100000（B 的子网掩码）<br>B 的 IP 地址为 192.168.26.3，二进制格式如下：<br>11000000 10101000 00011010 00000011（B 的 IP 地址）<br>服务器 B 使用自己的子网掩码与服务器 B 自身的 IP 地址相与得到服务器 B 的网络地址为：<br>11000000 10101000 00011010 00000000（B 的网络地址）</p>
-<p>A 的 IP 地址为 192.168.26.129，二进制格式如下：<br>11000000 10101000 00011010 10000001（A 的 IP 地址）<br>使用服务器 B 的子网掩码与服务器 A 的 IP 地址相与得到服务器 A 的网络地址为：<br>11000000 10101000 00011010 10000000（A 的网络地址）</p>
+<p>在服务器 B 看来，在往服务器 A 发送包之前，是仅仅知道服务器 A 的 IP 地址的，并不知道服务器 A 的子网掩码，所以服务器 B 使用自己的子网掩码与服务器 B 自身的 IP 地址相与得到服务器 B 的网络地址，然后继续使用服务器 B 的子网掩码与服务器 A 的 IP 地址相与得到服务器 A 的网络地址，根据 B 和 A 的网络地址是否相等来判断是否属于同一子网：<br>B 的子网掩码为 255.255.255.224，二进制格式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">11111111 11111111 11111111 11100000（B 的子网掩码）</div></pre></td></tr></table></figure></p>
+<p>B 的 IP 地址为 192.168.26.3，二进制格式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">11000000 10101000 00011010 00000011（B 的 IP 地址）</div></pre></td></tr></table></figure></p>
+<p>服务器 B 使用自己的子网掩码与服务器 B 自身的 IP 地址相与得到服务器 B 的网络地址为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">11000000 10101000 00011010 00000000（B 的网络地址）</div></pre></td></tr></table></figure></p>
+<p>A 的 IP 地址为 192.168.26.129，二进制格式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">11000000 10101000 00011010 10000001（A 的 IP 地址）</div></pre></td></tr></table></figure></p>
+<p>使用服务器 B 的子网掩码与服务器 A 的 IP 地址相与得到服务器 A 的网络地址为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">11000000 10101000 00011010 10000000（A 的网络地址）</div></pre></td></tr></table></figure></p>
 <p>通过以上结果，我们可以发现，在服务器 B 看来，B 的网络地址和 A 的网络地址是不同的，这也是服务器 B 通过 ARP 广播查询默认网关 MAC 地址的原因。</p>
-<p>在服务器 A 看来：<br>A 的子网掩码为 255.255.255.0，二进制格式如下：<br>11111111 11111111 11111111 00000000（A 的子网掩码）<br>A 的 IP 地址为 192.168.26.129，二进制格式如下：<br>11000000 10101000 00011010 10000001（A 的 IP 地址）<br>服务器 A 使用自己的子网掩码与服务器 A 自身的 IP 地址相与得到服务器 A 的网络地址为：<br>11000000 10101000 00011010 00000000（A 的网络地址）</p>
-<p>B 的 IP 地址为 192.168.26.3，二进制格式如下：<br>11000000 10101000 00011010 00000011（B 的 IP 地址）<br>使用服务器 A 的子网掩码与服务器 B 的 IP 地址相与得到服务器 B 的网络地址为：<br>11000000 10101000 00011010 00000000（B 的网络地址）</p>
+<p>在服务器 A 看来：<br>A 的子网掩码为 255.255.255.0，二进制格式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">11111111 11111111 11111111 00000000（A 的子网掩码）</div></pre></td></tr></table></figure></p>
+<p>A 的 IP 地址为 192.168.26.129，二进制格式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">11000000 10101000 00011010 10000001（A 的 IP 地址）</div></pre></td></tr></table></figure></p>
+<p>服务器 A 使用自己的子网掩码与服务器 A 自身的 IP 地址相与得到服务器 A 的网络地址为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">11000000 10101000 00011010 00000000（A 的网络地址）</div></pre></td></tr></table></figure></p>
+<p>B 的 IP 地址为 192.168.26.3，二进制格式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">11000000 10101000 00011010 00000011（B 的 IP 地址）</div></pre></td></tr></table></figure></p>
+<p>使用服务器 A 的子网掩码与服务器 B 的 IP 地址相与得到服务器 B 的网络地址为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">11000000 10101000 00011010 00000000（B 的网络地址）</div></pre></td></tr></table></figure></p>
 <p>通过以上结果，我们可以发现，在服务器 A 看来，A 的网络地址和 B 的网络地址是相同的，这也是服务器 A 直接和服务器 B 进行通信的原因。</p>
 <p>最后推荐下林沛满的这两本书：<a href="https://book.douban.com/subject/26268767/" target="_blank" rel="external">《Wireshark 网络分析就这么简单》</a>，<a href="https://book.douban.com/subject/26710788/" target="_blank" rel="external">《Wireshark 网络分析的艺术》</a>。可以说是是国内技术书籍中的上乘之作。这两本书让笔者对 TCP/UDP 有了更深入的理解，纸上得来终觉浅，绝知此事要躬行，只有自己亲自抓几个包看看才能真正理解相关细节。</p>
 
