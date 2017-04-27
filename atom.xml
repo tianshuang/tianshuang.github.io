@@ -99,7 +99,7 @@
     <link href="https://tianshuang.me/2017/04/Awesome-article/index.html"/>
     <id>https://tianshuang.me/2017/04/Awesome-article/index.html</id>
     <published>2017-04-08T13:31:33.000Z</published>
-    <updated>2017-04-26T10:24:51.000Z</updated>
+    <updated>2017-04-27T09:29:27.000Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h3 id="CS"><a href="#CS" class="headerlink" title="CS"></a>CS</h3><ul>
 <li><a href="http://www.ruanyifeng.com/blog/2016/11/byte-order.html" target="_blank" rel="external">理解字节序</a></li>
@@ -142,6 +142,9 @@
 <li><a href="http://arturmkrtchyan.com/jvm-biased-locking" target="_blank" rel="external">JVM Biased Locking</a></li>
 <li><a href="http://calvin1978.blogcn.com/articles/javatuning.html" target="_blank" rel="external">Java性能优化指南1.8版，及唯品会的实战</a></li>
 <li><a href="https://storage.tianshuang.me/2017/04/Java%20Tuning%20Guide%20v1.8.pdf" target="_blank" rel="external">Java Tuning Guide v1.8.pdf</a></li>
+<li><a href="http://stackoverflow.com/questions/26351243/allocations-in-new-tlab-vs-allocations-outside-tlab" target="_blank" rel="external">Allocations in new TLAB vs allocations outside TLAB</a></li>
+<li><a href="http://stackoverflow.com/questions/24618467/size-of-huge-objects-directly-allocated-to-old-generation/24620205#24620205" target="_blank" rel="external">Size of Huge Objects directly allocated to Old Generation</a></li>
+<li><a href="https://www.ibm.com/developerworks/java/library/j-jtp10185/" target="_blank" rel="external">Synchronization optimizations in Mustang</a></li>
 </ul>
 <h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><ul>
 <li><a href="https://www.cyberciti.biz/tips/what-is-devshm-and-its-practical-usage.html" target="_blank" rel="external">What Is /dev/shm And Its Practical Usage</a></li>
