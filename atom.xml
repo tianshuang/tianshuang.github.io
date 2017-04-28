@@ -99,7 +99,7 @@
     <link href="https://tianshuang.me/2017/04/Awesome-article/index.html"/>
     <id>https://tianshuang.me/2017/04/Awesome-article/index.html</id>
     <published>2017-04-08T13:31:33.000Z</published>
-    <updated>2017-04-28T08:02:51.000Z</updated>
+    <updated>2017-04-28T13:55:08.000Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h3 id="CS"><a href="#CS" class="headerlink" title="CS"></a>CS</h3><ul>
 <li><a href="http://www.ruanyifeng.com/blog/2016/11/byte-order.html" target="_blank" rel="external">理解字节序</a></li>
@@ -113,7 +113,7 @@
 </ul>
 <h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><ul>
 <li><a href="http://www.ibm.com/developerworks/cn/web/wa-lo-comet/" target="_blank" rel="external">Comet：基于 HTTP 长连接的服务器推技术</a></li>
-<li><a href="https://www.zhihu.com/question/34074946" target="_blank" rel="external">HTTP/2.0 相比1.0有哪些重大改进？</a></li>
+<li><a href="https://www.zhihu.com/question/34074946" target="_blank" rel="external">HTTP/2.0 相比 1.0 有哪些重大改进？</a></li>
 <li><a href="https://en.wikipedia.org/wiki/HTTP_persistent_connection" target="_blank" rel="external">HTTP persistent connection</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Maximum_segment_lifetime" target="_blank" rel="external">Maximum segment lifetime</a></li>
 <li><a href="https://www.mnot.net/talks/h2fe/" target="_blank" rel="external">HTTP/2 for Front-End Developers</a></li>
@@ -134,7 +134,7 @@
 <li><a href="http://blog.alexnesterov.com/post/spring-your-next-microframework/" target="_blank" rel="external">Spring: your next Java microframework</a></li>
 <li><a href="https://www.ibm.com/developerworks/cn/java/java-lo-concurrenthashmap/" target="_blank" rel="external">探索 ConcurrentHashMap 高并发性的实现机制</a></li>
 <li><a href="https://storage.tianshuang.me/2017/03/PerformanceTuningApacheTomcat.pdf" target="_blank" rel="external">Apache Tomcat Tuning for Production</a></li>
-<li><a href="http://ifeve.com/disruptor/" target="_blank" rel="external">并发框架Disruptor译文</a></li>
+<li><a href="http://ifeve.com/disruptor/" target="_blank" rel="external">并发框架 Disruptor 译文</a></li>
 <li><a href="https://antoniogoncalves.org/2015/01/15/micro-benchmarking-with-jmh-measure-dont-guess/" target="_blank" rel="external">Micro Benchmarking with JMH: Measure, don’t guess!</a></li>
 <li><a href="https://www.ibm.com/developerworks/cn/java/j-concurrencybugpatterns/" target="_blank" rel="external">多核系统上的 Java 并发缺陷模式</a></li>
 <li><a href="http://coolshell.cn/articles/11454.html" target="_blank" rel="external">从 LongAdder 看更高效的无锁实现</a></li>
@@ -142,7 +142,7 @@
 <h3 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h3><ul>
 <li><a href="http://arturmkrtchyan.com/java-object-header" target="_blank" rel="external">Java Object Header</a></li>
 <li><a href="http://arturmkrtchyan.com/jvm-biased-locking" target="_blank" rel="external">JVM Biased Locking</a></li>
-<li><a href="http://calvin1978.blogcn.com/articles/javatuning.html" target="_blank" rel="external">Java性能优化指南1.8版，及唯品会的实战</a></li>
+<li><a href="http://calvin1978.blogcn.com/articles/javatuning.html" target="_blank" rel="external">Java 性能优化指南 1.8 版，及唯品会的实战</a></li>
 <li><a href="https://storage.tianshuang.me/2017/04/Java%20Tuning%20Guide%20v1.8.pdf" target="_blank" rel="external">Java Tuning Guide v1.8.pdf</a></li>
 <li><a href="http://stackoverflow.com/questions/26351243/allocations-in-new-tlab-vs-allocations-outside-tlab" target="_blank" rel="external">Allocations in new TLAB vs allocations outside TLAB</a></li>
 <li><a href="http://stackoverflow.com/questions/24618467/size-of-huge-objects-directly-allocated-to-old-generation/24620205#24620205" target="_blank" rel="external">Size of Huge Objects directly allocated to Old Generation</a></li>
@@ -158,7 +158,7 @@
 <li><a href="http://blog.brucefeng.info/post/distributed-locks" target="_blank" rel="external">分布式锁</a></li>
 <li><a href="http://insights.thoughtworkers.org/security-issues-in-restful/" target="_blank" rel="external">RESTful 架构风格下的 4 大常见安全问题</a></li>
 <li><a href="http://www.ruanyifeng.com/blog/2017/02/filename-should-be-lowercase.html" target="_blank" rel="external">为什么文件名要小写？</a></li>
-<li><a href="http://mp.weixin.qq.com/s/_snozlQIcfROxuexpVTe9Q" target="_blank" rel="external">我回阿里的29个月</a></li>
+<li><a href="http://mp.weixin.qq.com/s/_snozlQIcfROxuexpVTe9Q" target="_blank" rel="external">我回阿里的 29 个月</a></li>
 <li><a href="https://www.zhihu.com/question/29270034" target="_blank" rel="external">短 URL 系统是怎么设计的？</a></li>
 </ul>
 ]]></content>
