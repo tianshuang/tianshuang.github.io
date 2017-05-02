@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tianshuang.me/"/>
-  <updated>2017-05-02T09:13:05.000Z</updated>
+  <updated>2017-05-02T09:36:34.000Z</updated>
   <id>https://tianshuang.me/</id>
   
   <author>
@@ -20,13 +20,13 @@
     <link href="https://tianshuang.me/2017/05/Java-Mission-Control/index.html"/>
     <id>https://tianshuang.me/2017/05/Java-Mission-Control/index.html</id>
     <published>2017-05-02T08:56:29.000Z</published>
-    <updated>2017-05-02T09:13:05.000Z</updated>
+    <updated>2017-05-02T09:36:34.000Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>Java Flight Recorder and Java Mission Control together create a complete tool chain to continuously collect low level and detailed runtime information enabling after-the-fact incident analysis. Java Flight Recorder is a profiling and event collection framework built into the Oracle JDK. It allows Java administrators and developers to gather detailed low level information about how the Java Virtual Machine (JVM) and the Java application are behaving. Java Mission Control is an advanced set of tools that enables efficient and detailed analysis of the extensive of data collected by Java Flight Recorder. The tool chain enables developers and administrators to collect and analyze data from Java applications running locally or deployed in production environments.</p>
 <p><img src="https://storage.tianshuang.me/2017/05/Java%20Mission%20Control.png" alt="Java Mission Control"><br>题图为监测 <a href="https://github.com/tianshuang/pull-readhub.me" target="_blank" rel="external">pull-readhub.me</a> 的示例数据。<br><a id="more"></a></p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qytuEgVmhsI" frameborder="0" allowfullscreen></iframe>
 
-<p><a href="http://www.oracle.com/technetwork/java/javaseproducts/mission-control/java-mission-control-1998576.html" target="_blank" rel="external">Java Mission Control</a></p>
+<p><a href="http://www.oracle.com/technetwork/java/javaseproducts/mission-control/java-mission-control-1998576.html" target="_blank" rel="external">Java Mission Control</a><br><a href="https://github.com/btraceio/btrace" target="_blank" rel="external">BTrace</a></p>
 ]]></content>
     
     <summary type="html">
