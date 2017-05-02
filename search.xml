@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[Java Mission Control]]></title>
+      <url>%2F2017%2F05%2FJava-Mission-Control%2Findex.html</url>
+      <content type="text"><![CDATA[Java Flight Recorder and Java Mission Control together create a complete tool chain to continuously collect low level and detailed runtime information enabling after-the-fact incident analysis. Java Flight Recorder is a profiling and event collection framework built into the Oracle JDK. It allows Java administrators and developers to gather detailed low level information about how the Java Virtual Machine (JVM) and the Java application are behaving. Java Mission Control is an advanced set of tools that enables efficient and detailed analysis of the extensive of data collected by Java Flight Recorder. The tool chain enables developers and administrators to collect and analyze data from Java applications running locally or deployed in production environments. 题图为监测 pull-readhub.me 的示例数据。 Java Mission Control]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Quiz Yourself]]></title>
       <url>%2F2017%2F04%2FQuiz-Yourself%2Findex.html</url>
       <content type="text"><![CDATA[Java Magazine MarchApril 2017]]></content>

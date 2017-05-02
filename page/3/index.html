@@ -264,6 +264,135 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://tianshuang.me/2016/12/MySQL-Sorting-Rows/index.html">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Poison">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://storage.tianshuang.me/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Poison">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Poison" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/MySQL-Sorting-Rows/index.html" itemprop="url">
+                  MySQL Sorting Rows
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-15T10:50:01+08:00">
+                2016-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/MySQL-Sorting-Rows/index.html" class="leancloud_visitors" data-flag-title="MySQL Sorting Rows">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <script src="/assets/js/APlayer.min.js"> </script><p>之前一直以为 MySQL 的「ORDER BY」关键字在多列排序时未显式声明排序方式的列会沿用最后显式声明排序方式的列，今天才发现自己弄错了，罪过罪过。在多列排序时，不同的列拥有不同的排序方式，如果未显式声明，则采用默认的升序排序方式。</p>
+<p>You can sort on multiple columns, and you can sort different columns in different directions. For example, to sort by type of animal in ascending order, then by birth date within animal type in descending order (youngest animals first), use the following query:<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">mysql&gt; SELECT name, species, birth FROM pet</div><div class="line">    -&gt; ORDER BY species, birth DESC;</div><div class="line">+----------+---------+------------+</div><div class="line">| name     | species | birth      |</div><div class="line">+----------+---------+------------+</div><div class="line">| Chirpy   | bird    | 1998-09-11 |</div><div class="line">| Whistler | bird    | 1997-12-09 |</div><div class="line">| Claws    | cat     | 1994-03-17 |</div><div class="line">| Fluffy   | cat     | 1993-02-04 |</div><div class="line">| Fang     | dog     | 1990-08-27 |</div><div class="line">| Bowser   | dog     | 1989-08-31 |</div><div class="line">| Buffy    | dog     | 1989-05-13 |</div><div class="line">| Puffball | hamster | 1999-03-30 |</div><div class="line">| Slim     | snake   | 1996-04-29 |</div><div class="line">+----------+---------+------------+</div></pre></td></tr></table></figure></p>
+<p>The DESC keyword applies only to the column name immediately preceding it (birth); it does not affect the species column sort order.</p>
+<p><a href="http://dev.mysql.com/doc/refman/5.7/en/sorting-rows.html" target="_blank" rel="external">MySQL 5.7 Reference Manual 4.3.4.4 Sorting Rows</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="https://tianshuang.me/2016/09/SQL-JOINS/index.html">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -771,139 +900,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://tianshuang.me/2016/02/Hello-2016/index.html">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Poison">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="https://storage.tianshuang.me/avatar.jpg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Poison">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Poison" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/Hello-2016/index.html" itemprop="url">
-                  Hello, 2016!
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-02-08T01:30:02+08:00">
-                2016-02-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/02/Hello-2016/index.html" class="leancloud_visitors" data-flag-title="Hello, 2016!">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote class="blockquote-center">风险越高，收益越大</blockquote>
-
-<p>新年，已经没了小时候的些许期待，年复一年。</p>
-<p>回顾 2015 ，专业技能方面稳步增长，但感觉驱动自己向前的力量没以前那么强了，可能已经渐渐厌倦大学生活，破茧待出，心里渴望急需闯进外面的世界。春节前考过了科目三，2016 终于不会再在练车上消耗时间。白条和花呗不是好东西。</p>
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/Hello-2016/index.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -949,7 +945,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives/index.html">
-              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -959,7 +955,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
