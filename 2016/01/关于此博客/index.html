@@ -92,10 +92,12 @@
 <meta property="og:url" content="https://tianshuang.me/2016/01/关于此博客/index.html">
 <meta property="og:site_name" content="Poison">
 <meta property="og:description" content="折腾两三天，总算把这个博客搭建起来了。之前大二在 CSDN 写过一段时间的博客，大多数都是关于技术细节的，竟然有 138 篇？一直都有自己搭建博客的想法，想过自己动手码个博客，但无奈自己主要做 Java 的相关开发，前端不是很熟悉，无法做到心里想象中的前端效果，遂放弃自己动手码的想法。看到许多人用 Hexo ，于是 Google 了下相关资料，静态，再看看主题，也不错，遂决定就是 Hexo 了。接">
-<meta property="og:updated_time" content="2017-04-26T06:44:24.000Z">
+<meta property="og:image" content="https://storage.tianshuang.me/2017/05/aliyun-cdn-http2.png">
+<meta property="og:updated_time" content="2017-05-10T14:47:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于此博客">
 <meta name="twitter:description" content="折腾两三天，总算把这个博客搭建起来了。之前大二在 CSDN 写过一段时间的博客，大多数都是关于技术细节的，竟然有 138 篇？一直都有自己搭建博客的想法，想过自己动手码个博客，但无奈自己主要做 Java 的相关开发，前端不是很熟悉，无法做到心里想象中的前端效果，遂放弃自己动手码的想法。看到许多人用 Hexo ，于是 Google 了下相关资料，静态，再看看主题，也不错，遂决定就是 Hexo 了。接">
+<meta name="twitter:image" content="https://storage.tianshuang.me/2017/05/aliyun-cdn-http2.png">
 
 
 
@@ -374,6 +376,7 @@
 <p>上面的部分是16年博客建立之初的环境，由于主机在境外，由于众所周知的原因，慢是一种常态，更严重的是有时根本无法连通，开始我只是把部分图片资源转移到了七牛上，再后面直接把这个域名直接加速，后来学生主机到期，就把静态博客移到了 Github Pages 上，但是怎么弄主机都在境外，只要一旦没击中缓存，就要从境外主机回源，速度不可直视。趁这几天有空，将 blog 挪一下窝，一切为了速度，首先将 DNS 解析更换为 <a href="https://www.cloudxns.net/" target="_blank" rel="external">CloudXNS</a> ，然后将 blog 文件放至阿里云 OSS ，写了个增量更新的脚本，还是一样的一键发布，再搭配阿里云的 CDN ，之所以选阿里云是因为之前用七牛的 CDN 时，七牛那边暂不支持 HTTP 到 HTTPS 的 301/302 重定向，七牛的技术给的答复也只是支持的时候会通知，腾讯云的 CDN 也暂时不支持，而阿里云这边是支持的，之所以一定要 HTTPS ，是因为实在受不了右下角经常被插入小广告。暂时就做以上的调整，先试试效果。</p>
 <h3 id="2017-02-25-更新日志"><a href="#2017-02-25-更新日志" class="headerlink" title="2017-02-25 更新日志"></a>2017-02-25 更新日志</h3><p>将博客增量上传到 OSS 的 Python 脚本上传到了 Github 上，需要的朋友自取， <a href="https://github.com/tianshuang/aliyun-oss-sync" target="_blank" rel="external">aliyun-oss-sync</a> ，因为使用阿里云 CDN 加速 OSS 之后， OSS 中的文件变化后 CDN 会自动清空相应文件的 CDN 缓存，所以每次只要 UPDATE 到 OSS 即完成发布。</p>
 <h3 id="2017-03-03-更新日志"><a href="#2017-03-03-更新日志" class="headerlink" title="2017-03-03 更新日志"></a>2017-03-03 更新日志</h3><p>因为用户直接在浏览器输入 tianshuang.me 的话，浏览器默认使用 HTTP 协议访问， server 端返回 301/302 让客户端重定向到 <a href="https://tianshuang.me/">https://tianshuang.me/</a> ，而在这一次请求及响应依然是明文传输的，所以仍然存在被中间人攻击的可能。为了尽可能降低这种可能性，我们希望配置 Strict-Transport-Security 这个 header ，这里有一篇文章讲得比较清楚，参见 <a href="http://insights.thoughtworkers.org/detailed-hsts/" target="_blank" rel="external">HSTS详解</a> ，而本站使用了阿里云的 CDN ， CDN 的控制面板里可以手动配置 HTTP header ，但阿里云仅开放了部分 header 供用户手动配置，故已经提交了工单，希望开放此 Strict-Transport-Security header 供用户手动配置。</p>
+<h3 id="2017-05-10-更新日志"><a href="#2017-05-10-更新日志" class="headerlink" title="2017-05-10 更新日志"></a>2017-05-10 更新日志</h3><p>重新梳理了下相关缓存配置，调整了 CDN 缓存服务器的缓存策略，对部分资源添加了针对浏览器的缓存控制头，调试时发现阿里云 CDN 已经支持 HTTP2 了。<br><img src="https://storage.tianshuang.me/2017/05/aliyun-cdn-http2.png" alt="aliyun-cdn-http2"> </p>
 
       
     </div>
@@ -497,7 +500,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives/index.html">
-              <span class="site-state-item-count">17</span>
+              <span class="site-state-item-count">18</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -600,7 +603,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2017-02-20-更新日志"><span class="nav-number">1.</span> <span class="nav-text">2017-02-20 更新日志</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2017-02-25-更新日志"><span class="nav-number">2.</span> <span class="nav-text">2017-02-25 更新日志</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2017-03-03-更新日志"><span class="nav-number">3.</span> <span class="nav-text">2017-03-03 更新日志</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2017-02-20-更新日志"><span class="nav-number">1.</span> <span class="nav-text">2017-02-20 更新日志</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2017-02-25-更新日志"><span class="nav-number">2.</span> <span class="nav-text">2017-02-25 更新日志</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2017-03-03-更新日志"><span class="nav-number">3.</span> <span class="nav-text">2017-03-03 更新日志</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2017-05-10-更新日志"><span class="nav-number">4.</span> <span class="nav-text">2017-05-10 更新日志</span></a></li></ol></div>
             
 
           </div>
