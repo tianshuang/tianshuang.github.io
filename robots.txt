@@ -3,12 +3,10 @@ User-agent: *
 Allow: /
 Allow: /archives/
 
-Disallow: /vendors/
+Disallow: /assets/
 Disallow: /js/
 Disallow: /css/
-Disallow: /fonts/
-Disallow: /vendors/
-Disallow: /fancybox/
+Disallow: /lib/
 
 Sitemap: https://tianshuang.me/sitemap.xml
 
