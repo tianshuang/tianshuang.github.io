@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tianshuang.me/"/>
-  <updated>2017-05-12T01:59:35.000Z</updated>
+  <updated>2017-05-15T15:18:50.000Z</updated>
   <id>https://tianshuang.me/</id>
   
   <author>
@@ -16,11 +16,53 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Java 为什么对常量的修改没有生效？</title>
+    <link href="https://tianshuang.me/2017/05/Java-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AF%B9%E5%B8%B8%E9%87%8F%E7%9A%84%E4%BF%AE%E6%94%B9%E6%B2%A1%E6%9C%89%E7%94%9F%E6%95%88%EF%BC%9F/index.html"/>
+    <id>https://tianshuang.me/2017/05/Java-为什么对常量的修改没有生效？/index.html</id>
+    <published>2017-05-15T02:17:48.000Z</published>
+    <updated>2017-05-15T15:18:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>写这篇文章的起因是前几天同事改了一个常量类中的提示，发布到测试环境后没有生效，正好看 <a href="https://book.douban.com/subject/5362860/" target="_blank" rel="external">《Java 解惑（谜题 93: 类的战争）》</a> 提到了这个问题，所以写篇文章记录一下。</p>
+<p>以下均使用命令行进行演示，至于为什么没有使用 IDE 后面会提到。</p>
+<p>先看一个简单的 Contants 类：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by Poison on 15/05/2017.</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Constants</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String a = <span class="string">"before fixing"</span>;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>再看下 Solution 类：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by Poison on 15/05/2017.</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        System.out.println(Constants.a);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>编译，运行 Solution 的主函数，毫无疑问结果如图：</p>
+<p><img src="http://storage.tianshuang.me/2017/05/ConstantsBeforeFixing.png" alt="before fixing"></p>
+<p>现在我们把 Constants 类修改为：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by Poison on 15/05/2017.</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Constants</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String a = <span class="string">"after fixing"</span>;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>重新编译 Constants 类，再运行 Solution 的主函数，输出结果如图：</p>
+<p><img src="http://storage.tianshuang.me/2017/05/ConstantsAfterFixing.png" alt="after fixing"></p>
+<p>为什么修改没有生效？是 Constants 类的问题，还是 Solution 类的问题？</p>
+<p>我们先反编译 Constants 类看看：</p>
+<p><img src="http://storage.tianshuang.me/2017/05/javapConstants.png" alt="javap Constants"></p>
+<p>由上图可见，对 Constants 类的修改是生效的。</p>
+<p>再看反编译的 Solution 类：</p>
+<p><img src="http://storage.tianshuang.me/2017/05/javapSolution.png" alt="javap Solution"></p>
+<p>看到这里，原因也就明确了，常量变量会被编译进那些引用它们的类中。这和笔者同事前几日遇到的情况一模一样，同事在本地开发时修改了常量类中的常量字段的值，本地是生效的，原因是因为本地开发使用了 IDE，而 IDE 将引用到常量类的类也重新编译了，所以能看到最新的值，而在发布到测试环境的过程中，打包机使用增量编译，只是重新编译了源代码被更改过的类，未将引用常量的类重新编译，所以当时看见的是更改前的值，同事将常量类的 class 文件反编译后看见的也是修改后的值，但是却忘了看引用该常量类的类，所以当时没有发现这个问题。</p>
+<p><a href="https://book.douban.com/subject/5362860/" target="_blank" rel="external">Java 解惑</a><br><a href="https://book.douban.com/subject/26418340/" target="_blank" rel="external">Java 虚拟机规范（Java SE 8版）</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;写这篇文章的起因是前几天同事改了一个常量类中的提示，发布到测试环境后没有生效，正好看 &lt;a href=&quot;https://book.douban.com/subject/5362860/&quot;&gt;《Java 解惑（谜题 93: 类的战争）》&lt;/a&gt; 提到了这个问题，所以写篇文章记录一下。&lt;/p&gt;
+&lt;p&gt;以下均使用命令行进行演示，至于为什么没有使用 IDE 后面会提到。&lt;/p&gt;
+&lt;p&gt;先看一个简单的 Contants 类：&lt;br&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/**&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; * Created by Poison on 15/05/2017.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; */&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Constants&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; String a = &lt;span class=&quot;string&quot;&gt;&quot;before fixing&quot;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://tianshuang.me/tags/Java/"/>
+    
+      <category term="Constant" scheme="https://tianshuang.me/tags/Constant/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Awesome Linux tools</title>
     <link href="https://tianshuang.me/2017/05/Awesome-Linux-tools/index.html"/>
     <id>https://tianshuang.me/2017/05/Awesome-Linux-tools/index.html</id>
     <published>2017-05-06T02:57:47.000Z</published>
-    <updated>2017-05-12T01:59:35.000Z</updated>
+    <updated>2017-05-15T09:16:33.000Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h3 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h3><ul>
 <li><a href="https://github.com/nvbn/thefuck" target="_blank" rel="external">fuck</a></li>
@@ -35,6 +77,9 @@
 <li><a href="https://github.com/raboof/nethogs" target="_blank" rel="external">nethogs</a></li>
 <li><a href="https://www.wireshark.org/docs/man-pages/tshark.html" target="_blank" rel="external">tshark</a></li>
 <li><a href="https://linux.die.net/man/8/tcpdump" target="_blank" rel="external">tcpdump</a></li>
+<li><a href="https://nmap.org/" target="_blank" rel="external">nmap</a></li>
+<li><a href="https://github.com/haad/proxychains" target="_blank" rel="external">proxychains</a></li>
+<li><a href="https://github.com/rofl0r/proxychains-ng" target="_blank" rel="external">proxychains-ng</a></li>
 </ul>
 ]]></content>
     
@@ -56,7 +101,7 @@
     <link href="https://tianshuang.me/2017/05/Java-Mission-Control/index.html"/>
     <id>https://tianshuang.me/2017/05/Java-Mission-Control/index.html</id>
     <published>2017-05-02T08:56:29.000Z</published>
-    <updated>2017-05-02T09:36:34.000Z</updated>
+    <updated>2017-05-15T02:19:12.000Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>Java Flight Recorder and Java Mission Control together create a complete tool chain to continuously collect low level and detailed runtime information enabling after-the-fact incident analysis. Java Flight Recorder is a profiling and event collection framework built into the Oracle JDK. It allows Java administrators and developers to gather detailed low level information about how the Java Virtual Machine (JVM) and the Java application are behaving. Java Mission Control is an advanced set of tools that enables efficient and detailed analysis of the extensive of data collected by Java Flight Recorder. The tool chain enables developers and administrators to collect and analyze data from Java applications running locally or deployed in production environments.</p>
 <p><img src="https://storage.tianshuang.me/2017/05/Java%20Mission%20Control.png" alt="Java Mission Control"><br>题图为监测 <a href="https://github.com/tianshuang/pull-readhub.me" target="_blank" rel="external">pull-readhub.me</a> 的示例数据。<br><a id="more"></a></p>
@@ -72,6 +117,8 @@
     
     </summary>
     
+    
+      <category term="Java" scheme="https://tianshuang.me/tags/Java/"/>
     
       <category term="测量" scheme="https://tianshuang.me/tags/%E6%B5%8B%E9%87%8F/"/>
     
@@ -161,7 +208,7 @@
     <link href="https://tianshuang.me/2017/04/Awesome-article/index.html"/>
     <id>https://tianshuang.me/2017/04/Awesome-article/index.html</id>
     <published>2017-04-08T13:31:33.000Z</published>
-    <updated>2017-05-12T10:21:08.000Z</updated>
+    <updated>2017-05-15T02:25:28.000Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h3 id="CS"><a href="#CS" class="headerlink" title="CS"></a>CS</h3><ul>
 <li><a href="http://www.ruanyifeng.com/blog/2016/11/byte-order.html" target="_blank" rel="external">理解字节序</a></li>
@@ -204,6 +251,7 @@
 <li><a href="https://antoniogoncalves.org/2015/01/15/micro-benchmarking-with-jmh-measure-dont-guess/" target="_blank" rel="external">Micro Benchmarking with JMH: Measure, don’t guess!</a></li>
 <li><a href="https://www.ibm.com/developerworks/cn/java/j-concurrencybugpatterns/" target="_blank" rel="external">多核系统上的 Java 并发缺陷模式</a></li>
 <li><a href="http://coolshell.cn/articles/11454.html" target="_blank" rel="external">从 LongAdder 看更高效的无锁实现</a></li>
+<li><a href="http://stackoverflow.com/questions/29247896/why-linkedlist-implementation-in-java-has-node-nested-class-as-static" target="_blank" rel="external">Why LinkedList implementation in java has Node nested class as static?</a></li>
 </ul>
 <h3 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h3><ul>
 <li><a href="http://arturmkrtchyan.com/java-object-header" target="_blank" rel="external">Java Object Header</a></li>

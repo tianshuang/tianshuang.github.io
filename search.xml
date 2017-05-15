@@ -3,9 +3,16 @@
   
     
     <entry>
+      <title><![CDATA[Java 为什么对常量的修改没有生效？]]></title>
+      <url>%2F2017%2F05%2FJava-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AF%B9%E5%B8%B8%E9%87%8F%E7%9A%84%E4%BF%AE%E6%94%B9%E6%B2%A1%E6%9C%89%E7%94%9F%E6%95%88%EF%BC%9F%2Findex.html</url>
+      <content type="text"><![CDATA[写这篇文章的起因是前几天同事改了一个常量类中的提示，发布到测试环境后没有生效，正好看 《Java 解惑（谜题 93: 类的战争）》 提到了这个问题，所以写篇文章记录一下。 以下均使用命令行进行演示，至于为什么没有使用 IDE 后面会提到。 先看一个简单的 Contants 类：12345678/** * Created by Poison on 15/05/2017. */public class Constants &#123; public static final String a = "before fixing";&#125; 再看下 Solution 类：12345678910/** * Created by Poison on 15/05/2017. */public class Solution &#123; public static void main(String[] args) &#123; System.out.println(Constants.a); &#125;&#125; 编译，运行 Solution 的主函数，毫无疑问结果如图： 现在我们把 Constants 类修改为：12345678/** * Created by Poison on 15/05/2017. */public class Constants &#123; public static final String a = "after fixing";&#125; 重新编译 Constants 类，再运行 Solution 的主函数，输出结果如图： 为什么修改没有生效？是 Constants 类的问题，还是 Solution 类的问题？ 我们先反编译 Constants 类看看： 由上图可见，对 Constants 类的修改是生效的。 再看反编译的 Solution 类： 看到这里，原因也就明确了，常量变量会被编译进那些引用它们的类中。这和笔者同事前几日遇到的情况一模一样，同事在本地开发时修改了常量类中的常量字段的值，本地是生效的，原因是因为本地开发使用了 IDE，而 IDE 将引用到常量类的类也重新编译了，所以能看到最新的值，而在发布到测试环境的过程中，打包机使用增量编译，只是重新编译了源代码被更改过的类，未将引用常量的类重新编译，所以当时看见的是更改前的值，同事将常量类的 class 文件反编译后看见的也是修改后的值，但是却忘了看引用该常量类的类，所以当时没有发现这个问题。 Java 解惑Java 虚拟机规范（Java SE 8版）]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Awesome Linux tools]]></title>
       <url>%2F2017%2F05%2FAwesome-Linux-tools%2Findex.html</url>
-      <content type="text"><![CDATA[Shell fuck System htop Network netstat ifstat nethogs tshark tcpdump]]></content>
+      <content type="text"><![CDATA[Shell fuck System htop Network netstat ifstat nethogs tshark tcpdump nmap proxychains proxychains-ng]]></content>
     </entry>
 
     
@@ -40,7 +47,7 @@
     <entry>
       <title><![CDATA[Awesome article]]></title>
       <url>%2F2017%2F04%2FAwesome-article%2Findex.html</url>
-      <content type="text"><![CDATA[CS 理解字节序 User space 与 Kernel space OLTP vs. OLAP Algorithm 小而巧的数字压缩算法：zigzag 多动态图详细讲解二叉搜索树 DNS 智能DNS解析？ HTTP Comet：基于 HTTP 长连接的服务器推技术 HTTP/2.0 相比 1.0 有哪些重大改进？ HTTP persistent connection Maximum segment lifetime HTTP/2 for Front-End Developers TCP/IP The TCP/IP Guide TCP 三次握手和 Syn-Flood 攻击 一则经典技术面试题目的解读 What-happens-when What-happens-when (中文版) Virtual IP Addresses and Their Discontents for Database Availability Java 一个简单代码的不简单实现 The substring() Method in JDK 6 and JDK 7 Java 8 HashMaps, Keys and the Comparable interface Java Thread Join Example Why is there a Java radix limit? Spring: your next Java microframework 探索 ConcurrentHashMap 高并发性的实现机制 Apache Tomcat Tuning for Production 并发框架 Disruptor 译文 Micro Benchmarking with JMH: Measure, don’t guess! 多核系统上的 Java 并发缺陷模式 从 LongAdder 看更高效的无锁实现 JVM Java Object Header JVM Biased Locking Java 性能优化指南 1.8 版，及唯品会的实战 Java Tuning Guide v1.8.pdf Allocations in new TLAB vs allocations outside TLAB Size of Huge Objects directly allocated to Old Generation Synchronization optimizations in Mustang Linux What Is /dev/shm And Its Practical Usage tmpfs Linux TCP/IP Tuning for Scalability Others 当服务 QPS 增高时我们做什么 分布式锁 RESTful 架构风格下的 4 大常见安全问题 为什么文件名要小写？ 我回阿里的 29 个月 短 URL 系统是怎么设计的？ 有哪些命令行的软件堪称神器？]]></content>
+      <content type="text"><![CDATA[CS 理解字节序 User space 与 Kernel space OLTP vs. OLAP Algorithm 小而巧的数字压缩算法：zigzag 多动态图详细讲解二叉搜索树 DNS 智能DNS解析？ HTTP Comet：基于 HTTP 长连接的服务器推技术 HTTP/2.0 相比 1.0 有哪些重大改进？ HTTP persistent connection Maximum segment lifetime HTTP/2 for Front-End Developers TCP/IP The TCP/IP Guide TCP 三次握手和 Syn-Flood 攻击 一则经典技术面试题目的解读 What-happens-when What-happens-when (中文版) Virtual IP Addresses and Their Discontents for Database Availability Java 一个简单代码的不简单实现 The substring() Method in JDK 6 and JDK 7 Java 8 HashMaps, Keys and the Comparable interface Java Thread Join Example Why is there a Java radix limit? Spring: your next Java microframework 探索 ConcurrentHashMap 高并发性的实现机制 Apache Tomcat Tuning for Production 并发框架 Disruptor 译文 Micro Benchmarking with JMH: Measure, don’t guess! 多核系统上的 Java 并发缺陷模式 从 LongAdder 看更高效的无锁实现 Why LinkedList implementation in java has Node nested class as static? JVM Java Object Header JVM Biased Locking Java 性能优化指南 1.8 版，及唯品会的实战 Java Tuning Guide v1.8.pdf Allocations in new TLAB vs allocations outside TLAB Size of Huge Objects directly allocated to Old Generation Synchronization optimizations in Mustang Linux What Is /dev/shm And Its Practical Usage tmpfs Linux TCP/IP Tuning for Scalability Others 当服务 QPS 增高时我们做什么 分布式锁 RESTful 架构风格下的 4 大常见安全问题 为什么文件名要小写？ 我回阿里的 29 个月 短 URL 系统是怎么设计的？ 有哪些命令行的软件堪称神器？]]></content>
     </entry>
 
     
