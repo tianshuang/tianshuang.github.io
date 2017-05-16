@@ -62,7 +62,7 @@
     <link href="https://tianshuang.me/2017/05/Awesome-Linux-tools/index.html"/>
     <id>https://tianshuang.me/2017/05/Awesome-Linux-tools/index.html</id>
     <published>2017-05-06T02:57:47.000Z</published>
-    <updated>2017-05-15T09:16:33.000Z</updated>
+    <updated>2017-05-16T07:54:46.000Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h3 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h3><ul>
 <li><a href="https://github.com/nvbn/thefuck" target="_blank" rel="external">fuck</a></li>
@@ -80,6 +80,9 @@
 <li><a href="https://nmap.org/" target="_blank" rel="external">nmap</a></li>
 <li><a href="https://github.com/haad/proxychains" target="_blank" rel="external">proxychains</a></li>
 <li><a href="https://github.com/rofl0r/proxychains-ng" target="_blank" rel="external">proxychains-ng</a></li>
+</ul>
+<h3 id="I-O"><a href="#I-O" class="headerlink" title="I/O"></a>I/O</h3><ul>
+<li><a href="https://linux.die.net/man/1/iostat" target="_blank" rel="external">iostat</a></li>
 </ul>
 ]]></content>
     
