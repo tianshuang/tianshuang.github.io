@@ -12,7 +12,7 @@
     <entry>
       <title><![CDATA[Awesome Linux tools]]></title>
       <url>%2F2017%2F05%2FAwesome-Linux-tools%2Findex.html</url>
-      <content type="text"><![CDATA[Shell fuck System htop Network netstat ifstat nethogs tshark tcpdump nmap proxychains proxychains-ng I/O iostat]]></content>
+      <content type="text"><![CDATA[Shell fuck System htop mpstat Network netstat ifstat nethogs tshark tcpdump nmap proxychains proxychains-ng I/O iostat]]></content>
     </entry>
 
     
