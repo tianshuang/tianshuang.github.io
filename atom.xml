@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tianshuang.me/"/>
-  <updated>2017-07-01T16:05:56.000Z</updated>
+  <updated>2017-09-12T13:05:43.000Z</updated>
   <id>https://tianshuang.me/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一次线上 CPU 飙升问题的分析解决</title>
+    <link href="https://tianshuang.me/2017/09/%E4%B8%80%E6%AC%A1%E7%BA%BF%E4%B8%8A-CPU-%E9%A3%99%E5%8D%87%E9%97%AE%E9%A2%98%E7%9A%84%E5%88%86%E6%9E%90%E8%A7%A3%E5%86%B3/index.html"/>
+    <id>https://tianshuang.me/2017/09/一次线上-CPU-飙升问题的分析解决/index.html</id>
+    <published>2017-09-11T14:45:12.000Z</published>
+    <updated>2017-09-12T13:05:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>前几日，下了班在家时突然收到监控报警，线上一组业务机器 CPU 被打满至 100%，为了保持服务的稳定运行，临时采取了升级配置、加机器等粗暴的方法将当晚扛了过去。<br><a id="more"></a><br>半夜想了下可能的原因，由于可能因素太多，不能确定，第二天到公司后，在一台预发机器上把 <a href="https://tianshuang.me/2017/05/Java-Mission-Control/index.html">Java Mission Control</a> 所需的参数配置好，然后就等待下一次问题出现呗，果然，没几天，在晚高峰时问题又复现了，马上将线上的流量分了一小部分到提前配置好的预发机器上，没过一会，预发机器的 <a href="https://www.howtogeek.com/194642/understanding-the-load-average-on-linux-and-other-unix-like-systems/" target="_blank" rel="external">负载</a> 也满了。在 Java Mission Control 的 Thread 的面板里观察了一会，业务线程的 CPU 使用率根本不高，超过 10% 的都很少，但此时 CPU 又是被打满的，在不停查看 Java Mission Control 中提供的信息时，发现了 <a href="http://www.fasterj.com/articles/oraclecollectors1.shtml" target="_blank" rel="external">Full GC</a> 非常频繁，在应用启动了两个多小时内，Full GC 了 1500 多次，占用了 13 多分钟，并且次数和时间依然在不停增加中，一下让笔者想到了之前在相关书籍上提到的频繁 Full GC 的相关问题，没想到在这里让笔者给碰上了，如图：</p><p><img src="https://storage.tianshuang.me/2017/09/prepub%20Full%20GC.png" alt="prepub Full GC"></p><p>但是预发机器和线上机器配置是不一样的啊，预发是 Full GC 导致的 CPU 飙升不能代表线上机器也是这个原因啊，为了验证此问题，笔者在其中一台线上机器配置了 GC log 等参数，就等着线上问题再出现时能留下相关日志信息，GC log 相关知识可参考： <a href="https://dzone.com/articles/understanding-garbage-collection-log" target="_blank" rel="external">Understanding the Java Garbage Collection Log</a> 。是否感觉肉眼分析 GC log 很麻烦？好吧，早就有人做好了相关分析工具： <a href="http://gceasy.io/" target="_blank" rel="external">GC easy</a> 。</p><p>这里提供一份 GC log，是在一台线上 1Core 4G 的机器上采集的 (JVM 未调优)，也是到了晚高峰 CPU 就 100% 了，可以自行上传到 <a href="http://gceasy.io/" target="_blank" rel="external">GC easy</a> 分析看看，点此 <a href="https://storage.tianshuang.me/2017/09/gc.log" target="_blank" rel="external">下载</a>。</p><p>一图胜千言：<br><img src="https://storage.tianshuang.me/2017/09/Full%20GC.png" alt="Full GC"></p><p>为了检查是否有部分业务线程存在大幅使用 CPU 的情况，笔者也顺便准备了 <a href="https://blog.fastthread.io/2016/06/06/how-to-take-thread-dumps-7-options/" target="_blank" rel="external">生成线程转储</a> 相关命令，如：先用 <a href="http://docs.oracle.com/javase/7/docs/technotes/tools/share/jps.html" target="_blank" rel="external">jps</a> 找出 tomcat 的 pid，然后使用如下命令生成线程转储：<br></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jstack -l &lt;pid&gt; &gt; /opt/threadDump.txt</div></pre></td></tr></table></figure><p></p><p>为了保证数据的准确性，在 CPU 被打满的时间段内笔者生成了五六份以备后面分析，同样，用肉眼观察总是比较艰难，此处可利用 <a href="http://fastthread.io/" target="_blank" rel="external">Java Thread Dump Analyzer</a> 进行分析。这一块在线上机器上的分析和笔者之前在预发机器上观察的现象一致，没有存在大量消耗 CPU 的问题线程。</p><p>到此为止，问题总算找到了，只要找到原因所在，解决总是比较简单的，之前由于这组业务量不大，就没有进行 JVM 调优，使用的默认的 JVM 相关参数，比如在 1Core 4G 的机器上，默认 <a href="https://stackoverflow.com/questions/4667483/how-is-the-default-java-heap-size-determined/4667635#4667635" target="_blank" rel="external">最大堆内存</a> 为物理的内存的四分之一，还有很多内存没有得到利用，后面的解决办法也不用写了，调整后观察了一周，到目前为止晚高峰时服务依然很稳定，负载也在预期的范围内，没有再出现 CPU 飙升的情况，问题得到解决。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前几日，下了班在家时突然收到监控报警，线上一组业务机器 CPU 被打满至 100%，为了保持服务的稳定运行，临时采取了升级配置、加机器等粗暴的方法将当晚扛了过去。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://tianshuang.me/tags/Java/"/>
+    
+      <category term="JVM" scheme="https://tianshuang.me/tags/JVM/"/>
+    
+  </entry>
   
   <entry>
     <title>学习</title>
