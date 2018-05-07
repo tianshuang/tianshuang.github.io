@@ -38,26 +38,6 @@
   </entry>
   
   <entry>
-    <title>学习</title>
-    <link href="https://tianshuang.me/2017/07/%E5%AD%A6%E4%B9%A0/index.html"/>
-    <id>https://tianshuang.me/2017/07/学习/index.html</id>
-    <published>2017-07-01T16:03:21.000Z</published>
-    <updated>2017-07-01T16:05:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p><img src="https://storage.tianshuang.me/2017/07/study.jpg" alt="study"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;&lt;img src=&quot;https://storage.tianshuang.me/2017/07/study.jpg&quot; alt=&quot;study&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="tombkeeper" scheme="https://tianshuang.me/tags/tombkeeper/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Java 为什么对常量的修改没有生效？</title>
     <link href="https://tianshuang.me/2017/05/Java-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AF%B9%E5%B8%B8%E9%87%8F%E7%9A%84%E4%BF%AE%E6%94%B9%E6%B2%A1%E6%9C%89%E7%94%9F%E6%95%88%EF%BC%9F/index.html"/>
     <id>https://tianshuang.me/2017/05/Java-为什么对常量的修改没有生效？/index.html</id>

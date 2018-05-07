@@ -10,14 +10,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[学习]]></title>
-    <url>%2F2017%2F07%2F%E5%AD%A6%E4%B9%A0%2Findex.html</url>
-    <content type="text"><![CDATA[]]></content>
-      <tags>
-        <tag>tombkeeper</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Java 为什么对常量的修改没有生效？]]></title>
     <url>%2F2017%2F05%2FJava-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AF%B9%E5%B8%B8%E9%87%8F%E7%9A%84%E4%BF%AE%E6%94%B9%E6%B2%A1%E6%9C%89%E7%94%9F%E6%95%88%EF%BC%9F%2Findex.html</url>
     <content type="text"><![CDATA[写这篇文章的起因是前几天同事改了一个常量类中的提示，发布到测试环境后没有生效，正好看 《Java 解惑（谜题 93: 类的战争）》 提到了这个问题，所以写篇文章记录一下。以下均使用命令行进行演示，至于为什么没有使用 IDE 后面会提到。先看一个简单的 Constants 类：12345678/** * Created by Poison on 15/05/2017. */public class Constants &#123; public static final String a = "before fixing";&#125;再看下 Solution 类：12345678910/** * Created by Poison on 15/05/2017. */public class Solution &#123; public static void main(String[] args) &#123; System.out.println(Constants.a); &#125;&#125;编译，运行 Solution 的主函数，毫无疑问结果如图：现在我们把 Constants 类修改为：12345678/** * Created by Poison on 15/05/2017. */public class Constants &#123; public static final String a = "after fixing";&#125;重新编译 Constants 类，再运行 Solution 的主函数，输出结果如图：为什么修改没有生效？是 Constants 类的问题，还是 Solution 类的问题？我们先反编译 Constants 类看看：由上图可见，对 Constants 类的修改是生效的。再看反编译的 Solution 类：看到这里，原因也就明确了，常量变量会被编译进那些引用它们的类中。这和笔者同事前几日遇到的情况一模一样，同事在本地开发时修改了常量类中的常量字段的值，本地是生效的，原因是因为本地开发使用了 IDE，而 IDE 将引用到常量类的类也重新编译了，所以能看到最新的值，而在发布到测试环境的过程中，打包机仅仅将常量类所属的模块进行了重新编译，未将引用常量的类的模块重新编译，所以当时看见的是更改前的值，同事将常量类的 class 文件反编译后看见的也是修改后的值，但是却忘了看引用该常量类的类，所以当时没有发现这个问题。Java 解惑Java 虚拟机规范（Java SE 8版）]]></content>
